@@ -1,0 +1,15 @@
+# Allowed domains for the custom cloud environment.
+# Add each to the routine environment's network allow-list.
+# Keep this in sync with CLAUDE.md §"Allowed domains".
+
+# Bách Hóa Xanh (site + internal API)
+bachhoaxanh.com
+www.bachhoaxanh.com
+apibhx.tgdd.vn
+
+# WinMart (site + internal API)
+winmart.vn
+www.winmart.vn
+api-crownx.winmart.vn
+
+# If a new API host is discovered during PoC, add it here AND in CLAUDE.md.

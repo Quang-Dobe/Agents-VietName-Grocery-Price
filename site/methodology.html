@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phương pháp luận — Giá Chợ</title>
+  <meta name="description" content="Rổ hàng, trọng số và cách tính chỉ số giá Giá Chợ.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Giá Chợ">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="11" fill="#141821" stroke="rgba(255,255,255,0.10)"/>
+          <path d="M17 20a7 7 0 0 1 14 0" fill="none" stroke="#2dd4a7" stroke-width="2.4" stroke-linecap="round"/>
+          <rect x="11.5" y="19" width="25" height="4.2" rx="2.1" fill="#2dd4a7"/>
+          <path d="M14.5 23.5 L33.5 23.5 L30.6 36 a2 2 0 0 1-1.95 1.6 H19.35 a2 2 0 0 1-1.95-1.6 Z" fill="none" stroke="#2dd4a7" stroke-width="2.2" stroke-linejoin="round"/>
+          <rect x="18.4" y="30" width="3" height="4.2" rx="1.1" fill="#3987e5"/>
+          <rect x="22.5" y="27.6" width="3" height="6.6" rx="1.1" fill="#5aa0ee"/>
+          <rect x="26.6" y="25" width="3" height="9.2" rx="1.1" fill="#7db6f3"/>
+        </svg>
+        <span>
+          <span class="name">Giá Chợ</span>
+          <span class="tag">Chỉ số giá thực phẩm hàng tuần · BHX &amp; WinMart</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="methodology.html">Phương pháp</a>
+        <a class="cta" href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price/blob/main/docs/WORKFLOW.md">Cách hoạt động ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="page-title">Phương pháp luận</h1>
+    <p class="page-sub">Chỉ số được tính minh bạch, dễ kiểm chứng. Dưới đây là cách làm.</p>
+
+    <section class="card" style="margin-bottom:18px">
+      <h2>Rổ hàng</h2>
+      <p class="compare-line">40 mặt hàng cố định, chia 14 nhóm: gạo, thịt heo/gà/bò, cá &amp; thủy sản,
+      trứng, rau củ, trái cây, dầu ăn, gia vị, sữa, mì gói, cà phê, và đồ dùng thiết yếu
+      (giấy vệ sinh, nước rửa chén, bột giặt). Danh sách đầy đủ nằm trong
+      <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price/blob/main/basket.json"><code>basket.json</code></a>.</p>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+      <h2>Trọng số</h2>
+      <p class="compare-line">Mỗi nhóm có một trọng số phản ánh mức chi tiêu thực tế của hộ gia đình,
+      dựa trên cơ cấu rổ CPI 2020–2025 của Tổng cục Thống kê (nhóm hàng ăn), rồi chuẩn hóa về tổng
+      bằng 1,0 và bổ sung nhóm đồ dùng thiết yếu.</p>
+      <div class="tableview" style="margin-top:12px">
+        <table>
+          <thead><tr><th>Nhóm</th><th>Trọng số</th><th>Số mặt hàng</th></tr></thead>
+          <tbody id="wtable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+      <h2>Cách tính chỉ số</h2>
+      <p class="compare-line">Với mỗi mặt hàng, ta lấy <em>giá tuần này chia cho giá tuần đầu</em> (tỷ lệ giá).
+      Chỉ số là <strong>trung bình có trọng số</strong> của các tỷ lệ đó (công thức Laspeyres đơn giản),
+      nhân 100. Tuần đầu tiên luôn bằng đúng 100.</p>
+      <ul class="compare-line" style="line-height:1.8">
+        <li>Giá dùng để tính là giá người mua thực trả: <em>giá khuyến mãi nếu có, không thì giá niêm yết</em>.</li>
+        <li>Mọi giá quy về <strong>đơn giá chuẩn</strong> (đ/kg, đ/lít, đ/quả) để so sánh công bằng giữa 2 siêu thị.</li>
+        <li>Tính riêng cho BHX, WinMart, và một chỉ số chung (trung bình 2 siêu thị theo từng mặt hàng).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Xử lý mặt hàng thay đổi</h2>
+      <ul class="compare-line" style="line-height:1.8">
+        <li><strong>Hết hàng:</strong> giữ giá gần nhất tối đa 2 tuần, sau đó tạm loại khỏi kỳ tính.</li>
+        <li><strong>Thay thế:</strong> chỉ thay bằng mặt hàng cùng nhóm, cùng quy cách; chỉ số được
+        <em>nối chuỗi</em> để không bị nhảy bậc khi thay.</li>
+        <li><strong>Giá bất thường:</strong> nếu giá nhảy hơn 50% so với tuần trước, hệ thống nghi lỗi
+        và loại giá đó, có ghi log.</li>
+      </ul>
+      <p class="note date">Mọi thay đổi được ghi lại công khai trong
+      <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price/tree/main/data">thư mục <code>data/</code></a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap row">
+      <span>Giá Chợ · chỉ số giá thực phẩm</span>
+      <span>
+        <a href="index.html">Dashboard</a> ·
+        <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price/blob/main/docs/WORKFLOW.md">Cách hoạt động</a> ·
+        <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price">Mã nguồn</a>
+      </span>
+      <span>Dữ liệu tự thu thập, chỉ để tham khảo.</span>
+    </div>
+  </footer>
+
+  <script>
+  // Group weights mirror basket.json (docs/PLAN.md §3). site-builder can regenerate.
+  var W = [
+    ["Gạo & lương thực", 0.12, 3], ["Thịt heo", 0.15, 4], ["Thịt gà", 0.08, 3],
+    ["Thịt bò", 0.06, 2], ["Cá & thủy sản", 0.09, 3], ["Trứng", 0.05, 2],
+    ["Rau củ", 0.11, 5], ["Trái cây", 0.06, 3], ["Dầu ăn", 0.04, 2],
+    ["Gia vị", 0.06, 4], ["Sữa", 0.06, 3], ["Mì gói", 0.03, 2],
+    ["Cà phê", 0.02, 1], ["Đồ dùng thiết yếu", 0.07, 3]
+  ];
+  var pct = new Intl.NumberFormat("vi-VN", { style: "percent", minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  var tb = document.getElementById("wtable");
+  W.forEach(function (r) {
+    var tr = document.createElement("tr");
+    var c0 = document.createElement("td"); c0.textContent = r[0]; c0.style.textAlign = "left";
+    var c1 = document.createElement("td"); c1.textContent = pct.format(r[1]);
+    var c2 = document.createElement("td"); c2.textContent = r[2];
+    tr.appendChild(c0); tr.appendChild(c1); tr.appendChild(c2); tb.appendChild(tr);
+  });
+  </script>
+</body>
+</html>

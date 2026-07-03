@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" role="img" aria-label="Giá Chợ — chỉ số giá thực phẩm">
+  <!-- icon -->
+  <g>
+    <rect x="2" y="2" width="44" height="44" rx="11" fill="#141821" stroke="rgba(255,255,255,0.10)"/>
+    <path d="M17 20a7 7 0 0 1 14 0" fill="none" stroke="#2dd4a7" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="11.5" y="19" width="25" height="4.2" rx="2.1" fill="#2dd4a7"/>
+    <path d="M14.5 23.5 L33.5 23.5 L30.6 36 a2 2 0 0 1-1.95 1.6 H19.35 a2 2 0 0 1-1.95-1.6 Z"
+          fill="none" stroke="#2dd4a7" stroke-width="2.2" stroke-linejoin="round"/>
+    <rect x="18.4" y="30" width="3" height="4.2" rx="1.1" fill="#3987e5"/>
+    <rect x="22.5" y="27.6" width="3" height="6.6" rx="1.1" fill="#5aa0ee"/>
+    <rect x="26.6" y="25" width="3" height="9.2" rx="1.1" fill="#7db6f3"/>
+  </g>
+  <!-- wordmark -->
+  <text x="56" y="31" font-family="system-ui,-apple-system,'Segoe UI',sans-serif"
+        font-size="22" font-weight="700" fill="#f4f6fb" letter-spacing="0.2">Giá Chợ</text>
+</svg>

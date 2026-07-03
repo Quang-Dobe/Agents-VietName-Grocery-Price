@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "version": 1,
+    "note": "Fixed basket for the mini-CPI. Group weights anchored to Vietnam GSO CPI 2020-2025 food structure, renormalized to 1.0 and extended with household essentials. See docs/PLAN.md section 3. urls/quy_cach are placeholders resolved at the P1 PoC phase against the pinned store; quy_doi = number of don_vi_chuan units per pack, per chain.",
+    "trong_so_tong": 1.0,
+    "so_sku": 40
+  },
+  "items": [
+    { "id": "gao-st25-5kg",            "ten_chuan": "Gạo ST25 túi 5kg",              "nhom": "Gạo & lương thực", "don_vi_chuan": "kg",   "trong_so": 0.040, "quy_cach": { "bhx": "5kg", "winmart": "5kg" },   "quy_doi": { "bhx": 5,    "winmart": 5 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "gao-jasmine-5kg",         "ten_chuan": "Gạo thơm Jasmine túi 5kg",      "nhom": "Gạo & lương thực", "don_vi_chuan": "kg",   "trong_so": 0.040, "quy_cach": { "bhx": "5kg", "winmart": "5kg" },   "quy_doi": { "bhx": 5,    "winmart": 5 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "bun-pho-kho-500g",        "ten_chuan": "Bún/phở khô gói 500g",          "nhom": "Gạo & lương thực", "don_vi_chuan": "kg",   "trong_so": 0.040, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "thit-heo-ba-roi-500g",    "ten_chuan": "Thịt ba rọi heo khay 500g",     "nhom": "Thịt heo",         "don_vi_chuan": "kg",   "trong_so": 0.0375, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "thit-heo-nac-dui-500g",   "ten_chuan": "Thịt nạc đùi heo khay 500g",    "nhom": "Thịt heo",         "don_vi_chuan": "kg",   "trong_so": 0.0375, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "thit-heo-xay-500g",       "ten_chuan": "Thịt heo xay khay 500g",        "nhom": "Thịt heo",         "don_vi_chuan": "kg",   "trong_so": 0.0375, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "suon-non-heo-500g",       "ten_chuan": "Sườn non heo khay 500g",        "nhom": "Thịt heo",         "don_vi_chuan": "kg",   "trong_so": 0.0375, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "ga-ta-nguyen-con-1kg",    "ten_chuan": "Gà ta nguyên con ~1kg",         "nhom": "Thịt gà",          "don_vi_chuan": "kg",   "trong_so": 0.027, "quy_cach": { "bhx": "1kg", "winmart": "1kg" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "dui-ga-cn-500g",          "ten_chuan": "Đùi gà công nghiệp khay 500g",  "nhom": "Thịt gà",          "don_vi_chuan": "kg",   "trong_so": 0.027, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "canh-ga-500g",            "ten_chuan": "Cánh gà khay 500g",             "nhom": "Thịt gà",          "don_vi_chuan": "kg",   "trong_so": 0.026, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "thit-bo-than-300g",       "ten_chuan": "Thịt bò thăn khay 300g",        "nhom": "Thịt bò",          "don_vi_chuan": "kg",   "trong_so": 0.030, "quy_cach": { "bhx": "300g", "winmart": "300g" }, "quy_doi": { "bhx": 0.3,  "winmart": 0.3 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "thit-bo-xay-300g",        "ten_chuan": "Thịt bò xay khay 300g",         "nhom": "Thịt bò",          "don_vi_chuan": "kg",   "trong_so": 0.030, "quy_cach": { "bhx": "300g", "winmart": "300g" }, "quy_doi": { "bhx": 0.3,  "winmart": 0.3 },  "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "ca-nuc-500g",             "ten_chuan": "Cá nục tươi khay 500g",         "nhom": "Cá & thủy sản",    "don_vi_chuan": "kg",   "trong_so": 0.030, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "ca-basa-phi-le-500g",     "ten_chuan": "Cá basa phi lê 500g",           "nhom": "Cá & thủy sản",    "don_vi_chuan": "kg",   "trong_so": 0.030, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "tom-the-500g",            "ten_chuan": "Tôm thẻ tươi 500g",             "nhom": "Cá & thủy sản",    "don_vi_chuan": "kg",   "trong_so": 0.030, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "trung-ga-hop-10",         "ten_chuan": "Trứng gà hộp 10 quả",           "nhom": "Trứng",            "don_vi_chuan": "quả",  "trong_so": 0.025, "quy_cach": { "bhx": "10 quả", "winmart": "10 quả" }, "quy_doi": { "bhx": 10, "winmart": 10 }, "urls": { "bhx": "", "winmart": "" } },
+    { "id": "trung-vit-hop-10",        "ten_chuan": "Trứng vịt hộp 10 quả",          "nhom": "Trứng",            "don_vi_chuan": "quả",  "trong_so": 0.025, "quy_cach": { "bhx": "10 quả", "winmart": "10 quả" }, "quy_doi": { "bhx": 10, "winmart": 10 }, "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "rau-muong-bo",            "ten_chuan": "Rau muống bó ~500g",            "nhom": "Rau củ",           "don_vi_chuan": "kg",   "trong_so": 0.022, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "ca-chua-1kg",             "ten_chuan": "Cà chua ~1kg",                  "nhom": "Rau củ",           "don_vi_chuan": "kg",   "trong_so": 0.022, "quy_cach": { "bhx": "1kg", "winmart": "1kg" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "khoai-tay-1kg",           "ten_chuan": "Khoai tây ~1kg",                "nhom": "Rau củ",           "don_vi_chuan": "kg",   "trong_so": 0.022, "quy_cach": { "bhx": "1kg", "winmart": "1kg" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "hanh-la-100g",            "ten_chuan": "Hành lá gói 100g",              "nhom": "Rau củ",           "don_vi_chuan": "kg",   "trong_so": 0.022, "quy_cach": { "bhx": "100g", "winmart": "100g" }, "quy_doi": { "bhx": 0.1,  "winmart": 0.1 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "cai-thao-1kg",            "ten_chuan": "Cải thảo ~1kg",                 "nhom": "Rau củ",           "don_vi_chuan": "kg",   "trong_so": 0.022, "quy_cach": { "bhx": "1kg", "winmart": "1kg" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "chuoi-gia-1kg",           "ten_chuan": "Chuối già ~1kg",                "nhom": "Trái cây",         "don_vi_chuan": "kg",   "trong_so": 0.020, "quy_cach": { "bhx": "1kg", "winmart": "1kg" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "tao-my-1kg",              "ten_chuan": "Táo Mỹ ~1kg",                   "nhom": "Trái cây",         "don_vi_chuan": "kg",   "trong_so": 0.020, "quy_cach": { "bhx": "1kg", "winmart": "1kg" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "cam-sanh-1kg",            "ten_chuan": "Cam sành ~1kg",                 "nhom": "Trái cây",         "don_vi_chuan": "kg",   "trong_so": 0.020, "quy_cach": { "bhx": "1kg", "winmart": "1kg" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "dau-an-tuong-an-1l",      "ten_chuan": "Dầu ăn Tường An chai 1 lít",    "nhom": "Dầu ăn",           "don_vi_chuan": "lít",  "trong_so": 0.020, "quy_cach": { "bhx": "1L", "winmart": "1L" },     "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "dau-an-simply-1l",        "ten_chuan": "Dầu ăn Simply chai 1 lít",      "nhom": "Dầu ăn",           "don_vi_chuan": "lít",  "trong_so": 0.020, "quy_cach": { "bhx": "1L", "winmart": "1L" },     "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "nuoc-mam-nam-ngu-500ml",  "ten_chuan": "Nước mắm Nam Ngư chai 500ml",   "nhom": "Gia vị",           "don_vi_chuan": "lít",  "trong_so": 0.015, "quy_cach": { "bhx": "500ml", "winmart": "500ml" }, "quy_doi": { "bhx": 0.5, "winmart": 0.5 }, "urls": { "bhx": "", "winmart": "" } },
+    { "id": "duong-bien-hoa-1kg",      "ten_chuan": "Đường Biên Hòa túi 1kg",        "nhom": "Gia vị",           "don_vi_chuan": "kg",   "trong_so": 0.015, "quy_cach": { "bhx": "1kg", "winmart": "1kg" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "muoi-iot-500g",           "ten_chuan": "Muối i-ốt gói 500g",            "nhom": "Gia vị",           "don_vi_chuan": "kg",   "trong_so": 0.015, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+    { "id": "bot-ngot-ajinomoto-400g", "ten_chuan": "Bột ngọt Ajinomoto gói 400g",   "nhom": "Gia vị",           "don_vi_chuan": "kg",   "trong_so": 0.015, "quy_cach": { "bhx": "400g", "winmart": "400g" }, "quy_doi": { "bhx": 0.4,  "winmart": 0.4 },  "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "sua-tuoi-vinamilk-1l",    "ten_chuan": "Sữa tươi Vinamilk hộp 1 lít",   "nhom": "Sữa",              "don_vi_chuan": "lít",  "trong_so": 0.020, "quy_cach": { "bhx": "1L", "winmart": "1L" },     "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "sua-dac-ong-tho-380g",    "ten_chuan": "Sữa đặc Ông Thọ lon 380g",      "nhom": "Sữa",              "don_vi_chuan": "kg",   "trong_so": 0.020, "quy_cach": { "bhx": "380g", "winmart": "380g" }, "quy_doi": { "bhx": 0.38, "winmart": 0.38 }, "urls": { "bhx": "", "winmart": "" } },
+    { "id": "sua-chua-vinamilk-loc4",  "ten_chuan": "Sữa chua Vinamilk lốc 4 hộp",   "nhom": "Sữa",              "don_vi_chuan": "cái",  "trong_so": 0.020, "quy_cach": { "bhx": "4 hộp", "winmart": "4 hộp" }, "quy_doi": { "bhx": 4,   "winmart": 4 },   "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "mi-hao-hao-goi",          "ten_chuan": "Mì Hảo Hảo gói 75g",            "nhom": "Mì gói",           "don_vi_chuan": "gói",  "trong_so": 0.015, "quy_cach": { "bhx": "75g", "winmart": "75g" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+    { "id": "mi-3-mien-goi",           "ten_chuan": "Mì 3 Miền gói 65g",             "nhom": "Mì gói",           "don_vi_chuan": "gói",  "trong_so": 0.015, "quy_cach": { "bhx": "65g", "winmart": "65g" },   "quy_doi": { "bhx": 1,    "winmart": 1 },    "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "ca-phe-trung-nguyen-500g","ten_chuan": "Cà phê Trung Nguyên gói 500g",  "nhom": "Cà phê",           "don_vi_chuan": "kg",   "trong_so": 0.020, "quy_cach": { "bhx": "500g", "winmart": "500g" }, "quy_doi": { "bhx": 0.5,  "winmart": 0.5 },  "urls": { "bhx": "", "winmart": "" } },
+
+    { "id": "giay-ve-sinh-loc10",      "ten_chuan": "Giấy vệ sinh lốc 10 cuộn",      "nhom": "Đồ dùng thiết yếu","don_vi_chuan": "cuộn", "trong_so": 0.023, "quy_cach": { "bhx": "10 cuộn", "winmart": "10 cuộn" }, "quy_doi": { "bhx": 10, "winmart": 10 }, "urls": { "bhx": "", "winmart": "" } },
+    { "id": "nuoc-rua-chen-sunlight-750g","ten_chuan": "Nước rửa chén Sunlight 750g", "nhom": "Đồ dùng thiết yếu","don_vi_chuan": "lít",  "trong_so": 0.023, "quy_cach": { "bhx": "750g", "winmart": "750g" }, "quy_doi": { "bhx": 0.75, "winmart": 0.75 }, "urls": { "bhx": "", "winmart": "" } },
+    { "id": "bot-giat-omo-3kg",        "ten_chuan": "Bột giặt Omo túi 3kg",          "nhom": "Đồ dùng thiết yếu","don_vi_chuan": "kg",   "trong_so": 0.024, "quy_cach": { "bhx": "3kg", "winmart": "3kg" },   "quy_doi": { "bhx": 3,    "winmart": 3 },    "urls": { "bhx": "", "winmart": "" } }
+  ]
+}
