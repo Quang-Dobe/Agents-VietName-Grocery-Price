@@ -55,6 +55,13 @@ See `docs/PLAN.md` for the full plan.
 - `don_vi_chuan` — the unit the index compares in (`kg`, `lít`, `quả`, `cái`).
 - `trong_so` — SKU weight; all 40 sum to **1.0**.
 - `quy_doi` — how many `don_vi_chuan` units are in one pack, per chain.
+- **`match`** (optional, WinMart matching hints — curate when the default fuzzy
+  match picks a wrong product): `{ "kw": [search terms, specific→general],
+  "must": [tokens a candidate MUST contain], "avoid": [phrases that disqualify],
+  "head_start": true }`. `head_start` requires the product name to *lead* with the
+  SKU's head noun (rejects e.g. a "Vinamilk … Cà Phê" drink for a coffee SKU). The
+  crawler also searches the **deaccented** term (the API misses some accented
+  queries, e.g. "đường" → nothing, "duong" → sugar).
 
 ### `data/db/products.json` — product catalog: **current details + current price** (overwritten every run)
 The "database" the product pages read. Rich detail plus the latest price for each
