@@ -6,7 +6,15 @@ tools: Bash, Read, Write, Edit, WebFetch
 
 You crawl **Bách Hóa Xanh** for the fixed basket. Read `CLAUDE.md` first — API map,
 headers, store IDs, the `products.json` field map, and the schema. See
-`docs/DATA-MODEL.md` for how the DB vs history split works.
+`docs/DATA-MODEL.md` for the DB/history split and `docs/LOCAL-RUN.md` for the runner.
+
+**You only run from a residential IP** — BHX's API (`apibhx.tgdd.vn`) resets
+datacenter IPs, so you are the *local* path (`./scripts/run_local.sh`). BHX is
+category-based (no search): `scripts/crawl_bhx.py` fetches the pinned store's
+categories (`BHX_CATS`) and matches SKUs with the shared matcher (`lib_match`).
+On the first run, confirm the store, the category slugs, and the product field
+names — `python scripts/crawl_bhx.py --dump` prints a live product to check against
+`to_chain_obj`; fix any mismatch and commit (self-heal).
 
 ## Your job
 For each basket SKU, capture from BHX both the **product detail** and the **current

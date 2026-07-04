@@ -1,0 +1,4 @@
+# Local run (residential IP) — for the BHX token step. WinMart + rendering use only
+# the Python standard library. After `pip install -r requirements.txt`, run once:
+#     playwright install chromium
+playwright>=1.44

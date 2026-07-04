@@ -184,11 +184,12 @@ palette validated for dark mode, legend + table-view twin, hover crosshair.
 - **Unrestricted branch push** → commit straight to `main` → Pages redeploys.
 - BHX token step uses the **pre-installed Playwright Chromium**.
 
-**Local fallback (ready, not default):** if the in-environment PoC shows the
-datacenter IP is blocked, run the *same repo, same agents* as a **Desktop
-scheduled task** on a residential IP. Only the trigger/runner changes; all agent
-logic, schema, and site code are reused. Requires the machine to be on at run
-time. Decision gate: PoC result in §PoC below.
+**Local fallback (IMPLEMENTED for BHX):** BHX's API resets datacenter IPs
+(confirmed live), so BHX runs from a **residential IP** — `./scripts/run_local.sh`
+on a home machine (BHX + WinMart + render + push in one command). Only the runner
+changes; all schema, matcher, and site code are reused. Requires the machine to be
+on at run time. Setup + first-run confirmation steps: **[`LOCAL-RUN.md`](LOCAL-RUN.md)**.
+The weekly cloud routine stays WinMart-only.
 
 ---
 
