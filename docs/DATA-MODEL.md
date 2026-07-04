@@ -55,8 +55,10 @@ validator
    └─ compare products.json vs last row of items CSVs → fix products.json (carry-forward, drops)
 index-calculator
    └─ read products.json (now) + items CSVs (base) → append index-history.csv + items/<id>.csv
-site-builder
-   └─ read products.json (details) + history CSVs (charts) → rebuild site
+site-builder (scripts/build_run.py)
+   └─ read products.json (details) + history CSVs → RENDER static HTML
+      (site/index.html + site/items/<id>.html, real values baked in — no client
+       data script, no fetch; charts read <canvas data-*> attributes)
    └─ write data/db/meta.json { last_run_week, captured_at }
 ```
 

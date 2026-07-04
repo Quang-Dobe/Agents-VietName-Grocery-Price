@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cá nục tươi khay 500g — Giá Chợ</title>
+  <meta name="description" content="Chi tiết sản phẩm và lịch sử giá tại BHX và WinMart.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/app.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html" aria-label="Giá Chợ">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="11" fill="#141821" stroke="rgba(255,255,255,0.10)"/>
+          <path d="M17 20a7 7 0 0 1 14 0" fill="none" stroke="#2dd4a7" stroke-width="2.4" stroke-linecap="round"/>
+          <rect x="11.5" y="19" width="25" height="4.2" rx="2.1" fill="#2dd4a7"/>
+          <path d="M14.5 23.5 L33.5 23.5 L30.6 36 a2 2 0 0 1-1.95 1.6 H19.35 a2 2 0 0 1-1.95-1.6 Z" fill="none" stroke="#2dd4a7" stroke-width="2.2" stroke-linejoin="round"/>
+          <rect x="18.4" y="30" width="3" height="4.2" rx="1.1" fill="#3987e5"/>
+          <rect x="22.5" y="27.6" width="3" height="6.6" rx="1.1" fill="#5aa0ee"/>
+          <rect x="26.6" y="25" width="3" height="9.2" rx="1.1" fill="#7db6f3"/>
+        </svg>
+        <span>
+          <span class="name">Giá Chợ</span>
+          <span class="tag">Chỉ số giá thực phẩm hàng tuần · BHX &amp; WinMart</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="../index.html">Dashboard</a>
+        <a href="../methodology.html">Phương pháp</a>
+        <a class="cta" href="../workflow.html">Cách hoạt động ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="crumb"><a href="../index.html">← Dashboard</a></p>
+    <h1 class="item-title">Cá nục tươi khay 500g</h1>
+    <p class="item-group">Cá &amp; thủy sản</p>
+
+    <section class="grid chains" aria-label="Chi tiết theo siêu thị"><div class="card chain-card"><div class="prod-img ph">🛒</div><div class="chain-body"><div class="chain-name"><span class="dot" style="background:#199e70"></span>Bách Hóa Xanh</div><p class="empty">Chưa lấy được (nguồn tạm chặn)</p></div></div><div class="card chain-card"><div class="prod-img ph">🛒</div><div class="chain-body"><div class="chain-name"><span class="dot" style="background:#e66767"></span>WinMart</div><div class="disp-name">Cá nục làm sạch bỏ đầu 8-12 con/kg</div><div class="meta-row">Thương hiệu: NOBRAND</div><div class="meta-row">Danh mục: Thủy hải sản</div><div class="price-block"><span class="price-now">118.900đ</span><span class="badge in">Còn hàng</span></div><div class="unitprice">Đơn giá chuẩn: 118.900đ/kg</div><div class="store-line"><a href="https://winmart.vn/products/ca-nuc-lam-sach-bo-dau-8-12-conkg--s10060420" target="_blank" rel="noopener">Xem trên web ↗</a></div></div></div></section>
+
+    <section class="card chart-card">
+      <h2>Lịch sử đơn giá chuẩn</h2>
+      <p class="hint">đơn giá theo đ/kg</p>
+      <div class="legend">
+        <span class="item"><span class="swatch" style="background:#199e70"></span> BHX</span>
+        <span class="item"><span class="swatch" style="background:#e66767"></span> WinMart</span>
+      </div>
+      <div class="chart-box"><canvas id="itemChart"
+        data-labels='[&quot;04/07&quot;]' data-bhx='[null]'
+        data-winmart='[118900.0]' data-unit="kg"></canvas></div>
+      <div style="margin-top:12px"><button class="toggle" data-target="tblPanel">Bảng số liệu</button></div>
+      <div class="tableview" id="tblPanel" hidden>
+        <table><thead><tr><th>Tuần</th><th>BHX (đ)</th><th>WinMart (đ)</th></tr></thead>
+          <tbody><tr><td style="text-align:left">04/07</td><td>–</td><td>118.900</td></tr></tbody></table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap row">
+      <span>Giá Chợ · chỉ số giá thực phẩm</span>
+      <span>
+        <a href="../index.html">Dashboard</a> ·
+        <a href="../methodology.html">Phương pháp</a> ·
+        <a href="../workflow.html">Cách hoạt động</a>
+      </span>
+      <span>Dữ liệu tự thu thập, chỉ để tham khảo.</span>
+    </div>
+  </footer>
+
+  <script src="../assets/chart.umd.min.js"></script>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

@@ -39,10 +39,12 @@ writes `data/top-movers.json`, and applies chain-link factors for any substituti
 Week 1 → all three series = 100.00.
 
 ## Step 4 — build the site
-Run **`site-builder`**. It rebuilds the dark-theme dashboard, the per-item **detail
-pages (from `data/db/products.json`)**, and the methodology page, writes the
-plain-Vietnamese weekly note, and keeps the **Workflow reference link** on the
-dashboard. It verifies the page renders.
+Run **`site-builder`** (which runs `python scripts/build_run.py`). It **renders the
+dashboard and per-item pages as static HTML with the real values baked in** — from
+`data/db/products.json` + the history CSVs — writes the plain-Vietnamese weekly
+note, and keeps the **Workflow link** (`workflow.html`) on the dashboard. No client
+data script and no fetch; charts read `<canvas data-*>` attributes. It verifies the
+page renders.
 
 ## Step 5 — commit & log
 - Append a run summary to `data/run-log.md` (date, sources ok/fail, SKUs captured,

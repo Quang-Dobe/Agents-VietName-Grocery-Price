@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giá Chợ — Chỉ số giá thực phẩm hàng tuần</title>
+  <meta name="description" content="Chỉ số giá của một rổ 40 mặt hàng thực phẩm & tiêu dùng, theo dõi hàng tuần tại Bách Hóa Xanh và WinMart.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Giá Chợ">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="11" fill="#141821" stroke="rgba(255,255,255,0.10)"/>
+          <path d="M17 20a7 7 0 0 1 14 0" fill="none" stroke="#2dd4a7" stroke-width="2.4" stroke-linecap="round"/>
+          <rect x="11.5" y="19" width="25" height="4.2" rx="2.1" fill="#2dd4a7"/>
+          <path d="M14.5 23.5 L33.5 23.5 L30.6 36 a2 2 0 0 1-1.95 1.6 H19.35 a2 2 0 0 1-1.95-1.6 Z" fill="none" stroke="#2dd4a7" stroke-width="2.2" stroke-linejoin="round"/>
+          <rect x="18.4" y="30" width="3" height="4.2" rx="1.1" fill="#3987e5"/>
+          <rect x="22.5" y="27.6" width="3" height="6.6" rx="1.1" fill="#5aa0ee"/>
+          <rect x="26.6" y="25" width="3" height="9.2" rx="1.1" fill="#7db6f3"/>
+        </svg>
+        <span>
+          <span class="name">Giá Chợ</span>
+          <span class="tag">Chỉ số giá thực phẩm hàng tuần · BHX &amp; WinMart</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="methodology.html">Phương pháp</a>
+        <a class="cta" href="workflow.html">Cách hoạt động ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="page-title">Chỉ số giá tuần này</h1>
+    <p class="page-sub">Base 100 ở tuần đầu — <strong>100</strong> là mốc, trên 100 là đắt hơn, dưới 100 là rẻ hơn.</p>
+
+    <section class="grid tiles" aria-label="Chỉ số tuần này">
+      <div class="tile hero">
+        <span class="label"><span class="dot" style="background:#3987e5"></span> Chỉ số chung</span>
+        <div class="value">{{V_CHUNG}}</div>
+        {{D_CHUNG}}
+        <span class="base">so với tuần trước</span>
+      </div>
+      <div class="tile">
+        <span class="label"><span class="dot" style="background:#199e70"></span> Bách Hóa Xanh</span>
+        <div class="value">{{V_BHX}}</div>
+        {{D_BHX}}
+        <span class="base">so với tuần trước</span>
+      </div>
+      <div class="tile">
+        <span class="label"><span class="dot" style="background:#e66767"></span> WinMart</span>
+        <div class="value">{{V_WINMART}}</div>
+        {{D_WINMART}}
+        <span class="base">so với tuần trước</span>
+      </div>
+    </section>
+
+    <section class="card chart-card">
+      <h2>Chỉ số theo thời gian</h2>
+      <div class="legend">
+        <span class="item"><span class="swatch" style="background:#3987e5"></span> Chỉ số chung</span>
+        <span class="item"><span class="swatch" style="background:#199e70"></span> BHX</span>
+        <span class="item"><span class="swatch" style="background:#e66767"></span> WinMart</span>
+      </div>
+      <div class="chart-box"><canvas id="indexChart"
+        data-labels='{{CHART_LABELS}}' data-chung='{{CHART_CHUNG}}'
+        data-bhx='{{CHART_BHX}}' data-winmart='{{CHART_WINMART}}'></canvas></div>
+      <div style="margin-top:12px"><button class="toggle" data-target="tblPanel">Bảng số liệu</button></div>
+      <div class="tableview" id="tblPanel" hidden>
+        <table><thead><tr><th>Tuần</th><th>Chung</th><th>BHX</th><th>WinMart</th></tr></thead>
+          <tbody>{{TABLE_ROWS}}</tbody></table>
+      </div>
+    </section>
+
+    <section class="grid two-up">
+      <div class="card">
+        <h2>Tăng mạnh nhất</h2>
+        <ul class="movers">{{RISERS}}</ul>
+      </div>
+      <div class="card">
+        <h2>Giảm mạnh nhất</h2>
+        <ul class="movers">{{FALLERS}}</ul>
+      </div>
+    </section>
+
+    <section class="grid two-up">
+      <div class="card">
+        <h2>BHX so với WinMart</h2>
+        <p class="compare-line">{{COMPARE}}</p>
+      </div>
+      <div class="card">
+        <h2>Nhận xét tuần</h2>
+        <p class="note">{{NOTE}}</p>
+        <p class="note date">{{NOTE_DATE}}</p>
+      </div>
+    </section>
+
+    <div class="section-head">
+      <h2>Rổ hàng tuần này</h2>
+      <span class="cnt">{{PROD_COUNT}}</span>
+    </div>
+    <section class="grid prod-grid" aria-label="Rổ hàng">{{PRODUCT_GRID}}</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap row">
+      <span>Cập nhật lần cuối: {{UPDATED}}</span>
+      <span>
+        <a href="methodology.html">Phương pháp luận</a> ·
+        <a href="workflow.html">Cách hoạt động</a> ·
+        <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price">Mã nguồn</a>
+      </span>
+      <span>Dữ liệu tự thu thập, chỉ để tham khảo.</span>
+    </div>
+  </footer>
+
+  <script src="assets/chart.umd.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

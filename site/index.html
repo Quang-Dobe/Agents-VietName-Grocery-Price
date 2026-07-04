@@ -29,7 +29,7 @@
       <nav class="nav">
         <a href="index.html">Dashboard</a>
         <a href="methodology.html">Phương pháp</a>
-        <a class="cta" href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price/blob/main/docs/WORKFLOW.md">Cách hoạt động ↗</a>
+        <a class="cta" href="workflow.html">Cách hoạt động ↗</a>
       </nav>
     </div>
   </header>
@@ -38,29 +38,27 @@
     <h1 class="page-title">Chỉ số giá tuần này</h1>
     <p class="page-sub">Base 100 ở tuần đầu — <strong>100</strong> là mốc, trên 100 là đắt hơn, dưới 100 là rẻ hơn.</p>
 
-    <!-- Stat tiles -->
     <section class="grid tiles" aria-label="Chỉ số tuần này">
       <div class="tile hero">
         <span class="label"><span class="dot" style="background:#3987e5"></span> Chỉ số chung</span>
-        <div class="value" id="v-chung">–</div>
-        <span class="delta" id="d-chung"></span>
+        <div class="value">100,0</div>
+        <span class="delta flat">mốc gốc</span>
         <span class="base">so với tuần trước</span>
       </div>
       <div class="tile">
         <span class="label"><span class="dot" style="background:#199e70"></span> Bách Hóa Xanh</span>
-        <div class="value" id="v-bhx">–</div>
-        <span class="delta" id="d-bhx"></span>
+        <div class="value">–</div>
+        <span class="delta flat">mốc gốc</span>
         <span class="base">so với tuần trước</span>
       </div>
       <div class="tile">
         <span class="label"><span class="dot" style="background:#e66767"></span> WinMart</span>
-        <div class="value" id="v-winmart">–</div>
-        <span class="delta" id="d-winmart"></span>
+        <div class="value">100,0</div>
+        <span class="delta flat">mốc gốc</span>
         <span class="base">so với tuần trước</span>
       </div>
     </section>
 
-    <!-- Main chart -->
     <section class="card chart-card">
       <h2>Chỉ số theo thời gian</h2>
       <div class="legend">
@@ -68,148 +66,59 @@
         <span class="item"><span class="swatch" style="background:#199e70"></span> BHX</span>
         <span class="item"><span class="swatch" style="background:#e66767"></span> WinMart</span>
       </div>
-      <div class="chart-box"><canvas id="indexChart"></canvas></div>
-      <div style="margin-top:12px"><button class="toggle" id="tblBtn">Bảng số liệu</button></div>
+      <div class="chart-box"><canvas id="indexChart"
+        data-labels='[&quot;04/07&quot;]' data-chung='[100.0]'
+        data-bhx='[null]' data-winmart='[100.0]'></canvas></div>
+      <div style="margin-top:12px"><button class="toggle" data-target="tblPanel">Bảng số liệu</button></div>
       <div class="tableview" id="tblPanel" hidden>
         <table><thead><tr><th>Tuần</th><th>Chung</th><th>BHX</th><th>WinMart</th></tr></thead>
-          <tbody id="tblBody"></tbody></table>
+          <tbody><tr><td style="text-align:left">04/07</td><td>100,0</td><td>–</td><td>100,0</td></tr></tbody></table>
       </div>
     </section>
 
-    <!-- Movers -->
     <section class="grid two-up">
       <div class="card">
         <h2>Tăng mạnh nhất</h2>
-        <ul class="movers" id="risers"></ul>
+        <ul class="movers"><li class="empty">Tuần đầu — chưa có thay đổi để so sánh</li></ul>
       </div>
       <div class="card">
         <h2>Giảm mạnh nhất</h2>
-        <ul class="movers" id="fallers"></ul>
+        <ul class="movers"><li class="empty">Tuần đầu — chưa có thay đổi để so sánh</li></ul>
       </div>
     </section>
 
-    <!-- Compare + note -->
     <section class="grid two-up">
       <div class="card">
         <h2>BHX so với WinMart</h2>
-        <p class="compare-line" id="compare">–</p>
+        <p class="compare-line">Tuần đầu: đã lấy giá 35 mặt hàng ở WinMart. Bách Hóa Xanh sẽ bổ sung khi có đường lấy dữ liệu ổn định.</p>
       </div>
       <div class="card">
         <h2>Nhận xét tuần</h2>
-        <p class="note" id="note">–</p>
-        <p class="note date" id="noteDate"></p>
+        <p class="note">Đây là tuần đầu tiên nên chỉ số được đặt ở mốc 100 để làm gốc so sánh. Tuần này ghi nhận giá của 35 mặt hàng tại WinMart; Bách Hóa Xanh tạm thời chưa lấy được nên chỉ số dùng dữ liệu WinMart. Từ tuần sau sẽ có thay đổi giá để theo dõi.</p>
+        <p class="note date">Ghi nhận ngày 04/07/2026</p>
       </div>
     </section>
 
-    <!-- Products (the real basket this week) -->
     <div class="section-head">
       <h2>Rổ hàng tuần này</h2>
-      <span class="cnt" id="prodCount"></span>
+      <span class="cnt">35 mặt hàng · WinMart</span>
     </div>
-    <section class="grid prod-grid" id="prodGrid" aria-label="Rổ hàng"></section>
+    <section class="grid prod-grid" aria-label="Rổ hàng"><a class="card pcard" href="items/gao-st25-5kg.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2023/04/ngoc-nuong-gao-st25-5kg_tv-20230426082612.png" alt="Gạo ST25 túi 5kg" loading="lazy"><div class="pn">Gạo ST25 túi 5kg</div><div class="pg">Gạo &amp; lương thực</div><div class="pp"><span class="amt">37.800đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/gao-jasmine-5kg.html"><div class="thumb ph">🛒</div><div class="pn">Gạo thơm Jasmine túi 5kg</div><div class="pg">Gạo &amp; lương thực</div><div class="pp"><span class="amt">31.667đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/bun-pho-kho-500g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2023/02/bun-kho-hung-lo-thien-nhien-xanh-500g.png" alt="Bún/phở khô gói 500g" loading="lazy"><div class="pn">Bún/phở khô gói 500g</div><div class="pg">Gạo &amp; lương thực</div><div class="pp"><span class="amt">73.200đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/thit-heo-ba-roi-500g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/162427314545410053663-kg-thit-dui-heo-og.jpg" alt="Thịt ba rọi heo khay 500g" loading="lazy"><div class="pn">Thịt ba rọi heo khay 500g</div><div class="pg">Thịt heo</div><div class="pp"><span class="amt">239.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/thit-heo-nac-dui-500g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2024/12/10617957-20241205094605.jpg" alt="Thịt nạc đùi heo khay 500g" loading="lazy"><div class="pn">Thịt nạc đùi heo khay 500g</div><div class="pg">Thịt heo</div><div class="pp"><span class="amt">204.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/thit-heo-xay-500g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2024/12/10617947-20241205094732.jpg" alt="Thịt heo xay khay 500g" loading="lazy"><div class="pn">Thịt heo xay khay 500g</div><div class="pg">Thịt heo</div><div class="pp"><span class="amt">141.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/suon-non-heo-500g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/162427337310110053664-kg-syp-lo-(bung-cai)-trang-og.jpg" alt="Sườn non heo khay 500g" loading="lazy"><div class="pn">Sườn non heo khay 500g</div><div class="pg">Thịt heo</div><div class="pp"><span class="amt">255.000đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/ga-ta-nguyen-con-1kg.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2024/04/ga-ta-3f-khay-vang-20240415024517.jpeg" alt="Gà ta nguyên con ~1kg" loading="lazy"><div class="pn">Gà ta nguyên con ~1kg</div><div class="pg">Thịt gà</div><div class="pp"><span class="amt">129.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/dui-ga-cn-500g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2024/12/10283203-20241205094133.jpg" alt="Đùi gà công nghiệp khay 500g" loading="lazy"><div class="pn">Đùi gà công nghiệp khay 500g</div><div class="pg">Thịt gà</div><div class="pp"><span class="amt">95.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/canh-ga-500g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/162428501154810053639-kg-cp-chon-giu-heo-og.jpg" alt="Cánh gà khay 500g" loading="lazy"><div class="pn">Cánh gà khay 500g</div><div class="pg">Thịt gà</div><div class="pp"><span class="amt">103.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/thit-bo-than-300g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/thit-bo-vien-khay-hoa-doanh-300g_7528a7df-2f31-4ab7-937d-dffdbf4c7ede-og.jpg" alt="Thịt bò thăn khay 300g" loading="lazy"><div class="pn">Thịt bò thăn khay 300g</div><div class="pg">Thịt bò</div><div class="pp"><span class="amt">173.333đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/thit-bo-xay-300g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/8936150841113_7bc1837c-aa53-4a4d-a62c-28bed51c0e98-og.jpg" alt="Thịt bò xay khay 300g" loading="lazy"><div class="pn">Thịt bò xay khay 300g</div><div class="pg">Thịt bò</div><div class="pp"><span class="amt">343.500đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/ca-nuc-500g.html"><div class="thumb ph">🛒</div><div class="pn">Cá nục tươi khay 500g</div><div class="pg">Cá &amp; thủy sản</div><div class="pp"><span class="amt">118.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/tom-the-500g.html"><div class="thumb ph">🛒</div><div class="pn">Tôm thẻ tươi 500g</div><div class="pg">Cá &amp; thủy sản</div><div class="pp"><span class="amt">299.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/trung-ga-hop-10.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/trung-ga-so-729-ba-vi-gio-10-qua.jpg" alt="Trứng gà hộp 10 quả" loading="lazy"><div class="pn">Trứng gà hộp 10 quả</div><div class="pg">Trứng</div><div class="pp"><span class="amt">5.500đ</span><span class="unit"> /quả</span></div></a><a class="card pcard" href="items/ca-chua-1kg.html"><div class="thumb ph">🛒</div><div class="pn">Cà chua ~1kg</div><div class="pg">Rau củ</div><div class="pp"><span class="amt">27.000đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/khoai-tay-1kg.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/khoai-tay-cat-soi-shoestring-farm-best-1kg.jpg" alt="Khoai tây ~1kg" loading="lazy"><div class="pn">Khoai tây ~1kg</div><div class="pg">Rau củ</div><div class="pp"><span class="amt">85.500đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/hanh-la-100g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/10281879.jpg" alt="Hành lá gói 100g" loading="lazy"><div class="pn">Hành lá gói 100g</div><div class="pg">Rau củ</div><div class="pp"><span class="amt">55.200đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/cai-thao-1kg.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/162428528568010053860-kg-cai-xanh-(cai-canh)-l1-vineco-og.jpg" alt="Cải thảo ~1kg" loading="lazy"><div class="pn">Cải thảo ~1kg</div><div class="pg">Rau củ</div><div class="pp"><span class="amt">19.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/chuoi-gia-1kg.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/162428516041010613694-kg-keo-deo-chupa-chups-bites-gui-90g-og.jpg" alt="Chuối già ~1kg" loading="lazy"><div class="pn">Chuối già ~1kg</div><div class="pg">Trái cây</div><div class="pp"><span class="amt">40.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/tao-my-1kg.html"><div class="thumb ph">🛒</div><div class="pn">Táo Mỹ ~1kg</div><div class="pg">Trái cây</div><div class="pp"><span class="amt">49.000đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/cam-sanh-1kg.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/cam-sanh-loai-nho_c7469128-7397-41d9-8fa9-345c3c46db40-og.jpg" alt="Cam sành ~1kg" loading="lazy"><div class="pn">Cam sành ~1kg</div><div class="pg">Trái cây</div><div class="pp"><span class="amt">32.900đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/dau-an-tuong-an-1l.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/162427293308210010153-cha-dau-an-tuong-an-gold-chai-1-lot-og.jpg" alt="Dầu ăn Tường An chai 1 lít" loading="lazy"><div class="pn">Dầu ăn Tường An chai 1 lít</div><div class="pg">Dầu ăn</div><div class="pp"><span class="amt">65.000đ</span><span class="unit"> /lít</span></div></a><a class="card pcard" href="items/dau-an-simply-1l.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2026/07/1-20260701061654.png" alt="Dầu ăn Simply chai 1 lít" loading="lazy"><div class="pn">Dầu ăn Simply chai 1 lít</div><div class="pg">Dầu ăn</div><div class="pp"><span class="amt">56.100đ</span><span class="unit"> /lít</span></div></a><a class="card pcard" href="items/nuoc-mam-nam-ngu-500ml.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2025/11/750ml_10009164_nn_750ml-mockup_2-20251111061548.png" alt="Nước mắm Nam Ngư chai 500ml" loading="lazy"><div class="pn">Nước mắm Nam Ngư chai 500ml</div><div class="pg">Gia vị</div><div class="pp"><span class="amt">71.467đ</span><span class="unit"> /lít</span></div></a><a class="card pcard" href="items/duong-bien-hoa-1kg.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2024/11/10198108-20241109110228.jpg" alt="Đường Biên Hòa túi 1kg" loading="lazy"><div class="pn">Đường Biên Hòa túi 1kg</div><div class="pg">Gia vị</div><div class="pp"><span class="amt">27.200đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/muoi-iot-500g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2025/09/10198161-20250930041600.jpg" alt="Muối i-ốt gói 500g" loading="lazy"><div class="pn">Muối i-ốt gói 500g</div><div class="pg">Gia vị</div><div class="pp"><span class="amt">9.800đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/bot-ngot-ajinomoto-400g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/162428595394410008597-g1-gia-vi-nom-san-co-kho-rieng-aji-quick-ajinomoto-gui-29g-og.jpg" alt="Bột ngọt Ajinomoto gói 400g" loading="lazy"><div class="pn">Bột ngọt Ajinomoto gói 400g</div><div class="pg">Gia vị</div><div class="pp"><span class="amt">85.250đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/sua-tuoi-vinamilk-1l.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2024/11/10198211-1--20241107091643.jpg" alt="Sữa tươi Vinamilk hộp 1 lít" loading="lazy"><div class="pn">Sữa tươi Vinamilk hộp 1 lít</div><div class="pg">Sữa</div><div class="pp"><span class="amt">44.545đ</span><span class="unit"> /lít</span></div></a><a class="card pcard" href="items/sua-dac-ong-tho-380g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2023/09/10010459-20230912100123.jpeg" alt="Sữa đặc Ông Thọ lon 380g" loading="lazy"><div class="pn">Sữa đặc Ông Thọ lon 380g</div><div class="pg">Sữa</div><div class="pp"><span class="amt">77.632đ</span><span class="unit"> /kg</span></div></a><a class="card pcard" href="items/sua-chua-vinamilk-loc4.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2022/ba-vi-sua-chua-an-nha-dam-100g-4_2f1afdd1-6a27-4501-9e0a-5389297b38b5-og.png" alt="Sữa chua Vinamilk lốc 4 hộp" loading="lazy"><div class="pn">Sữa chua Vinamilk lốc 4 hộp</div><div class="pg">Sữa</div><div class="pp"><span class="amt">6.700đ</span><span class="unit"> /cái</span></div></a><a class="card pcard" href="items/mi-3-mien-goi.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2024/11/frame-2-8--20241104093203.jpg" alt="Mì 3 Miền gói 65g" loading="lazy"><div class="pn">Mì 3 Miền gói 65g</div><div class="pg">Mì gói</div><div class="pp"><span class="amt">86.400đ</span><span class="unit"> /gói</span></div></a><a class="card pcard" href="items/giay-ve-sinh-loc10.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2023/07/giay-elene-20230707081504.png" alt="Giấy vệ sinh lốc 10 cuộn" loading="lazy"><div class="pn">Giấy vệ sinh lốc 10 cuộn</div><div class="pg">Đồ dùng thiết yếu</div><div class="pp"><span class="amt">6.500đ</span><span class="unit"> /cuộn</span></div></a><a class="card pcard" href="items/nuoc-rua-chen-sunlight-750g.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2023/04/8934868147404-20230425031742.png" alt="Nước rửa chén Sunlight 750g" loading="lazy"><div class="pn">Nước rửa chén Sunlight 750g</div><div class="pg">Đồ dùng thiết yếu</div><div class="pp"><span class="amt">38.400đ</span><span class="unit"> /lít</span></div></a><a class="card pcard" href="items/bot-giat-omo-3kg.html"><img class="thumb" src="https://s3-hcmc02.higiocloud.vn/images/2024/11/10406729-20241110105943.jpg" alt="Bột giặt Omo túi 3kg" loading="lazy"><div class="pn">Bột giặt Omo túi 3kg</div><div class="pg">Đồ dùng thiết yếu</div><div class="pp"><span class="amt">48.933đ</span><span class="unit"> /kg</span></div></a></section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap row">
-      <span id="updated">Cập nhật lần cuối: –</span>
+      <span>Cập nhật lần cuối: 04/07/2026</span>
       <span>
         <a href="methodology.html">Phương pháp luận</a> ·
-        <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price/blob/main/docs/WORKFLOW.md">Cách hoạt động</a> ·
+        <a href="workflow.html">Cách hoạt động</a> ·
         <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price">Mã nguồn</a>
       </span>
       <span>Dữ liệu tự thu thập, chỉ để tham khảo.</span>
     </div>
   </footer>
 
-  <!-- Fallback sample; the real weekly data is fetched from data/dashboard.json -->
-  <script id="giacho-data">
-  window.GIACHO_FALLBACK = {
-    updated: "—", base_week: true,
-    series: { labels: ["04/07"], chung: [100], bhx: [null], winmart: [100] },
-    index: { chung: 100, bhx: null, winmart: 100 }, deltas: {},
-    risers: [], fallers: [], products: [],
-    compare: "Đang tải dữ liệu…", note: "Đang tải dữ liệu…", note_date: ""
-  };
-  </script>
   <script src="assets/chart.umd.min.js"></script>
   <script src="assets/app.js"></script>
-  <!-- Real weekly data (window.GIACHO), regenerated by scripts/build_run.py.
-       Loaded as a script so it works both on GitHub Pages and from a local file. -->
-  <script src="data/dashboard.js"></script>
-  <script>
-  (function () {
-    var vnd = new Intl.NumberFormat("vi-VN");
-    function pct(x) { return new Intl.NumberFormat("vi-VN", { minimumFractionDigits: 1, maximumFractionDigits: 1, signDisplay: "always" }).format(x); }
-
-    function setTile(id, val, dId, delta) {
-      document.getElementById(id).textContent = window.GiaCho.fmtIndex(val);
-      var el = document.getElementById(dId);
-      if (delta == null) { el.className = "delta flat"; el.textContent = "mốc gốc"; return; }
-      var up = delta > 0.05, down = delta < -0.05;
-      el.className = "delta " + (up ? "up" : down ? "down" : "flat");
-      el.textContent = (up ? "▲ " : down ? "▼ " : "– ") + pct(delta) + "%";
-    }
-
-    function render(d) {
-      var s = d.series || {};
-      setTile("v-chung", d.index && d.index.chung, "d-chung", d.deltas && d.deltas.chung);
-      setTile("v-bhx", d.index && d.index.bhx, "d-bhx", d.deltas && d.deltas.bhx);
-      setTile("v-winmart", d.index && d.index.winmart, "d-winmart", d.deltas && d.deltas.winmart);
-
-      window.GiaCho.initIndexChart(document.getElementById("indexChart"),
-        { labels: s.labels || [], chung: s.chung || [], bhx: s.bhx || [], winmart: s.winmart || [] });
-
-      var tb = document.getElementById("tblBody");
-      (s.labels || []).forEach(function (wk, i) {
-        var tr = document.createElement("tr");
-        [wk, window.GiaCho.fmtIndex(s.chung[i]), window.GiaCho.fmtIndex(s.bhx[i]), window.GiaCho.fmtIndex(s.winmart[i])]
-          .forEach(function (t, j) { var td = document.createElement("td"); td.textContent = t; if (j === 0) td.style.textAlign = "left"; tr.appendChild(td); });
-        tb.appendChild(tr);
-      });
-      window.GiaCho.wireToggle(document.getElementById("tblBtn"), document.getElementById("tblPanel"));
-
-      function movers(id, arr, cls) {
-        var ul = document.getElementById(id);
-        if (!arr || !arr.length) { ul.innerHTML = '<li class="empty">' + (d.base_week ? "Tuần đầu — chưa có thay đổi để so sánh" : "Chưa có dữ liệu") + "</li>"; return; }
-        arr.forEach(function (m) {
-          var li = document.createElement("li");
-          var nm = document.createElement("span"); nm.className = "nm"; nm.textContent = m.ten_chuan;
-          var ch = document.createElement("span"); ch.className = "chip " + cls;
-          ch.textContent = (cls === "up" ? "▲ " : "▼ ") + pct(m.pct) + "%";
-          li.appendChild(nm); li.appendChild(ch); ul.appendChild(li);
-        });
-      }
-      movers("risers", d.risers, "up");
-      movers("fallers", d.fallers, "down");
-
-      document.getElementById("compare").textContent = d.compare || "–";
-      document.getElementById("note").textContent = d.note || "–";
-      document.getElementById("noteDate").textContent = d.note_date || "";
-      document.getElementById("updated").textContent = "Cập nhật lần cuối: " + (d.updated || "–");
-
-      // products grid
-      var grid = document.getElementById("prodGrid"), prods = d.products || [];
-      document.getElementById("prodCount").textContent = prods.length ? prods.length + " mặt hàng · WinMart" : "";
-      if (!prods.length) { grid.innerHTML = '<p class="empty">Chưa có mặt hàng.</p>'; return; }
-      prods.forEach(function (p) {
-        var a = document.createElement("a"); a.className = "card pcard"; a.href = "items/item.html?id=" + encodeURIComponent(p.id);
-        if (p.hinh_anh) {
-          var img = document.createElement("img"); img.className = "thumb"; img.src = p.hinh_anh; img.alt = p.ten_chuan; img.loading = "lazy";
-          img.onerror = function () { var ph = document.createElement("div"); ph.className = "thumb ph"; ph.textContent = "🛒"; img.replaceWith(ph); };
-          a.appendChild(img);
-        } else { var ph = document.createElement("div"); ph.className = "thumb ph"; ph.textContent = "🛒"; a.appendChild(ph); }
-        var nm = document.createElement("div"); nm.className = "pn"; nm.textContent = p.ten_chuan; a.appendChild(nm);
-        var g = document.createElement("div"); g.className = "pg"; g.textContent = p.nhom; a.appendChild(g);
-        var pp = document.createElement("div"); pp.className = "pp";
-        var amt = document.createElement("span"); amt.className = "amt"; amt.textContent = p.don_gia_chuan != null ? vnd.format(p.don_gia_chuan) + "đ" : "–";
-        var un = document.createElement("span"); un.className = "unit"; un.textContent = " /" + (p.don_vi_chuan || "đv");
-        pp.appendChild(amt); pp.appendChild(un); a.appendChild(pp);
-        grid.appendChild(a);
-      });
-    }
-
-    render(window.GIACHO || window.GIACHO_FALLBACK);
-  })();
-  </script>
 </body>
 </html>

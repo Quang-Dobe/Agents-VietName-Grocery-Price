@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cách hoạt động — Giá Chợ</title>
+  <meta name="description" content="Quy trình tự động thu thập giá và tạo chỉ số của Giá Chợ.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Giá Chợ">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="11" fill="#141821" stroke="rgba(255,255,255,0.10)"/>
+          <path d="M17 20a7 7 0 0 1 14 0" fill="none" stroke="#2dd4a7" stroke-width="2.4" stroke-linecap="round"/>
+          <rect x="11.5" y="19" width="25" height="4.2" rx="2.1" fill="#2dd4a7"/>
+          <path d="M14.5 23.5 L33.5 23.5 L30.6 36 a2 2 0 0 1-1.95 1.6 H19.35 a2 2 0 0 1-1.95-1.6 Z" fill="none" stroke="#2dd4a7" stroke-width="2.2" stroke-linejoin="round"/>
+          <rect x="18.4" y="30" width="3" height="4.2" rx="1.1" fill="#3987e5"/>
+          <rect x="22.5" y="27.6" width="3" height="6.6" rx="1.1" fill="#5aa0ee"/>
+          <rect x="26.6" y="25" width="3" height="9.2" rx="1.1" fill="#7db6f3"/>
+        </svg>
+        <span>
+          <span class="name">Giá Chợ</span>
+          <span class="tag">Chỉ số giá thực phẩm hàng tuần · BHX &amp; WinMart</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="methodology.html">Phương pháp</a>
+        <a class="cta" href="workflow.html">Cách hoạt động ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="page-title">Cách hoạt động</h1>
+    <p class="page-sub">Mỗi tuần, một routine tự động thu thập giá và cập nhật trang này. Ngắn gọn, dễ hiểu.</p>
+
+    <section class="card" style="margin-bottom:18px">
+      <h2>Tóm tắt một dòng</h2>
+      <p class="compare-line">Mỗi tuần, routine ghé WinMart (và Bách Hóa Xanh khi có thể),
+      lấy giá của <strong>40 mặt hàng cố định</strong>, tính ra một <strong>chỉ số giá</strong>
+      (mốc 100 ở tuần đầu), rồi dựng lại trang này bằng dữ liệu thật.</p>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+      <h2>5 bước mỗi tuần</h2>
+      <ul class="compare-line" style="line-height:1.9">
+        <li><strong>1. Thu thập giá</strong> — Lấy giá qua <em>API nội bộ</em> của siêu thị
+        (nhanh, dễ đọc). Lấy cả giá niêm yết và giá khuyến mãi, rồi quy về
+        <strong>đơn giá chuẩn</strong> (đ/kg, đ/lít, đ/quả) để so sánh công bằng.</li>
+        <li><strong>2. Kiểm tra</strong> — Soát lỗi: giá nhảy quá 50% so với tuần trước bị nghi
+        là lỗi và loại; hàng hết được giữ giá cũ tối đa 2 tuần. Mọi quyết định đều ghi log.</li>
+        <li><strong>3. Tính chỉ số</strong> — Trung bình có trọng số của tỷ lệ
+        <em>giá tuần này / giá tuần đầu</em> (Laspeyres đơn giản). Tính riêng BHX, WinMart và chỉ số chung.</li>
+        <li><strong>4. Dựng trang</strong> — Ghi thẳng số liệu thật vào trang (thẻ chỉ số, rổ hàng,
+        biểu đồ, nhận xét). Không gọi dữ liệu động ở trình duyệt — trang là HTML tĩnh đã có sẵn số.</li>
+        <li><strong>5. Xuất bản</strong> — Commit lên GitHub, GitHub Pages tự deploy.</li>
+      </ul>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+      <h2>Vì sao dùng agent thay vì script cứng?</h2>
+      <p class="compare-line">Khi một mặt hàng biến mất hoặc đổi đường dẫn, agent có thể
+      <strong>tìm sản phẩm thay thế cùng nhóm, cùng quy cách</strong>, cập nhật rổ hàng kèm ghi chú,
+      và <strong>nối chuỗi giá</strong> để chỉ số không bị nhảy bậc. Script thường chỉ báo lỗi rồi dừng.</p>
+    </section>
+
+    <section class="card">
+      <h2>Minh bạch</h2>
+      <p class="compare-line">Toàn bộ mã nguồn, rổ hàng, log thu thập và lịch sử chỉ số đều công khai trên
+      <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price">GitHub</a>. Trang
+      <a href="methodology.html">Phương pháp luận</a> giải thích rổ hàng, trọng số và công thức chi tiết.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap row">
+      <span>Giá Chợ · chỉ số giá thực phẩm</span>
+      <span>
+        <a href="index.html">Dashboard</a> ·
+        <a href="methodology.html">Phương pháp</a> ·
+        <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price">Mã nguồn</a>
+      </span>
+      <span>Dữ liệu tự thu thập, chỉ để tham khảo.</span>
+    </div>
+  </footer>
+</body>
+</html>
