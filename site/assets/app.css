@@ -128,3 +128,31 @@ thead th { color: var(--text-2); background: var(--surface-2); font-weight: 700;
 .site-footer .row { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
 
 .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
+
+/* Item detail page */
+.crumb { color: var(--muted); font-size: 13px; margin: 22px 0 2px; }
+.crumb a { color: var(--text-2); }
+.item-title { font-size: 26px; font-weight: 800; margin: 2px 0 2px; }
+.item-group { color: var(--text-2); font-size: 14px; margin: 0 0 20px; }
+.chains { grid-template-columns: 1fr 1fr; margin-bottom: 20px; }
+@media (max-width: 720px) { .chains { grid-template-columns: 1fr; } }
+.chain-card { display: flex; gap: 16px; }
+.chain-card .prod-img {
+  width: 84px; height: 84px; flex: 0 0 auto; border-radius: 12px;
+  object-fit: cover; background: var(--surface-2); border: 1px solid var(--border);
+}
+.chain-card .prod-img.ph { display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 22px; }
+.chain-body { min-width: 0; flex: 1; }
+.chain-name { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; color: var(--text-2); }
+.disp-name { font-size: 15px; font-weight: 600; margin: 6px 0 2px; color: var(--text-1); }
+.meta-row { color: var(--muted); font-size: 12.5px; margin: 1px 0; }
+.price-block { margin-top: 10px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.price-now { font-size: 22px; font-weight: 800; }
+.price-old { color: var(--muted); text-decoration: line-through; font-size: 14px; }
+.unitprice { color: var(--text-2); font-size: 13px; margin-top: 2px; }
+.badge { font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+.badge.in { color: var(--down); background: rgba(45,212,167,0.12); }
+.badge.out { color: var(--up); background: rgba(229,103,79,0.12); }
+.badge.carry { color: var(--muted); background: var(--surface-2); }
+.store-line { color: var(--muted); font-size: 12px; margin-top: 10px; }
+.store-line a, .meta-row a { color: var(--text-2); }

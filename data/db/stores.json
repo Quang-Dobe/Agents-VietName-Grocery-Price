@@ -1,0 +1,7 @@
+{
+  "updated": null,
+  "stores": {
+    "bhx":     { "provinceId": null, "storeId": null, "ten": null, "dia_chi": null, "khu_vuc": "TP.HCM" },
+    "winmart": { "storeCode": null, "storeGroupCode": null, "ten": null, "dia_chi": null, "khu_vuc": "TP.HCM" }
+  }
+}

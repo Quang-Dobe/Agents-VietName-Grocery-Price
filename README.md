@@ -14,6 +14,8 @@ commentary.
 
 - **[`docs/PLAN.md`](docs/PLAN.md)** — the detailed plan: locked decisions, build
   order, acceptance criteria, risks.
+- **[`docs/DATA-MODEL.md`](docs/DATA-MODEL.md)** — the two stores: current-state **DB**
+  (`data/db/*.json`) vs **history** CSVs; what goes where and why.
 - **[`docs/research/POC-FINDINGS.md`](docs/research/POC-FINDINGS.md)** — verified
   internal APIs (BHX `apibhx.tgdd.vn`, WinMart `api-crownx.winmart.vn`), anti-bot
   reality, and the cloud-vs-local decision gate.
@@ -29,10 +31,11 @@ CLAUDE.md         schema, validation rules, store IDs, API field map, allowed do
 ROUTINE_PROMPT.md the weekly orchestration prompt
 basket.json       the fixed basket — 40 SKUs, weights sum to 1.0
 config/           allowed-domains.txt for the cloud environment
-scripts/          crawl_bhx.py, crawl_winmart.py, bhx_token.py, lib_index.py (skeletons)
-data/             prices/, items/, index-history.csv, logs
-site/             dark-theme dashboard (index.html), methodology.html, items/, assets/
-docs/             PLAN.md, UI-DESIGN.md, WORKFLOW.md, brief.md, research/
+scripts/          crawl_bhx.py, crawl_winmart.py, bhx_token.py, lib_index.py, lib_db.py (skeletons)
+data/db/          products.json (details + current price), stores.json, meta.json  ← the "DB" (current)
+data/             index-history.csv, items/<id>.csv  ← the history (time series)
+site/             dark-theme dashboard (index.html), methodology.html, items/ (detail pages), assets/
+docs/             PLAN.md, DATA-MODEL.md, UI-DESIGN.md, WORKFLOW.md, brief.md, research/
 ```
 
 ## Run the site locally

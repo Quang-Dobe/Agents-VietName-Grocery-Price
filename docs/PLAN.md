@@ -49,13 +49,13 @@ Out of scope for v1: extra chains, mobile app, alerts, user accounts.
 Claude Code Routine (weekly, Sat + Sun safety re-run)
         │
         ├─ crawler-bhx      ─┐  run in parallel
-        ├─ crawler-winmart  ─┘  → data/prices/<date>.json (raw per-SKU × chain)
+        ├─ crawler-winmart  ─┘  → data/db/products.json (details + current price), stores.json
         │
-        ├─ validator            → flags/repairs anomalies, writes decisions
-        ├─ index-calculator     → data/index-history.csv (+ per-item series)
-        └─ site-builder         → site/*.html (dashboard, items, methodology)
+        ├─ validator            → fixes anomalies in products.json, logs decisions
+        ├─ index-calculator     → appends index-history.csv + per-item CSV (the history)
+        └─ site-builder         → site/*.html (dashboard, item detail pages, methodology)
         │
-        └─ commit to main → GitHub Pages redeploys
+        └─ commit to default branch → GitHub Pages redeploys
 ```
 
 Five subagents, defined in `.claude/agents/*.md`, orchestrated by
@@ -104,16 +104,32 @@ weights within a group sum to the group weight, all 40 sum to 1.0).
 
 ---
 
-## 4. Data & files
+## 4. Data & files — two stores: DB (current) + history (time series)
+
+Full rationale in [`DATA-MODEL.md`](DATA-MODEL.md). Product details and the current
+price live in a current-state **DB** that is overwritten every run (never dated);
+the **history** for the charts lives in compact CSVs. There is no dated full-price
+snapshot.
 
 ```
-basket.json                     # basket definition (every change is version-controlled)
-data/prices/<YYYY-MM-DD>.json   # weekly snapshot: all SKUs × 2 chains, raw + normalized
-data/index-history.csv          # date, index_chung, index_bhx, index_winmart
-data/items/<sku-id>.csv         # per-SKU price history (both chains) for detail charts
-data/substitutions-log.md       # every SKU swap, with reason + old/new URL
-data/run-log.md                 # per-run: sources ok/fail, SKUs captured, notes
+basket.json                # basket definition (every change is version-controlled)
+
+# DB — current state, overwritten each run (no dates)
+data/db/products.json      # per-SKU × chain: rich product DETAILS + current price
+data/db/stores.json        # the pinned BHX & WinMart store (id, name, address, area)
+data/db/meta.json          # { last_run_week, captured_at } — idempotency marker
+
+# History — the only time-indexed data, for dashboard analysis
+data/index-history.csv     # date, index_chung, index_bhx, index_winmart
+data/items/<sku-id>.csv    # per-SKU đơn giá chuẩn (both chains) over time
+
+data/substitutions-log.md  # every SKU swap, with reason + old/new URL
+data/run-log.md            # per-run: sources ok/fail, SKUs captured, notes
 ```
+
+`data/db/products.json` powers the per-item **detail pages** (image, brand, category,
+store, list/promo price, stock). The pipeline derives week-over-week and base-week
+values from the item CSVs, so no dated snapshot is needed.
 
 **Index formula** — simple Laspeyres, base 100 at week 1. For each SKU the price
 relative is `price_now / price_base`; the index is the weighted average of
@@ -193,14 +209,14 @@ the field-mapping contract are in `CLAUDE.md`.
 |---|---|---|
 | **P0 PoC** | In-environment probe of both APIs from the routine env: token step for BHX, store pinning, one live product JSON per chain, robots re-check | We have real prices for ≥5 SKUs per chain and confirmed price field names; cloud-vs-local decided |
 | **P1 Schema** | `basket.json` finalized with real URLs + store IDs; `CLAUDE.md` field map confirmed | 40 SKUs resolve to live products on both chains (or logged substitution) |
-| **P2 Crawl** | `crawler-bhx`, `crawler-winmart` + `scripts/` produce `data/prices/<date>.json` | Snapshot has both chains, promo+list, normalized unit price |
+| **P2 Crawl** | `crawler-bhx`, `crawler-winmart` + `scripts/` fill `data/db/products.json` (details + current price) and `stores.json` | Both chains present, details + promo/list + normalized unit price |
 | **P3 Index** | `validator` + `index-calculator` → `index-history.csv`, per-item CSVs | Week-1 index = 100.0 on all three series; anomalies logged |
-| **P4 Site** | `site-builder` → dashboard + items + methodology, dark theme, logo, favicon, workflow link | Pages renders; charts populated; weekly note present |
-| **P5 Automate** | Routine schedule (Sat + Sun safety) + allow-list live | Two consecutive weekly runs commit clean snapshots unattended |
+| **P4 Site** | `site-builder` → dashboard + item detail pages + methodology, dark theme, logo, favicon, workflow link | Pages renders; charts populated; item detail from DB; weekly note present |
+| **P5 Automate** | Routine schedule (Sat + Sun safety) + allow-list live | Two consecutive weekly runs update the DB + history unattended |
 
-**Acceptance for v1:** three unattended weekly runs produce valid snapshots, the
-index updates, and the dashboard redeploys with a fresh agent-written note — with
-no manual intervention.
+**Acceptance for v1:** three unattended weekly runs refresh the DB, extend the
+history, and redeploy the dashboard with a fresh agent-written note — with no manual
+intervention.
 
 ---
 
@@ -226,8 +242,8 @@ CLAUDE.md           schema, validation rules, store IDs, API field map, allowed 
 ROUTINE_PROMPT.md   the weekly orchestration prompt
 basket.json         basket definition (40 SKUs)
 config/allowed-domains.txt
-scripts/            crawl_bhx.py, crawl_winmart.py, bhx_token.py, lib_index.py (skeletons)
-data/               prices/, items/, index-history.csv, logs
-site/               index.html, methodology.html, items/, assets/ (logo, favicon, css, js)
-docs/               PLAN.md (this file), UI-DESIGN.md, WORKFLOW.md, research/POC-FINDINGS.md
+scripts/            crawl_bhx.py, crawl_winmart.py, bhx_token.py, lib_index.py, lib_db.py (skeletons)
+data/               db/ (products.json, stores.json, meta.json), items/, index-history.csv, logs
+site/               index.html, methodology.html, items/ (detail pages), assets/ (logo, favicon, css, js)
+docs/               PLAN.md (this file), DATA-MODEL.md, UI-DESIGN.md, WORKFLOW.md, research/POC-FINDINGS.md
 ```

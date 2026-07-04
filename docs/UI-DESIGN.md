@@ -75,7 +75,12 @@ Status never carries meaning by color alone — always arrow + number + label.
 - **Footer:** last updated, link to methodology + workflow, "dữ liệu tự thu thập,
   tham khảo".
 
-Item pages: one chart (two chains' đơn giá chuẩn over time) + a data table.
+**Item detail pages** (`site/items/<id>.html`, built from the `site/items/_template.html`
+structure, fed by `data/db/products.json`): a per-chain **product card** for BHX and
+WinMart — image (with a 🛒 placeholder + `onerror` fallback), display name, brand,
+category, pack size, current price (promo bold + list struck through), a stock badge
+(Còn hàng / Giữ giá cũ / Hết hàng), đơn giá chuẩn, pinned store, and a "Xem trên web"
+link — then the two-chain đơn giá chuẩn history chart (one unit per page) + data table.
 
 ## Chart rules (from `dataviz`)
 

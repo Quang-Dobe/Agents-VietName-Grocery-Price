@@ -42,13 +42,24 @@ def fetch_category(slug: str, page: int = 1) -> list:
     return data.get("data", {}).get("items", []) or data.get("data", {}).get("products", [])
 
 
-def normalize(product: dict, quy_doi: float) -> dict:
-    # CONFIRM field names against a live item at PoC; fix in CLAUDE.md.
+def to_chain_obj(product: dict, quy_doi: float) -> dict:
+    """Build the full products.json chain object: DETAILS + current price.
+    CONFIRM field names against a live item at PoC; fix in CLAUDE.md."""
     gia_niem_yet = int(product.get("price") or 0)
     sale = product.get("salePrice")
     gia_khuyen_mai = int(sale) if sale and int(sale) != gia_niem_yet else None
     pay = gia_khuyen_mai or gia_niem_yet
+    seo = product.get("seoName")
     return {
+        # details
+        "ten_hien_thi": product.get("name"),
+        "thuong_hieu": product.get("brand"),
+        "danh_muc": product.get("category"),
+        "hinh_anh": product.get("image") or product.get("thumbnail"),
+        "url": f"https://winmart.vn/products/{seo}" if seo else None,
+        "don_vi": product.get("uom") or product.get("uomName"),
+        "net": None,
+        # price
         "gia_niem_yet": gia_niem_yet,
         "gia_khuyen_mai": gia_khuyen_mai,
         "don_gia_chuan": round(pay / quy_doi) if quy_doi else pay,
@@ -58,12 +69,18 @@ def normalize(product: dict, quy_doi: float) -> dict:
 
 
 def main() -> None:
+    import lib_db  # writes into data/db/products.json (current-state, overwritten)
+
     basket = json.loads((ROOT / "basket.json").read_text())["items"]
-    out = {}
+    db = lib_db.load_products()
     for item in basket:
+        # placeholder: real impl matches `item` in its category list, then:
+        # lib_db.upsert_chain(db, item["id"], item, "winmart", to_chain_obj(prod, item["quy_doi"]["winmart"]))
         time.sleep(PACE_SECONDS)
-        out[item["id"]] = {"trang_thai": "out_of_stock", "nguon": "api", "_todo": "match at P1"}
-    print(json.dumps(out, ensure_ascii=False, indent=2))
+        lib_db.upsert_chain(db, item["id"], item, "winmart",
+                            {"trang_thai": "out_of_stock", "nguon": "api", "_todo": "match at P1"})
+    lib_db.save_products(db, updated=None)  # set real captured week at P2
+    print(f"winmart: wrote {len(basket)} SKU stubs into data/db/products.json")
 
 
 if __name__ == "__main__":

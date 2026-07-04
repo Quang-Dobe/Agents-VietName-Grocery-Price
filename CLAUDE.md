@@ -8,28 +8,38 @@ crawled from Bách Hóa Xanh and WinMart online, published as a dark-theme stati
 site on GitHub Pages. No Claude API calls — the routine writes its own commentary.
 See `docs/PLAN.md` for the full plan.
 
+**Two data stores, on purpose (see `docs/DATA-MODEL.md`):**
+- **DB = current state, overwritten every run, never dated.** Rich product details
+  + the current price for each SKU on each chain, plus the pinned store metadata.
+  This is what the product pages read.
+- **History = the only time-indexed data, kept for dashboard analysis.** Compact
+  per-item and index CSVs. We do **not** keep dated full-price snapshots.
+
 ---
 
 ## Golden rules
 
 1. **API over HTML.** Always use the internal JSON APIs (§API map). Only parse
    HTML if the API fails and you have logged why.
-2. **One pinned store per chain** (§Store IDs). Never change a store ID without
-   adding a note to `data/substitutions-log.md` — changing store breaks the index.
+2. **One pinned store per chain** (§Store IDs → recorded in `data/db/stores.json`).
+   Never change a store ID without adding a note to `data/substitutions-log.md` —
+   changing store breaks the index.
 3. **Be polite.** ≤ 1 request / 2–3 s per host. Realistic desktop User-Agent.
    Stop and log if you see repeated 403/429; do not hammer.
 4. **Never invent prices.** If a SKU can't be read, mark it `out_of_stock` and
    follow carry-forward. A missing price is a logged gap, never a guess.
 5. **Every anomaly is logged, not silently dropped.** `validator` writes its
    reasoning to the run log.
-6. **Idempotent weekly runs.** If `data/prices/<this-week-saturday>.json` already
-   exists, exit early (the Sunday safety run relies on this).
+6. **Idempotent weekly runs.** If `data/db/meta.json` `last_run_week` == this
+   week's Saturday, exit early (the Sunday safety run relies on this).
+7. **DB is current-only.** Overwrite `data/db/*.json` each run — never write a
+   dated copy of it. Time series belong in the history CSVs, nowhere else.
 
 ---
 
 ## Data schema
 
-### `basket.json` item
+### `basket.json` item (the fixed SKU definition — version-controlled)
 ```json
 {
   "id": "gao-st25-5kg",
@@ -44,41 +54,77 @@ See `docs/PLAN.md` for the full plan.
 ```
 - `don_vi_chuan` — the unit the index compares in (`kg`, `lít`, `quả`, `cái`).
 - `trong_so` — SKU weight; all 40 sum to **1.0**.
-- `quy_doi` — how many `don_vi_chuan` units are in one pack, per chain (used to get
-  đơn giá chuẩn when pack sizes differ between chains).
+- `quy_doi` — how many `don_vi_chuan` units are in one pack, per chain.
 
-### `data/prices/<YYYY-MM-DD>.json` (one snapshot per week)
+### `data/db/products.json` — product catalog: **current details + current price** (overwritten every run)
+The "database" the product pages read. Rich detail plus the latest price for each
+SKU on each chain. Overwritten in place each run — **no dated copies**.
 ```json
 {
-  "week": "2026-07-04",
-  "captured_at": "2026-07-04T01:30:00+07:00",
-  "store": { "bhx": "2546", "winmart": "1535/1998" },
+  "updated": "2026-07-04",
   "items": [
     {
       "id": "gao-st25-5kg",
-      "bhx":     { "gia_niem_yet": 185000, "gia_khuyen_mai": 175000, "don_gia_chuan": 35000, "trang_thai": "in_stock",     "nguon": "api" },
-      "winmart": { "gia_niem_yet": 189000, "gia_khuyen_mai": null,   "don_gia_chuan": 37800, "trang_thai": "in_stock",     "nguon": "api" }
+      "ten_chuan": "Gạo ST25 túi 5kg",
+      "nhom": "Gạo & lương thực",
+      "don_vi_chuan": "kg",
+      "chains": {
+        "bhx": {
+          "ten_hien_thi": "Gạo ST25 Ông Cua túi 5kg",
+          "thuong_hieu": "ST25 Ông Cua",
+          "danh_muc": "Gạo",
+          "hinh_anh": "https://cdn.tgdd.vn/.../gao-st25.jpg",
+          "url": "https://www.bachhoaxanh.com/...",
+          "quy_cach": "5kg", "don_vi": "túi", "net": 5,
+          "gia_niem_yet": 185000, "gia_khuyen_mai": 175000, "don_gia_chuan": 35000,
+          "trang_thai": "in_stock", "nguon": "api"
+        },
+        "winmart": {
+          "ten_hien_thi": "Gạo ST25 túi 5kg",
+          "thuong_hieu": "ST25", "danh_muc": "Gạo",
+          "hinh_anh": "https://.../st25.jpg",
+          "url": "https://winmart.vn/products/...",
+          "quy_cach": "5kg", "don_vi": "túi", "net": 5,
+          "gia_niem_yet": 189000, "gia_khuyen_mai": null, "don_gia_chuan": 37800,
+          "trang_thai": "in_stock", "nguon": "api"
+        }
+      }
     }
   ]
 }
 ```
+
+### `data/db/stores.json` — pinned store metadata (current, overwritten)
+```json
+{
+  "updated": "2026-07-04",
+  "stores": {
+    "bhx":     { "provinceId": 3,  "storeId": 2546, "ten": "BHX <đường/phường>",     "dia_chi": "...", "khu_vuc": "TP.HCM" },
+    "winmart": { "storeCode": 1535, "storeGroupCode": 1998, "ten": "WinMart <...>",  "dia_chi": "...", "khu_vuc": "TP.HCM" }
+  }
+}
+```
+
+### `data/db/meta.json` — run marker (idempotency guard)
+```json
+{ "last_run_week": "2026-07-04", "captured_at": "2026-07-04T01:30:00+07:00" }
+```
+
+### History — the **only** time-indexed data (for dashboard analysis)
+```
+data/index-history.csv    date,index_chung,index_bhx,index_winmart
+data/items/<id>.csv       date,bhx_don_gia_chuan,winmart_don_gia_chuan
+```
+- We do **not** store a dated full-price snapshot. To compute this week's move:
+  read the current `don_gia_chuan` from `products.json` and the previous value from
+  the **last row** of `data/items/<id>.csv`; the **base week** is the **first row**.
+
+### Price fields (in `products.json.chains.<chain>`)
 - `gia_niem_yet` = list price; `gia_khuyen_mai` = promo (null if none).
 - **`don_gia_chuan`** = price a shopper pays, per `don_vi_chuan`:
   `(gia_khuyen_mai ?? gia_niem_yet) / quy_doi[chain]`. This is what the index uses.
 - `trang_thai` ∈ `in_stock` | `out_of_stock` | `carry_forward`.
 - All prices are integers in **VND**.
-
-### `data/index-history.csv`
-```
-date,index_chung,index_bhx,index_winmart
-2026-07-04,100.00,100.00,100.00
-```
-
-### `data/items/<id>.csv`
-```
-date,bhx_don_gia_chuan,winmart_don_gia_chuan
-2026-07-04,35000,37800
-```
 
 ---
 
@@ -90,7 +136,8 @@ For SKU *i*, chain *c*: relative `R_i,c = don_gia_chuan_now / don_gia_chuan_base
 - **Overall (`index_chung`):** first average the two chains per SKU
   `R_i = mean(R_i,bhx, R_i,winmart)` (use whichever chains are available), then
   `index_chung = 100 × Σ_i (w_i × R_i) / Σ_i w_i`.
-- **Base week** = the first snapshot; all three series read exactly `100.00` there.
+- `don_gia_chuan_now` comes from `products.json`; `don_gia_chuan_base` is the first
+  row of `data/items/<id>.csv`.
 - **Substitution week:** apply the chain-link factor so the level does not jump
   (see `docs/PLAN.md` §5).
 
@@ -98,10 +145,14 @@ For SKU *i*, chain *c*: relative `R_i,c = don_gia_chuan_now / don_gia_chuan_base
 
 ## Validation rules (`validator`)
 
+Operates on `data/db/products.json` (this week's current values) vs the last row of
+each `data/items/<id>.csv` (previous week). Corrections are written back into
+`products.json` before the index is computed.
+
 - **Jump guard:** if `don_gia_chuan` moves **> 50 %** vs last week for a SKU/chain,
   flag as suspected parse error. Default action: **drop that reading** (carry
-  forward instead) and log the raw value + reason. Keep it only if the crawler can
-  show the live promo that justifies it.
+  forward the previous value into `products.json`, mark `carry_forward`) and log the
+  raw value + reason. Keep it only if the crawler can show the live promo.
 - **Sanity band:** reject non-positive prices, prices off the item's historical
   median by > 10× (unit/parse bug), and unit-price mismatches between chains > 5×
   (likely a `quy_doi` error — fix `basket.json`, don't discard the SKU).
@@ -122,22 +173,32 @@ Headers: `Authorization: Bearer <token>`, `deviceid: <uuid>`,
   (`scripts/bhx_token.py`): open `www.bachhoaxanh.com`, intercept the
   `authorization` header off a `Menu/GetMenuV2` / `Location/...` request; read
   `deviceid` from cookie `ck_bhx_us_log` (`.did`) or generate a UUID.
+- Stores in a province: `GET /Location/V2/GetStoresByLocation?provinceId=<id>` → record chosen store in `stores.json`.
 - Category products: `GET /Category/V2/GetCate?provinceId=&wardId=&districtId=&storeId=&categoryUrl=<slug>&isMobile=true&isV2=true&pageSize=300`
 - Paged: `POST /Category/AjaxProduct` `{provinceId,wardId,districtId,storeId,CategoryId,PageIndex,PageSize}`
-- Products at `data.products[]`. **Field map (confirm on first live dump):**
-  name→`name`, unit→`unit`, net size→`netUnitValue`, list price→`sysPrice`,
-  promo/current price→`price`, discount→`discountPercent`, stock→stock flag.
-  ⚠️ If a live product's fields differ, **fix them here** — this is the only place.
+- Products at `data.products[]`.
 
 ### WinMart — `https://api-crownx.winmart.vn`
 Headers: browser UA, `origin: https://winmart.vn`, `referer: https://winmart.vn/`.
 - Category products: `GET /it/api/web/v3/item/category?orderByDesc=true&pageNumber=1&pageSize=100&slug=<cat-slug>&storeCode=<code>&storeGroupCode=<group>`
-- **Field map (confirm on first live dump):** name→`name`, list price→`price`,
-  promo/current→`salePrice`, unit→`uom`/`uomName`, product slug→`seoName`.
+
+### Product field map → `products.json` (⚠️ confirm on first live dump; fix here only)
+| `products.json` field | BHX (`data.products[]`) | WinMart (item) |
+|---|---|---|
+| `ten_hien_thi` | `name` | `name` |
+| `thuong_hieu` | `brandName` / `brand` | `brand` |
+| `danh_muc` | `category` / from category slug | `category` / from slug |
+| `hinh_anh` | `avatar` / `imgUrl` / `images[0]` | `image` / `thumbnail` |
+| `url` | build from `url`/seo slug | build from `seoName` |
+| `don_vi` | `unit` | `uom` / `uomName` |
+| `net` | `netUnitValue` | net from name/uom |
+| `gia_niem_yet` | `sysPrice` | `price` |
+| `gia_khuyen_mai` | `price` (if < sysPrice) | `salePrice` |
+| stock (`trang_thai`) | stock flag | stock flag |
 
 ---
 
-## Store IDs (pin at PoC, then never change silently)
+## Store IDs (pin at PoC, then never change silently → live in `data/db/stores.json`)
 
 | Chain | Fields | Value | Set |
 |---|---|---|---|
@@ -150,8 +211,10 @@ Headers: browser UA, `origin: https://winmart.vn`, `referer: https://winmart.vn/
 
 Mirror of `config/allowed-domains.txt`:
 `bachhoaxanh.com`, `www.bachhoaxanh.com`, `apibhx.tgdd.vn`, `winmart.vn`,
-`www.winmart.vn`, `api-crownx.winmart.vn`. Add any new API host you discover here
-**and** in `config/allowed-domains.txt`.
+`www.winmart.vn`, `api-crownx.winmart.vn`. Product images may load from CDN hosts
+(e.g. `cdn.tgdd.vn`); if the crawler must fetch/verify an image, add that host here
+**and** in `config/allowed-domains.txt`. (The dashboard just links image URLs — no
+fetch needed for display.)
 
 ---
 

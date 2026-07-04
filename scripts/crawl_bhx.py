@@ -50,12 +50,22 @@ def fetch_category(category_url: str, headers: dict) -> list:
     return data.get("data", {}).get("products", [])
 
 
-def normalize(product: dict, quy_doi: float) -> dict:
-    # CONFIRM these field names against a live product at PoC; fix in CLAUDE.md.
+def to_chain_obj(product: dict, quy_doi: float) -> dict:
+    """Build the full products.json chain object: DETAILS + current price.
+    CONFIRM these field names against a live product at PoC; fix in CLAUDE.md."""
     gia_niem_yet = int(product.get("sysPrice") or product.get("price") or 0)
     gia_khuyen_mai = int(product["price"]) if product.get("price") and product.get("price") != gia_niem_yet else None
     pay = gia_khuyen_mai or gia_niem_yet
     return {
+        # details
+        "ten_hien_thi": product.get("name"),
+        "thuong_hieu": product.get("brandName") or product.get("brand"),
+        "danh_muc": product.get("category"),
+        "hinh_anh": product.get("avatar") or product.get("imgUrl") or (product.get("images") or [None])[0],
+        "url": product.get("url"),
+        "don_vi": product.get("unit"),
+        "net": product.get("netUnitValue"),
+        # price
         "gia_niem_yet": gia_niem_yet,
         "gia_khuyen_mai": gia_khuyen_mai,
         "don_gia_chuan": round(pay / quy_doi) if quy_doi else pay,
@@ -65,16 +75,21 @@ def normalize(product: dict, quy_doi: float) -> dict:
 
 
 def main() -> None:
+    import lib_db  # writes into data/db/products.json (current-state, overwritten)
+
     basket = json.loads((ROOT / "basket.json").read_text())["items"]
     headers = get_headers()
-    out = {}
+    db = lib_db.load_products()
     # NOTE: mapping each SKU -> its category slug is part of P1; resolve via the
     # category tree (/Menu/GetMenuV2) and match by product name/slug.
     for item in basket:
-        # placeholder: real impl matches item inside its category's product list
+        # placeholder: real impl matches `item` inside its category's product list,
+        # then: lib_db.upsert_chain(db, item["id"], item, "bhx", to_chain_obj(prod, item["quy_doi"]["bhx"]))
         time.sleep(PACE_SECONDS)
-        out[item["id"]] = {"trang_thai": "out_of_stock", "nguon": "api", "_todo": "match at P1"}
-    print(json.dumps(out, ensure_ascii=False, indent=2))
+        lib_db.upsert_chain(db, item["id"], item, "bhx",
+                            {"trang_thai": "out_of_stock", "nguon": "api", "_todo": "match at P1"})
+    lib_db.save_products(db, updated=None)  # set real captured week at P2
+    print(f"bhx: wrote {len(basket)} SKU stubs into data/db/products.json")
 
 
 if __name__ == "__main__":
