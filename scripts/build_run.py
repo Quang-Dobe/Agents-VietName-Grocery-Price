@@ -105,7 +105,7 @@ def main() -> None:
                 "don_gia_chuan": c.get("don_gia_chuan"), "url": c.get("url")}
 
     dashboard = {
-        "updated": _vn_date(week), "week": week, "base_week": base_week,
+        "updated": _vn_date(week), "week": week, "base_week": len(ih_all) <= 1,
         "index": {"chung": 100.0, "bhx": None, "winmart": 100.0},
         "deltas": {"chung": None, "bhx": None, "winmart": None},
         "series": series,
@@ -119,14 +119,26 @@ def main() -> None:
     (SITE_DATA / "dashboard.json").write_text(
         json.dumps(dashboard, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    # per-item history for the detail pages
+    # per-item history for the detail pages + an items map for the JS bundle
+    items_map = {}
     for it in matched:
         rows = read_history(DATA / "items" / f"{it['id']}.csv")
-        (SITE_DATA / "items" / f"{it['id']}.json").write_text(json.dumps({
+        hist = {
             "labels": [r["date"][5:].replace("-", "/") for r in rows],
             "bhx": [float(r["bhx_don_gia_chuan"]) if r["bhx_don_gia_chuan"] else None for r in rows],
             "winmart": [float(r["winmart_don_gia_chuan"]) if r["winmart_don_gia_chuan"] else None for r in rows],
-        }, ensure_ascii=False) + "\n", encoding="utf-8")
+        }
+        (SITE_DATA / "items" / f"{it['id']}.json").write_text(
+            json.dumps(hist, ensure_ascii=False) + "\n", encoding="utf-8")
+        items_map[it["id"]] = {"id": it["id"], "ten_chuan": it["ten_chuan"], "nhom": it["nhom"],
+                               "don_vi_chuan": it["don_vi_chuan"], "chains": it["chains"], "history": hist}
+
+    # JS bundles: loaded via <script src>, so the UI shows real data BOTH on the
+    # live site and when index.html is opened as a local file (fetch() can't do that).
+    (SITE_DATA / "dashboard.js").write_text(
+        "window.GIACHO = " + json.dumps(dashboard, ensure_ascii=False) + ";\n", encoding="utf-8")
+    (SITE_DATA / "items.js").write_text(
+        "window.GIACHO_ITEMS = " + json.dumps(items_map, ensure_ascii=False) + ";\n", encoding="utf-8")
 
     # run log
     with (DATA / "run-log.md").open("a") as f:

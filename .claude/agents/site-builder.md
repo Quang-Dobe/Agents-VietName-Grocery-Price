@@ -17,11 +17,15 @@ components already in `site/`. See `docs/DATA-MODEL.md` for where data comes fro
      risers/fallers, the weekly note, and the **"Cách hoạt động / Workflow"
      reference link** to `docs/WORKFLOW.md` (keep this link — it is a requirement).
    - **Item detail** — served by the generic `site/items/item.html?id=<id>`, which
-     fetches `site/data/products.json` + `site/data/items/<id>.json` (written by
+     reads `window.GIACHO_ITEMS[id]` from `site/data/items.js` (written by
      `scripts/build_run.py`). Shows the product **detail** (image, brand, category,
      current list/promo price per chain, đơn giá chuẩn, stock) plus the dual-chain
      price-history chart and table. You normally just run `build_run.py`; no
      per-SKU HTML to generate.
+   - **Data is loaded via `<script src>`** (`site/data/dashboard.js` sets
+     `window.GIACHO`, `site/data/items.js` sets `window.GIACHO_ITEMS`) — NOT
+     `fetch()` — so the pages render real data both on GitHub Pages and when opened
+     as a local file. `build_run.py` regenerates these bundles each run.
    - **`site/methodology.html`** — basket, weights, formula, substitution policy.
    Data is injected as JSON the page reads at load; keep the site fully static.
 3. **Write the weekly note** yourself, in this session (no Claude API). Vietnamese,
