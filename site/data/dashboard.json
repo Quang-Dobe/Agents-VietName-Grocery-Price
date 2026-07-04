@@ -1,0 +1,348 @@
+{
+  "updated": "04/07/2026",
+  "week": "2026-07-04",
+  "base_week": true,
+  "index": {
+    "chung": 100.0,
+    "bhx": null,
+    "winmart": 100.0
+  },
+  "deltas": {
+    "chung": null,
+    "bhx": null,
+    "winmart": null
+  },
+  "series": {
+    "labels": [
+      "07/04"
+    ],
+    "chung": [
+      100.0
+    ],
+    "bhx": [
+      null
+    ],
+    "winmart": [
+      100.0
+    ]
+  },
+  "risers": [],
+  "fallers": [],
+  "compare": "Tuần đầu: đã lấy giá 28 mặt hàng ở WinMart. Bách Hóa Xanh sẽ bổ sung khi có đường lấy dữ liệu ổn định.",
+  "note": "Đây là tuần đầu tiên nên chỉ số được đặt ở mốc 100 để làm gốc so sánh. Tuần này ghi nhận giá của 28 mặt hàng tại WinMart; Bách Hóa Xanh tạm thời chưa lấy được nên chỉ số dùng dữ liệu WinMart. Từ tuần sau sẽ có thay đổi giá để theo dõi.",
+  "note_date": "Ghi nhận ngày 04/07/2026",
+  "coverage": {
+    "winmart": 28,
+    "total": 40
+  },
+  "products": [
+    {
+      "id": "gao-st25-5kg",
+      "ten_chuan": "Gạo ST25 túi 5kg",
+      "nhom": "Gạo & lương thực",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "NEPTUNE gạo ST25 special 5kg",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2026/01/10198642-20260108113018.png",
+      "gia": 139900,
+      "don_gia_chuan": 27980,
+      "url": "https://winmart.vn/products/neptune-gao-st25-special-5kg--s10198642"
+    },
+    {
+      "id": "gao-jasmine-5kg",
+      "ten_chuan": "Gạo thơm Jasmine túi 5kg",
+      "nhom": "Gạo & lương thực",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "AN ĐÌNH Gạo thơm ST25 mix ECO+++ 3kg",
+      "hinh_anh": null,
+      "gia": 95000,
+      "don_gia_chuan": 19000,
+      "url": "https://winmart.vn/products/an-dinh-gao-thom-st25-mix-eco-3kg--s10199993"
+    },
+    {
+      "id": "thit-heo-ba-roi-500g",
+      "ten_chuan": "Thịt ba rọi heo khay 500g",
+      "nhom": "Thịt heo",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Thịt ba rọi heo đặc biệt",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427314545410053663-kg-thit-dui-heo-og.jpg",
+      "gia": 239900,
+      "don_gia_chuan": 239900,
+      "url": "https://winmart.vn/products/thit-ba-roi-heo-dac-biet--s10053663"
+    },
+    {
+      "id": "thit-heo-xay-500g",
+      "ten_chuan": "Thịt heo xay khay 500g",
+      "nhom": "Thịt heo",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "MEATDELI Thịt heo xay chuẩn ngon (S)",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617947-20241205094732.jpg",
+      "gia": 141900,
+      "don_gia_chuan": 141900,
+      "url": "https://winmart.vn/products/meat-deli-thit-heo-xay--s10617947"
+    },
+    {
+      "id": "suon-non-heo-500g",
+      "ten_chuan": "Sườn non heo khay 500g",
+      "nhom": "Thịt heo",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Sườn non heo_MH giun quế",
+      "hinh_anh": null,
+      "gia": 239900,
+      "don_gia_chuan": 239900,
+      "url": "https://winmart.vn/products/suon-non-heo_mh-giun-que--s10323948"
+    },
+    {
+      "id": "ga-ta-nguyen-con-1kg",
+      "ten_chuan": "Gà ta nguyên con ~1kg",
+      "nhom": "Thịt gà",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Gà ta nguyên con 3F",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/04/ga-ta-3f-khay-vang-20240415024517.jpeg",
+      "gia": 129900,
+      "don_gia_chuan": 129900,
+      "url": "https://winmart.vn/products/3f-ga-ta--s10620356"
+    },
+    {
+      "id": "canh-ga-500g",
+      "ten_chuan": "Cánh gà khay 500g",
+      "nhom": "Thịt gà",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "CP Cánh gà công nghiệp VietGap",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428501154810053639-kg-cp-chon-giu-heo-og.jpg",
+      "gia": 103900,
+      "don_gia_chuan": 103900,
+      "url": "https://winmart.vn/products/cp-canh-ga-cong-nghiep-vietgap--s10053639"
+    },
+    {
+      "id": "thit-bo-than-300g",
+      "ten_chuan": "Thịt bò thăn khay 300g",
+      "nhom": "Thịt bò",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Thịt bò viên khay Hoa Doanh 300g",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/thit-bo-vien-khay-hoa-doanh-300g_7528a7df-2f31-4ab7-937d-dffdbf4c7ede-og.jpg",
+      "gia": 52000,
+      "don_gia_chuan": 173333,
+      "url": "https://winmart.vn/products/hoa-doanh-thit-bo-vien-khay-300g--s10620243"
+    },
+    {
+      "id": "thit-bo-xay-300g",
+      "ten_chuan": "Thịt bò xay khay 300g",
+      "nhom": "Thịt bò",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Thịt bò Úc Kiaora xay khay 200g",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/8936150841113_7bc1837c-aa53-4a4d-a62c-28bed51c0e98-og.jpg",
+      "gia": 68700,
+      "don_gia_chuan": 229000,
+      "url": "https://winmart.vn/products/kiaora-thit-bo-uc-xay-200g--s10282507"
+    },
+    {
+      "id": "ca-nuc-500g",
+      "ten_chuan": "Cá nục tươi khay 500g",
+      "nhom": "Cá & thủy sản",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Cá nục làm sạch bỏ đầu 8-12 con/kg",
+      "hinh_anh": null,
+      "gia": 118900,
+      "don_gia_chuan": 118900,
+      "url": "https://winmart.vn/products/ca-nuc-lam-sach-bo-dau-8-12-conkg--s10060420"
+    },
+    {
+      "id": "tom-the-500g",
+      "ten_chuan": "Tôm thẻ tươi 500g",
+      "nhom": "Cá & thủy sản",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "HDC Tôm thẻ hấp ĐL size 40-60con/kg",
+      "hinh_anh": null,
+      "gia": 299900,
+      "don_gia_chuan": 299900,
+      "url": "https://winmart.vn/products/hdc-tom-the-hap-dl-size-40-60conkg--s10283920"
+    },
+    {
+      "id": "trung-ga-hop-10",
+      "ten_chuan": "Trứng gà hộp 10 quả",
+      "nhom": "Trứng",
+      "don_vi_chuan": "quả",
+      "ten_hien_thi": "Trứng gà so 729 Ba Vì giỏ 10 quả",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/trung-ga-so-729-ba-vi-gio-10-qua.jpg",
+      "gia": 55000,
+      "don_gia_chuan": 5500,
+      "url": "https://winmart.vn/products/729-ba-vi-trung-ga-so-gio-10-qua--s10006025"
+    },
+    {
+      "id": "ca-chua-1kg",
+      "ten_chuan": "Cà chua ~1kg",
+      "nhom": "Rau củ",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Cà chua đỏ 500g",
+      "hinh_anh": null,
+      "gia": 13500,
+      "don_gia_chuan": 13500,
+      "url": "https://winmart.vn/products/ca-chua-do-500g--s10290350"
+    },
+    {
+      "id": "khoai-tay-1kg",
+      "ten_chuan": "Khoai tây ~1kg",
+      "nhom": "Rau củ",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Khoai tây cắt sợi Shoestring Farm Best 1kg",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/khoai-tay-cat-soi-shoestring-farm-best-1kg.jpg",
+      "gia": 85500,
+      "don_gia_chuan": 85500,
+      "url": "https://winmart.vn/products/farm-best-khoai-tay-soi-nho-1kg--s10182879"
+    },
+    {
+      "id": "hanh-la-100g",
+      "ten_chuan": "Hành lá gói 100g",
+      "nhom": "Rau củ",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Hành lá WinEco gói 100g",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/10281879.jpg",
+      "gia": 5520,
+      "don_gia_chuan": 55200,
+      "url": "https://winmart.vn/products/wineco-hanh-la-l1-100gr--s10281879"
+    },
+    {
+      "id": "cai-thao-1kg",
+      "ten_chuan": "Cải thảo ~1kg",
+      "nhom": "Rau củ",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Cải thảo",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428528568010053860-kg-cai-xanh-(cai-canh)-l1-vineco-og.jpg",
+      "gia": 19900,
+      "don_gia_chuan": 19900,
+      "url": "https://winmart.vn/products/cai-thao--s10053860"
+    },
+    {
+      "id": "cam-sanh-1kg",
+      "ten_chuan": "Cam sành ~1kg",
+      "nhom": "Trái cây",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Cam Sành loại nhỏ",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/cam-sanh-loai-nho_c7469128-7397-41d9-8fa9-345c3c46db40-og.jpg",
+      "gia": 32900,
+      "don_gia_chuan": 32900,
+      "url": "https://winmart.vn/products/cam-sanh--s10054858"
+    },
+    {
+      "id": "dau-an-tuong-an-1l",
+      "ten_chuan": "Dầu ăn Tường An chai 1 lít",
+      "nhom": "Dầu ăn",
+      "don_vi_chuan": "lít",
+      "ten_hien_thi": "Dầu ăn Tường An can 5L",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427293308210010153-cha-dau-an-tuong-an-gold-chai-1-lot-og.jpg",
+      "gia": 325000,
+      "don_gia_chuan": 325000,
+      "url": "https://winmart.vn/products/tuong-an-dau-an-danh-tieng-can-5l--s10010153"
+    },
+    {
+      "id": "dau-an-simply-1l",
+      "ten_chuan": "Dầu ăn Simply chai 1 lít",
+      "nhom": "Dầu ăn",
+      "don_vi_chuan": "lít",
+      "ten_hien_thi": "Dầu ăn thượng hạng  Neptune Light 1 lít",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2026/07/1-20260701061654.png",
+      "gia": 56100,
+      "don_gia_chuan": 56100,
+      "url": "https://winmart.vn/products/neptune-light-dau-an-thuong-hang-1l--s10170264"
+    },
+    {
+      "id": "nuoc-mam-nam-ngu-500ml",
+      "ten_chuan": "Nước mắm Nam Ngư chai 500ml",
+      "nhom": "Gia vị",
+      "don_vi_chuan": "lít",
+      "ten_hien_thi": "NAM NGƯ Nước Mắm Nhãn Vàng 900ml T6 Ex",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2025/07/10199835-20250719064359.png",
+      "gia": 61700,
+      "don_gia_chuan": 123400,
+      "url": "https://winmart.vn/products/nam-ngu-nuoc-mam-nhan-vang-900ml-t6-ex--s10199835"
+    },
+    {
+      "id": "bot-ngot-ajinomoto-400g",
+      "ten_chuan": "Bột ngọt Ajinomoto gói 400g",
+      "nhom": "Gia vị",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Bột ngọt (mì chính) Ajinomoto 400g",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428595394410008597-g1-gia-vi-nom-san-co-kho-rieng-aji-quick-ajinomoto-gui-29g-og.jpg",
+      "gia": 34100,
+      "don_gia_chuan": 85250,
+      "url": "https://winmart.vn/products/ajinomoto-bot-ngot-mi-chinh-400g--s10008597"
+    },
+    {
+      "id": "sua-tuoi-vinamilk-1l",
+      "ten_chuan": "Sữa tươi Vinamilk hộp 1 lít",
+      "nhom": "Sữa",
+      "don_vi_chuan": "lít",
+      "ten_hien_thi": "VINAMILK Sữa tươi TT Dừa 180ml",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/11/10198276-2--20241107090905.jpg",
+      "gia": 36300,
+      "don_gia_chuan": 36300,
+      "url": "https://winmart.vn/products/vinamilk-sua-tuoi-tt-dua-180ml--s10198276"
+    },
+    {
+      "id": "sua-chua-vinamilk-loc4",
+      "ten_chuan": "Sữa chua Vinamilk lốc 4 hộp",
+      "nhom": "Sữa",
+      "don_vi_chuan": "cái",
+      "ten_hien_thi": "BA VÌ Sữa chua phomai hũ 100g",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2025/12/10197388_ba-vi-hop-20251202084238.png",
+      "gia": 9100,
+      "don_gia_chuan": 2275,
+      "url": "https://winmart.vn/products/ba-vi-sua-chua-phomai-hu-100g--s10197388"
+    },
+    {
+      "id": "mi-3-mien-goi",
+      "ten_chuan": "Mì 3 Miền gói 65g",
+      "nhom": "Mì gói",
+      "don_vi_chuan": "gói",
+      "ten_hien_thi": "3 MIỀN Mì gà sợi phở 65g",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/11/frame-2-8--20241104093203.jpg",
+      "gia": 86400,
+      "don_gia_chuan": 86400,
+      "url": "https://winmart.vn/products/3-mien-mi-ga-soi-pho-65g--s10198356"
+    },
+    {
+      "id": "ca-phe-trung-nguyen-500g",
+      "ten_chuan": "Cà phê Trung Nguyên gói 500g",
+      "nhom": "Cà phê",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Trung Nguyên Cà phê Sấy lạnh Gold 100g",
+      "hinh_anh": null,
+      "gia": 231300,
+      "don_gia_chuan": 462600,
+      "url": "https://winmart.vn/products/trung-nguyen-ca-phe-say-lanh-gold-100g--s10284708"
+    },
+    {
+      "id": "giay-ve-sinh-loc10",
+      "ten_chuan": "Giấy vệ sinh lốc 10 cuộn",
+      "nhom": "Đồ dùng thiết yếu",
+      "don_vi_chuan": "cuộn",
+      "ten_hien_thi": "Giấy vệ sinh Elene hồng 3 lớp 10 cuộn",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2023/07/giay-elene-20230707081504.png",
+      "gia": 65000,
+      "don_gia_chuan": 6500,
+      "url": "https://winmart.vn/products/elene-giay-ve-sinh-10-cuon-hong-4lop-loi--s10020669"
+    },
+    {
+      "id": "nuoc-rua-chen-sunlight-750g",
+      "ten_chuan": "Nước rửa chén Sunlight 750g",
+      "nhom": "Đồ dùng thiết yếu",
+      "don_vi_chuan": "lít",
+      "ten_hien_thi": "Nước rửa chén chanh Sunlight chai 750g",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2023/04/8934868147404-20230425031742.png",
+      "gia": 28800,
+      "don_gia_chuan": 38400,
+      "url": "https://winmart.vn/products/sunlight-nuoc-rua-chen-chanh-chai-750g--s10638822"
+    },
+    {
+      "id": "bot-giat-omo-3kg",
+      "ten_chuan": "Bột giặt Omo túi 3kg",
+      "nhom": "Đồ dùng thiết yếu",
+      "don_vi_chuan": "kg",
+      "ten_hien_thi": "Bột giặt OMO hệ bọt thông minh túi 3kg",
+      "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/11/10406729-20241110105943.jpg",
+      "gia": 146800,
+      "don_gia_chuan": 48933,
+      "url": "https://winmart.vn/products/omo-bot-giat-thong-minh-3kg29kg--s10406729"
+    }
+  ]
+}

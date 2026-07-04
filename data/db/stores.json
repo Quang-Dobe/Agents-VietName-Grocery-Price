@@ -1,7 +1,19 @@
 {
-  "updated": null,
+  "updated": "2026-07-04",
   "stores": {
-    "bhx":     { "provinceId": null, "storeId": null, "ten": null, "dia_chi": null, "khu_vuc": "TP.HCM" },
-    "winmart": { "storeCode": null, "storeGroupCode": null, "ten": null, "dia_chi": null, "khu_vuc": "TP.HCM" }
+    "bhx": {
+      "provinceId": null,
+      "storeId": null,
+      "ten": null,
+      "dia_chi": null,
+      "khu_vuc": "TP.HCM"
+    },
+    "winmart": {
+      "storeCode": 1535,
+      "storeGroupCode": 1998,
+      "ten": "WinMart (pinned PoC store)",
+      "dia_chi": null,
+      "khu_vuc": "TP.HCM"
+    }
   }
 }

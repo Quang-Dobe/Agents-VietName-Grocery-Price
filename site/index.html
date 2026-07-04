@@ -100,6 +100,13 @@
         <p class="note date" id="noteDate"></p>
       </div>
     </section>
+
+    <!-- Products (the real basket this week) -->
+    <div class="section-head">
+      <h2>Rổ hàng tuần này</h2>
+      <span class="cnt" id="prodCount"></span>
+    </div>
+    <section class="grid prod-grid" id="prodGrid" aria-label="Rổ hàng"></section>
   </main>
 
   <footer class="site-footer">
@@ -114,86 +121,94 @@
     </div>
   </footer>
 
-  <!-- DATA: site-builder overwrites this block each week. Values below are SAMPLE
-       so the page renders during development; not real prices. -->
+  <!-- Fallback sample; the real weekly data is fetched from data/dashboard.json -->
   <script id="giacho-data">
-  window.GIACHO = {
-    updated: "05/07/2026",
-    labels: ["06/06", "13/06", "20/06", "27/06", "04/07"],
-    chung:   [100.0, 100.8, 101.5, 100.9, 102.4],
-    bhx:     [100.0, 101.1, 102.0, 101.2, 102.9],
-    winmart: [100.0, 100.5, 101.0, 100.6, 101.9],
-    deltas:  { chung: 1.5, bhx: 1.7, winmart: 1.3 },
-    risers: [
-      { ten_chuan: "Thịt heo ba rọi", pct: 6.4 },
-      { ten_chuan: "Cà chua", pct: 5.1 },
-      { ten_chuan: "Trứng gà", pct: 3.8 },
-      { ten_chuan: "Rau muống", pct: 2.9 },
-      { ten_chuan: "Cá nục", pct: 2.2 }
-    ],
-    fallers: [
-      { ten_chuan: "Táo Mỹ", pct: -4.7 },
-      { ten_chuan: "Dầu ăn Simply", pct: -3.1 },
-      { ten_chuan: "Cam sành", pct: -2.5 },
-      { ten_chuan: "Đường Biên Hòa", pct: -1.4 },
-      { ten_chuan: "Mì Hảo Hảo", pct: -0.8 }
-    ],
-    compare: "Tuần này WinMart nhỉnh hơn về giá — rổ hàng ở WinMart rẻ hơn BHX khoảng 1,0 điểm chỉ số.",
-    note: "Chỉ số chung tăng 1,5% so với tuần trước, chủ yếu do thịt heo và rau ăn lá lên giá. Trái cây nhập (táo, cam) giảm nhẹ nên phần nào bù lại. Nhìn chung, đi chợ tuần này đắt hơn một chút.",
-    note_date: "Ghi nhận ngày 05/07/2026"
+  window.GIACHO_FALLBACK = {
+    updated: "—", base_week: true,
+    series: { labels: ["04/07"], chung: [100], bhx: [null], winmart: [100] },
+    index: { chung: 100, bhx: null, winmart: 100 }, deltas: {},
+    risers: [], fallers: [], products: [],
+    compare: "Đang tải dữ liệu…", note: "Đang tải dữ liệu…", note_date: ""
   };
   </script>
   <script src="assets/chart.umd.min.js"></script>
   <script src="assets/app.js"></script>
   <script>
   (function () {
-    var d = window.GIACHO || {};
-    var last = function (a) { return a && a.length ? a[a.length - 1] : null; };
+    var vnd = new Intl.NumberFormat("vi-VN");
+    function pct(x) { return new Intl.NumberFormat("vi-VN", { minimumFractionDigits: 1, maximumFractionDigits: 1, signDisplay: "always" }).format(x); }
+
     function setTile(id, val, dId, delta) {
       document.getElementById(id).textContent = window.GiaCho.fmtIndex(val);
       var el = document.getElementById(dId);
-      if (delta == null) { el.className = "delta flat"; el.textContent = "–"; return; }
+      if (delta == null) { el.className = "delta flat"; el.textContent = "mốc gốc"; return; }
       var up = delta > 0.05, down = delta < -0.05;
       el.className = "delta " + (up ? "up" : down ? "down" : "flat");
-      var arrow = up ? "▲" : down ? "▼" : "–";
-      var num = new Intl.NumberFormat("vi-VN", { minimumFractionDigits: 1, maximumFractionDigits: 1, signDisplay: "always" }).format(delta);
-      el.textContent = arrow + " " + num + "%";
+      el.textContent = (up ? "▲ " : down ? "▼ " : "– ") + pct(delta) + "%";
     }
-    setTile("v-chung", last(d.chung), "d-chung", d.deltas && d.deltas.chung);
-    setTile("v-bhx", last(d.bhx), "d-bhx", d.deltas && d.deltas.bhx);
-    setTile("v-winmart", last(d.winmart), "d-winmart", d.deltas && d.deltas.winmart);
 
-    window.GiaCho.initIndexChart(document.getElementById("indexChart"), d);
+    function render(d) {
+      var s = d.series || {};
+      setTile("v-chung", d.index && d.index.chung, "d-chung", d.deltas && d.deltas.chung);
+      setTile("v-bhx", d.index && d.index.bhx, "d-bhx", d.deltas && d.deltas.bhx);
+      setTile("v-winmart", d.index && d.index.winmart, "d-winmart", d.deltas && d.deltas.winmart);
 
-    // table
-    var tb = document.getElementById("tblBody");
-    (d.labels || []).forEach(function (wk, i) {
-      var tr = document.createElement("tr");
-      [wk, window.GiaCho.fmtIndex(d.chung[i]), window.GiaCho.fmtIndex(d.bhx[i]), window.GiaCho.fmtIndex(d.winmart[i])]
-        .forEach(function (t, j) { var td = document.createElement("td"); td.textContent = t; if (j === 0) td.style.textAlign = "left"; tr.appendChild(td); });
-      tb.appendChild(tr);
-    });
-    window.GiaCho.wireToggle(document.getElementById("tblBtn"), document.getElementById("tblPanel"));
+      window.GiaCho.initIndexChart(document.getElementById("indexChart"),
+        { labels: s.labels || [], chung: s.chung || [], bhx: s.bhx || [], winmart: s.winmart || [] });
 
-    function movers(id, arr, cls) {
-      var ul = document.getElementById(id);
-      if (!arr || !arr.length) { ul.innerHTML = '<li class="empty">Chưa có dữ liệu</li>'; return; }
-      arr.forEach(function (m) {
-        var li = document.createElement("li");
-        var nm = document.createElement("span"); nm.className = "nm"; nm.textContent = m.ten_chuan;
-        var ch = document.createElement("span"); ch.className = "chip " + cls;
-        var sign = new Intl.NumberFormat("vi-VN", { minimumFractionDigits: 1, maximumFractionDigits: 1, signDisplay: "always" }).format(m.pct);
-        ch.textContent = (cls === "up" ? "▲ " : "▼ ") + sign + "%";
-        li.appendChild(nm); li.appendChild(ch); ul.appendChild(li);
+      var tb = document.getElementById("tblBody");
+      (s.labels || []).forEach(function (wk, i) {
+        var tr = document.createElement("tr");
+        [wk, window.GiaCho.fmtIndex(s.chung[i]), window.GiaCho.fmtIndex(s.bhx[i]), window.GiaCho.fmtIndex(s.winmart[i])]
+          .forEach(function (t, j) { var td = document.createElement("td"); td.textContent = t; if (j === 0) td.style.textAlign = "left"; tr.appendChild(td); });
+        tb.appendChild(tr);
+      });
+      window.GiaCho.wireToggle(document.getElementById("tblBtn"), document.getElementById("tblPanel"));
+
+      function movers(id, arr, cls) {
+        var ul = document.getElementById(id);
+        if (!arr || !arr.length) { ul.innerHTML = '<li class="empty">' + (d.base_week ? "Tuần đầu — chưa có thay đổi để so sánh" : "Chưa có dữ liệu") + "</li>"; return; }
+        arr.forEach(function (m) {
+          var li = document.createElement("li");
+          var nm = document.createElement("span"); nm.className = "nm"; nm.textContent = m.ten_chuan;
+          var ch = document.createElement("span"); ch.className = "chip " + cls;
+          ch.textContent = (cls === "up" ? "▲ " : "▼ ") + pct(m.pct) + "%";
+          li.appendChild(nm); li.appendChild(ch); ul.appendChild(li);
+        });
+      }
+      movers("risers", d.risers, "up");
+      movers("fallers", d.fallers, "down");
+
+      document.getElementById("compare").textContent = d.compare || "–";
+      document.getElementById("note").textContent = d.note || "–";
+      document.getElementById("noteDate").textContent = d.note_date || "";
+      document.getElementById("updated").textContent = "Cập nhật lần cuối: " + (d.updated || "–");
+
+      // products grid
+      var grid = document.getElementById("prodGrid"), prods = d.products || [];
+      document.getElementById("prodCount").textContent = prods.length ? prods.length + " mặt hàng · WinMart" : "";
+      if (!prods.length) { grid.innerHTML = '<p class="empty">Chưa có mặt hàng.</p>'; return; }
+      prods.forEach(function (p) {
+        var a = document.createElement("a"); a.className = "card pcard"; a.href = "items/item.html?id=" + encodeURIComponent(p.id);
+        if (p.hinh_anh) {
+          var img = document.createElement("img"); img.className = "thumb"; img.src = p.hinh_anh; img.alt = p.ten_chuan; img.loading = "lazy";
+          img.onerror = function () { var ph = document.createElement("div"); ph.className = "thumb ph"; ph.textContent = "🛒"; img.replaceWith(ph); };
+          a.appendChild(img);
+        } else { var ph = document.createElement("div"); ph.className = "thumb ph"; ph.textContent = "🛒"; a.appendChild(ph); }
+        var nm = document.createElement("div"); nm.className = "pn"; nm.textContent = p.ten_chuan; a.appendChild(nm);
+        var g = document.createElement("div"); g.className = "pg"; g.textContent = p.nhom; a.appendChild(g);
+        var pp = document.createElement("div"); pp.className = "pp";
+        var amt = document.createElement("span"); amt.className = "amt"; amt.textContent = p.don_gia_chuan != null ? vnd.format(p.don_gia_chuan) + "đ" : "–";
+        var un = document.createElement("span"); un.className = "unit"; un.textContent = " /" + (p.don_vi_chuan || "đv");
+        pp.appendChild(amt); pp.appendChild(un); a.appendChild(pp);
+        grid.appendChild(a);
       });
     }
-    movers("risers", d.risers, "up");
-    movers("fallers", d.fallers, "down");
 
-    document.getElementById("compare").textContent = d.compare || "–";
-    document.getElementById("note").textContent = d.note || "–";
-    document.getElementById("noteDate").textContent = d.note_date || "";
-    document.getElementById("updated").textContent = "Cập nhật lần cuối: " + (d.updated || "–");
+    fetch("data/dashboard.json", { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(render)
+      .catch(function () { render(window.GIACHO_FALLBACK); });
   })();
   </script>
 </body>

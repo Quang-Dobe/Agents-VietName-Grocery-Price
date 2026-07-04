@@ -16,10 +16,12 @@ components already in `site/`. See `docs/DATA-MODEL.md` for where data comes fro
      chart (chung/BHX/WinMart, base 100), BHX vs WinMart comparison, top 5
      risers/fallers, the weekly note, and the **"Cách hoạt động / Workflow"
      reference link** to `docs/WORKFLOW.md` (keep this link — it is a requirement).
-   - **`site/items/<id>.html`** — from `products.json`: the product **detail**
-     (image, brand, category, pinned store, current list/promo price per chain,
-     đơn giá chuẩn, stock) **plus** the dual-chain price-history chart from the item
-     CSV and a data table. Use the `site/items/_template.html` structure.
+   - **Item detail** — served by the generic `site/items/item.html?id=<id>`, which
+     fetches `site/data/products.json` + `site/data/items/<id>.json` (written by
+     `scripts/build_run.py`). Shows the product **detail** (image, brand, category,
+     current list/promo price per chain, đơn giá chuẩn, stock) plus the dual-chain
+     price-history chart and table. You normally just run `build_run.py`; no
+     per-SKU HTML to generate.
    - **`site/methodology.html`** — basket, weights, formula, substitution policy.
    Data is injected as JSON the page reads at load; keep the site fully static.
 3. **Write the weekly note** yourself, in this session (no Claude API). Vietnamese,
