@@ -1,5 +1,43 @@
 {
-  "week": "2026-07-04",
-  "risers": [],
-  "fallers": []
+  "week": "2026-07-08",
+  "risers": [
+    {
+      "id": "thit-heo-xay-500g",
+      "ten_chuan": "Thịt heo xay khay 500g",
+      "pct": 19.0,
+      "direction": "up"
+    },
+    {
+      "id": "cam-sanh-1kg",
+      "ten_chuan": "Cam sành ~1kg",
+      "pct": 6.4,
+      "direction": "up"
+    }
+  ],
+  "fallers": [
+    {
+      "id": "dui-ga-cn-500g",
+      "ten_chuan": "Đùi gà công nghiệp khay 500g",
+      "pct": -11.5,
+      "direction": "down"
+    },
+    {
+      "id": "sua-tuoi-vinamilk-1l",
+      "ten_chuan": "Sữa tươi Vinamilk hộp 1 lít",
+      "pct": -8.2,
+      "direction": "down"
+    },
+    {
+      "id": "suon-non-heo-500g",
+      "ten_chuan": "Sườn non heo khay 500g",
+      "pct": -5.9,
+      "direction": "down"
+    },
+    {
+      "id": "hanh-la-100g",
+      "ten_chuan": "Hành lá gói 100g",
+      "pct": -0.4,
+      "direction": "down"
+    }
+  ]
 }
