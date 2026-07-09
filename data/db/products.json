@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08",
+  "updated": "2026-07-09",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -96,9 +96,18 @@
       "id": "thit-heo-nac-dui-500g",
       "chains": {
         "winmart": {
-          "trang_thai": "out_of_stock",
-          "nguon": "api",
-          "_note": "no confident match (best 0.00)"
+          "ten_hien_thi": "MEATDELI Thịt Nạc dăm heo (Thịt Nạc vai) (S)",
+          "thuong_hieu": "MEAT DELI",
+          "danh_muc": "Thịt - Thủy Hải Sản",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617957-20241205094605.jpg",
+          "url": "https://winmart.vn/products/meat-deli-nac-dam-heo--s10617957",
+          "don_vi": "Kg",
+          "net": 1.0,
+          "gia_niem_yet": 204900,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 204900,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
@@ -109,16 +118,16 @@
       "id": "thit-heo-xay-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "MEAT DELI Thịt heo tảng cho món nướng",
+          "ten_hien_thi": "MEATDELI Thịt heo xay chuẩn ngon (S)",
           "thuong_hieu": "MEAT DELI",
-          "danh_muc": "Thịt",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/meat-deli-thit-heo-tang-cho-mon-nuong--s10274278",
+          "danh_muc": "Thịt - Thủy Hải Sản",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617947-20241205094732.jpg",
+          "url": "https://winmart.vn/products/meat-deli-thit-heo-xay--s10617947",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 168900,
+          "gia_niem_yet": 141900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 168900,
+          "don_gia_chuan": 141900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -131,16 +140,16 @@
       "id": "suon-non-heo-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Sườn non heo_MH giun quế",
+          "ten_hien_thi": "Sườn non heo đặc biệt",
           "thuong_hieu": "NOBRAND",
           "danh_muc": "Thịt",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/suon-non-heo_mh-giun-que--s10323948",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427337310110053664-kg-syp-lo-(bung-cai)-trang-og.jpg",
+          "url": "https://winmart.vn/products/suon-non-heo-dac-biet--s10053664",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 239900,
+          "gia_niem_yet": 255000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 239900,
+          "don_gia_chuan": 255000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -183,8 +192,8 @@
           "don_vi": "Kg",
           "net": 1.0,
           "gia_niem_yet": 94000,
-          "gia_khuyen_mai": 84900,
-          "don_gia_chuan": 84900,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 94000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -308,8 +317,8 @@
           "gia_niem_yet": 299900,
           "gia_khuyen_mai": null,
           "don_gia_chuan": 299900,
-          "trang_thai": "carry_forward",
-          "nguon": "carry_forward"
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
@@ -464,8 +473,8 @@
           "don_vi": "Kg",
           "net": 1.0,
           "gia_niem_yet": 40900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 40900,
+          "gia_khuyen_mai": 34900,
+          "don_gia_chuan": 34900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -478,18 +487,18 @@
       "id": "tao-my-1kg",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "WMNK Táo Gala Nam Phi size nhỏ",
+          "ten_hien_thi": "Táo Gala New túi 1Kg",
           "thuong_hieu": "NOBRAND",
-          "danh_muc": "Trái cây",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/wmnk-tao-gala-nam-phi-size-nho--s10283922",
-          "don_vi": "Kg",
+          "danh_muc": "Trái cây tươi",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2023/02/tao-gala-new-tui-1kg.png",
+          "url": "https://winmart.vn/products/tao-gala-new-tui-1kg--s10265791",
+          "don_vi": "Gói",
           "net": 1.0,
-          "gia_niem_yet": 59000,
-          "gia_khuyen_mai": 49000,
-          "don_gia_chuan": 49000,
-          "trang_thai": "carry_forward",
-          "nguon": "carry_forward"
+          "gia_niem_yet": 135000,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 135000,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
@@ -500,16 +509,16 @@
       "id": "cam-sanh-1kg",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Cam Sành loại nhỏ",
+          "ten_hien_thi": "Cam sành loại 1",
           "thuong_hieu": "NOBRAND",
-          "danh_muc": "Trái Cây",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/cam-sanh-loai-nho_c7469128-7397-41d9-8fa9-345c3c46db40-og.jpg",
-          "url": "https://winmart.vn/products/cam-sanh--s10054858",
+          "danh_muc": "Trái cây tươi",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/cam-sanh-loai-1.jpg",
+          "url": "https://winmart.vn/products/cam-sanh-loai-1--s10242468",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 35000,
+          "gia_niem_yet": 39900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 35000,
+          "don_gia_chuan": 39900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -596,8 +605,8 @@
           "don_vi": "Gói",
           "net": 1.0,
           "gia_niem_yet": 29900,
-          "gia_khuyen_mai": 27200,
-          "don_gia_chuan": 27200,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 29900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -684,8 +693,8 @@
           "don_vi": "Hộp",
           "net": 0.38,
           "gia_niem_yet": 29500,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 77632,
+          "gia_khuyen_mai": 28800,
+          "don_gia_chuan": 75789,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -706,8 +715,8 @@
           "don_vi": "Gói 4",
           "net": 4,
           "gia_niem_yet": 26800,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 6700,
+          "gia_khuyen_mai": 22800,
+          "don_gia_chuan": 5700,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -720,9 +729,18 @@
       "id": "mi-hao-hao-goi",
       "chains": {
         "winmart": {
-          "trang_thai": "out_of_stock",
-          "nguon": "api",
-          "_note": "no confident match (best 0.00)"
+          "ten_hien_thi": "Mì Handy Hảo Hảo chay lẩu nấm thập cẩm 66g",
+          "thuong_hieu": "HẢO HẢO",
+          "danh_muc": "Mì",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/11/10617354-20241119120714.jpg",
+          "url": "https://winmart.vn/products/acecook-mi-handy-chay-lau-nam-t.cam--s10617354",
+          "don_vi": "Ly",
+          "net": 1,
+          "gia_niem_yet": 10200,
+          "gia_khuyen_mai": 9600,
+          "don_gia_chuan": 9600,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
@@ -741,8 +759,8 @@
           "don_vi": "Thùng",
           "net": 1,
           "gia_niem_yet": 101000,
-          "gia_khuyen_mai": 86400,
-          "don_gia_chuan": 86400,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 101000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -768,18 +786,18 @@
       "id": "giay-ve-sinh-loc10",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Giấy vệ sinh Elene hồng 3 lớp 10 cuộn",
-          "thuong_hieu": "ELENE",
+          "ten_hien_thi": "Giấy vệ sinh  Fairy cao cấp 10 cuộn 4 lớp",
+          "thuong_hieu": "FAIRY",
           "danh_muc": "Khăn Giấy - Khăn Ướt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2023/07/giay-elene-20230707081504.png",
-          "url": "https://winmart.vn/products/elene-giay-ve-sinh-10-cuon-hong-4lop-loi--s10020669",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/11/10195149-20241108082331.jpg",
+          "url": "https://winmart.vn/products/fairy-giay-ve-sinh-cao-cap-10-cuon-4-lop--s10195149",
           "don_vi": "Lốc, Lô, Lố",
           "net": 10,
-          "gia_niem_yet": 116900,
-          "gia_khuyen_mai": 65000,
-          "don_gia_chuan": 6500,
-          "trang_thai": "carry_forward",
-          "nguon": "carry_forward"
+          "gia_niem_yet": 109000,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 10900,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
@@ -800,8 +818,8 @@
           "gia_niem_yet": 28800,
           "gia_khuyen_mai": null,
           "don_gia_chuan": 38400,
-          "trang_thai": "carry_forward",
-          "nguon": "carry_forward"
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },

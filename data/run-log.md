@@ -46,3 +46,8 @@ Format:
   Separately: `index-history.csv` values are still a hardcoded 100.00 placeholder
   in `build_run.py` (the weighted Laspeyres formula from `CLAUDE.md` isn't wired
   up yet) — flagged for follow-up, out of scope for this weekly-data run.
+
+## 2026-07-09  (captured 2026-07-09T06:00:00+07:00)
+- WinMart: ok — 36/40 SKU
+- BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
+- Index: chung 100.00 · bhx — · winmart 100.00

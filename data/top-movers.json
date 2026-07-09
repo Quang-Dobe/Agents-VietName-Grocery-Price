@@ -1,42 +1,66 @@
 {
-  "week": "2026-07-08",
+  "week": "2026-07-09",
   "risers": [
     {
-      "id": "thit-heo-xay-500g",
-      "ten_chuan": "Thịt heo xay khay 500g",
-      "pct": 19.0,
+      "id": "mi-3-mien-goi",
+      "ten_chuan": "Mì 3 Miền gói 65g",
+      "pct": 16.9,
       "direction": "up"
     },
     {
       "id": "cam-sanh-1kg",
       "ten_chuan": "Cam sành ~1kg",
-      "pct": 6.4,
+      "pct": 14.0,
+      "direction": "up"
+    },
+    {
+      "id": "dui-ga-cn-500g",
+      "ten_chuan": "Đùi gà công nghiệp khay 500g",
+      "pct": 10.7,
+      "direction": "up"
+    },
+    {
+      "id": "duong-bien-hoa-1kg",
+      "ten_chuan": "Đường Biên Hòa túi 1kg",
+      "pct": 9.9,
+      "direction": "up"
+    },
+    {
+      "id": "suon-non-heo-500g",
+      "ten_chuan": "Sườn non heo khay 500g",
+      "pct": 6.3,
       "direction": "up"
     }
   ],
   "fallers": [
     {
-      "id": "dui-ga-cn-500g",
-      "ten_chuan": "Đùi gà công nghiệp khay 500g",
-      "pct": -11.5,
+      "id": "nuoc-rua-chen-sunlight-750g",
+      "ten_chuan": "Nước rửa chén Sunlight 750g",
+      "pct": -59.3,
       "direction": "down"
     },
     {
-      "id": "sua-tuoi-vinamilk-1l",
-      "ten_chuan": "Sữa tươi Vinamilk hộp 1 lít",
-      "pct": -8.2,
+      "id": "tom-the-500g",
+      "ten_chuan": "Tôm thẻ tươi 500g",
+      "pct": -54.9,
       "direction": "down"
     },
     {
-      "id": "suon-non-heo-500g",
-      "ten_chuan": "Sườn non heo khay 500g",
-      "pct": -5.9,
+      "id": "thit-heo-xay-500g",
+      "ten_chuan": "Thịt heo xay khay 500g",
+      "pct": -16.0,
       "direction": "down"
     },
     {
-      "id": "hanh-la-100g",
-      "ten_chuan": "Hành lá gói 100g",
-      "pct": -0.4,
+      "id": "sua-chua-vinamilk-loc4",
+      "ten_chuan": "Sữa chua Vinamilk lốc 4 hộp",
+      "pct": -14.9,
+      "direction": "down"
+    },
+    {
+      "id": "chuoi-gia-1kg",
+      "ten_chuan": "Chuối già ~1kg",
+      "pct": -14.7,
       "direction": "down"
     }
   ]
