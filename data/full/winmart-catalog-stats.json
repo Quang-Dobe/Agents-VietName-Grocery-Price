@@ -1,0 +1,1402 @@
+{
+  "tong_so_sp": 4263,
+  "so_danh_muc": 132,
+  "het_hang": 0,
+  "dang_khuyen_mai": 818,
+  "giam_gia_tb_pct": 19.1,
+  "danh_muc": [
+    {
+      "danh_muc": "Chăm Sóc Da",
+      "so_luong": 218,
+      "con_hang": 218,
+      "gia_tb": 123390,
+      "gia_min": 12000,
+      "gia_max": 396700,
+      "so_khuyen_mai": 67,
+      "giam_gia_tb_pct": 22.4
+    },
+    {
+      "danh_muc": "Gia dụng",
+      "so_luong": 186,
+      "con_hang": 186,
+      "gia_tb": 309253,
+      "gia_min": 18700,
+      "gia_max": 4490000,
+      "so_khuyen_mai": 11,
+      "giam_gia_tb_pct": 40.6
+    },
+    {
+      "danh_muc": "Kẹo - Chocolate",
+      "so_luong": 170,
+      "con_hang": 170,
+      "gia_tb": 52967,
+      "gia_min": 2600,
+      "gia_max": 486000,
+      "so_khuyen_mai": 18,
+      "giam_gia_tb_pct": 18.4
+    },
+    {
+      "danh_muc": "Thực phẩm khô",
+      "so_luong": 155,
+      "con_hang": 155,
+      "gia_tb": 77763,
+      "gia_min": 4300,
+      "gia_max": 960000,
+      "so_khuyen_mai": 26,
+      "giam_gia_tb_pct": 17.6
+    },
+    {
+      "danh_muc": "Nước Ngọt",
+      "so_luong": 144,
+      "con_hang": 144,
+      "gia_tb": 75012,
+      "gia_min": 7900,
+      "gia_max": 505000,
+      "so_khuyen_mai": 27,
+      "giam_gia_tb_pct": 15.6
+    },
+    {
+      "danh_muc": "Mì",
+      "so_luong": 113,
+      "con_hang": 113,
+      "gia_tb": 91068,
+      "gia_min": 4500,
+      "gia_max": 305100,
+      "so_khuyen_mai": 18,
+      "giam_gia_tb_pct": 13.7
+    },
+    {
+      "danh_muc": "Đồ dùng nhà bếp",
+      "so_luong": 112,
+      "con_hang": 112,
+      "gia_tb": 132236,
+      "gia_min": 13000,
+      "gia_max": 726000,
+      "so_khuyen_mai": 24,
+      "giam_gia_tb_pct": 33.3
+    },
+    {
+      "danh_muc": "Bánh Xốp - Bánh Quy",
+      "so_luong": 110,
+      "con_hang": 110,
+      "gia_tb": 43025,
+      "gia_min": 6400,
+      "gia_max": 212000,
+      "so_khuyen_mai": 19,
+      "giam_gia_tb_pct": 18.3
+    },
+    {
+      "danh_muc": "Gia Vị Khác",
+      "so_luong": 104,
+      "con_hang": 104,
+      "gia_tb": 45778,
+      "gia_min": 5000,
+      "gia_max": 199000,
+      "so_khuyen_mai": 25,
+      "giam_gia_tb_pct": 13.6
+    },
+    {
+      "danh_muc": "Bơ, sữa, trứng",
+      "so_luong": 104,
+      "con_hang": 104,
+      "gia_tb": 57167,
+      "gia_min": 7200,
+      "gia_max": 367500,
+      "so_khuyen_mai": 26,
+      "giam_gia_tb_pct": 11.2
+    },
+    {
+      "danh_muc": "Sữa Chua - Váng Sữa",
+      "so_luong": 95,
+      "con_hang": 95,
+      "gia_tb": 40559,
+      "gia_min": 5400,
+      "gia_max": 239000,
+      "so_khuyen_mai": 31,
+      "giam_gia_tb_pct": 11.5
+    },
+    {
+      "danh_muc": "Bánh Snack",
+      "so_luong": 85,
+      "con_hang": 85,
+      "gia_tb": 23946,
+      "gia_min": 5400,
+      "gia_max": 238100,
+      "so_khuyen_mai": 15,
+      "giam_gia_tb_pct": 19.0
+    },
+    {
+      "danh_muc": "Chăm Sóc Tóc",
+      "so_luong": 85,
+      "con_hang": 85,
+      "gia_tb": 181895,
+      "gia_min": 53100,
+      "gia_max": 313000,
+      "so_khuyen_mai": 16,
+      "giam_gia_tb_pct": 17.6
+    },
+    {
+      "danh_muc": "Thịt",
+      "so_luong": 83,
+      "con_hang": 83,
+      "gia_tb": 185202,
+      "gia_min": 36900,
+      "gia_max": 489000,
+      "so_khuyen_mai": 8,
+      "giam_gia_tb_pct": 9.6
+    },
+    {
+      "danh_muc": "Sữa - Bánh Kẹo",
+      "so_luong": 77,
+      "con_hang": 77,
+      "gia_tb": 62523,
+      "gia_min": 8200,
+      "gia_max": 466700,
+      "so_khuyen_mai": 20,
+      "giam_gia_tb_pct": 18.3
+    },
+    {
+      "danh_muc": "Văn Phòng Phẩm - Đồ Chơi",
+      "so_luong": 75,
+      "con_hang": 75,
+      "gia_tb": 34768,
+      "gia_min": 6900,
+      "gia_max": 185600,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Chăm Sóc Răng Miệng",
+      "so_luong": 74,
+      "con_hang": 74,
+      "gia_tb": 75705,
+      "gia_min": 29100,
+      "gia_max": 849000,
+      "so_khuyen_mai": 15,
+      "giam_gia_tb_pct": 23.3
+    },
+    {
+      "danh_muc": "Sữa Tươi",
+      "so_luong": 72,
+      "con_hang": 72,
+      "gia_tb": 66885,
+      "gia_min": 5200,
+      "gia_max": 455800,
+      "so_khuyen_mai": 14,
+      "giam_gia_tb_pct": 13.2
+    },
+    {
+      "danh_muc": "Hạt - Trái Cây Sấy Khô",
+      "so_luong": 71,
+      "con_hang": 71,
+      "gia_tb": 114856,
+      "gia_min": 5500,
+      "gia_max": 561400,
+      "so_khuyen_mai": 10,
+      "giam_gia_tb_pct": 13.0
+    },
+    {
+      "danh_muc": "Cà Phê",
+      "so_luong": 65,
+      "con_hang": 65,
+      "gia_tb": 133700,
+      "gia_min": 12200,
+      "gia_max": 641700,
+      "so_khuyen_mai": 8,
+      "giam_gia_tb_pct": 12.9
+    },
+    {
+      "danh_muc": "Vệ Sinh Nhà Cửa",
+      "so_luong": 65,
+      "con_hang": 65,
+      "gia_tb": 152349,
+      "gia_min": 22500,
+      "gia_max": 1325000,
+      "so_khuyen_mai": 17,
+      "giam_gia_tb_pct": 27.2
+    },
+    {
+      "danh_muc": "Mỹ phẩm, chăm sóc cá nhân",
+      "so_luong": 60,
+      "con_hang": 60,
+      "gia_tb": 135608,
+      "gia_min": 23000,
+      "gia_max": 268000,
+      "so_khuyen_mai": 16,
+      "giam_gia_tb_pct": 19.6
+    },
+    {
+      "danh_muc": "Gạo - Mì - Dầu Ăn - Gia Vị",
+      "so_luong": 58,
+      "con_hang": 58,
+      "gia_tb": 70055,
+      "gia_min": 9700,
+      "gia_max": 290000,
+      "so_khuyen_mai": 21,
+      "giam_gia_tb_pct": 15.8
+    },
+    {
+      "danh_muc": "Hóa phẩm",
+      "so_luong": 58,
+      "con_hang": 58,
+      "gia_tb": 133431,
+      "gia_min": 23600,
+      "gia_max": 349000,
+      "so_khuyen_mai": 16,
+      "giam_gia_tb_pct": 24.4
+    },
+    {
+      "danh_muc": "Khăn Giấy - Khăn Ướt",
+      "so_luong": 58,
+      "con_hang": 58,
+      "gia_tb": 53521,
+      "gia_min": 7600,
+      "gia_max": 146300,
+      "so_khuyen_mai": 6,
+      "giam_gia_tb_pct": 37.0
+    },
+    {
+      "danh_muc": "Rau Lá",
+      "so_luong": 58,
+      "con_hang": 58,
+      "gia_tb": 26320,
+      "gia_min": 4500,
+      "gia_max": 69900,
+      "so_khuyen_mai": 10,
+      "giam_gia_tb_pct": 20.0
+    },
+    {
+      "danh_muc": "Chăm Sóc Phụ Nữ",
+      "so_luong": 55,
+      "con_hang": 55,
+      "gia_tb": 48507,
+      "gia_min": 16900,
+      "gia_max": 95000,
+      "so_khuyen_mai": 2,
+      "giam_gia_tb_pct": 26.4
+    },
+    {
+      "danh_muc": "Trà - Các Loại Khác",
+      "so_luong": 53,
+      "con_hang": 53,
+      "gia_tb": 78030,
+      "gia_min": 30900,
+      "gia_max": 252500,
+      "so_khuyen_mai": 9,
+      "giam_gia_tb_pct": 12.3
+    },
+    {
+      "danh_muc": "Dầu Ăn",
+      "so_luong": 50,
+      "con_hang": 50,
+      "gia_tb": 147044,
+      "gia_min": 12200,
+      "gia_max": 794000,
+      "so_khuyen_mai": 20,
+      "giam_gia_tb_pct": 13.5
+    },
+    {
+      "danh_muc": "Thực Phẩm Chế Biến Khác",
+      "so_luong": 46,
+      "con_hang": 46,
+      "gia_tb": 58011,
+      "gia_min": 10800,
+      "gia_max": 193900,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 20.7
+    },
+    {
+      "danh_muc": "Trái cây tươi",
+      "so_luong": 46,
+      "con_hang": 46,
+      "gia_tb": 98748,
+      "gia_min": 19900,
+      "gia_max": 399000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 21.8
+    },
+    {
+      "danh_muc": "Rong Biển - Tảo Biển",
+      "so_luong": 43,
+      "con_hang": 43,
+      "gia_tb": 48719,
+      "gia_min": 12700,
+      "gia_max": 128100,
+      "so_khuyen_mai": 12,
+      "giam_gia_tb_pct": 12.9
+    },
+    {
+      "danh_muc": "Bánh kẹo",
+      "so_luong": 43,
+      "con_hang": 43,
+      "gia_tb": 68135,
+      "gia_min": 7900,
+      "gia_max": 707000,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 17.7
+    },
+    {
+      "danh_muc": "Xúc xích - Thịt Nguội",
+      "so_luong": 41,
+      "con_hang": 41,
+      "gia_tb": 77863,
+      "gia_min": 9900,
+      "gia_max": 336000,
+      "so_khuyen_mai": 6,
+      "giam_gia_tb_pct": 12.4
+    },
+    {
+      "danh_muc": "Miến - Hủ Tíu - Bánh Canh",
+      "so_luong": 41,
+      "con_hang": 41,
+      "gia_tb": 47112,
+      "gia_min": 11300,
+      "gia_max": 492300,
+      "so_khuyen_mai": 15,
+      "giam_gia_tb_pct": 17.2
+    },
+    {
+      "danh_muc": "Giá Siêu Rẻ",
+      "so_luong": 40,
+      "con_hang": 40,
+      "gia_tb": 92960,
+      "gia_min": 6500,
+      "gia_max": 275000,
+      "so_khuyen_mai": 18,
+      "giam_gia_tb_pct": 24.1
+    },
+    {
+      "danh_muc": "Sữa Hạt - Sữa Đậu",
+      "so_luong": 39,
+      "con_hang": 39,
+      "gia_tb": 50233,
+      "gia_min": 4000,
+      "gia_max": 181800,
+      "so_khuyen_mai": 9,
+      "giam_gia_tb_pct": 8.8
+    },
+    {
+      "danh_muc": "Thực Phẩm Đóng Hộp",
+      "so_luong": 39,
+      "con_hang": 39,
+      "gia_tb": 82564,
+      "gia_min": 10100,
+      "gia_max": 429000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 12.4
+    },
+    {
+      "danh_muc": "Đồ uống, thuốc lá",
+      "so_luong": 39,
+      "con_hang": 39,
+      "gia_tb": 132210,
+      "gia_min": 5000,
+      "gia_max": 534300,
+      "so_khuyen_mai": 6,
+      "giam_gia_tb_pct": 14.5
+    },
+    {
+      "danh_muc": "Củ, Quả",
+      "so_luong": 38,
+      "con_hang": 38,
+      "gia_tb": 21829,
+      "gia_min": 3120,
+      "gia_max": 65000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 20.0
+    },
+    {
+      "danh_muc": "Nước Giặt",
+      "so_luong": 37,
+      "con_hang": 37,
+      "gia_tb": 187251,
+      "gia_min": 42300,
+      "gia_max": 265100,
+      "so_khuyen_mai": 7,
+      "giam_gia_tb_pct": 18.1
+    },
+    {
+      "danh_muc": "Bia",
+      "so_luong": 35,
+      "con_hang": 35,
+      "gia_tb": 348231,
+      "gia_min": 14400,
+      "gia_max": 1580000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Giấy và bông",
+      "so_luong": 35,
+      "con_hang": 35,
+      "gia_tb": 102209,
+      "gia_min": 5800,
+      "gia_max": 400100,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 26.8
+    },
+    {
+      "danh_muc": "Bơ Sữa - Phô Mai",
+      "so_luong": 33,
+      "con_hang": 33,
+      "gia_tb": 99273,
+      "gia_min": 35000,
+      "gia_max": 178000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 11.4
+    },
+    {
+      "danh_muc": "Thực Phẩm Đông Lạnh Khác",
+      "so_luong": 32,
+      "con_hang": 32,
+      "gia_tb": 73947,
+      "gia_min": 30000,
+      "gia_max": 149900,
+      "so_khuyen_mai": 8,
+      "giam_gia_tb_pct": 14.2
+    },
+    {
+      "danh_muc": "Đồ Uống",
+      "so_luong": 32,
+      "con_hang": 32,
+      "gia_tb": 154884,
+      "gia_min": 8700,
+      "gia_max": 474000,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 23.9
+    },
+    {
+      "danh_muc": "Thịt nguội, xúc xích, hàng chua",
+      "so_luong": 31,
+      "con_hang": 31,
+      "gia_tb": 62735,
+      "gia_min": 5900,
+      "gia_max": 180000,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 18.6
+    },
+    {
+      "danh_muc": "Nước Mắm - Nước Chấm",
+      "so_luong": 30,
+      "con_hang": 30,
+      "gia_tb": 90100,
+      "gia_min": 20100,
+      "gia_max": 221300,
+      "so_khuyen_mai": 5,
+      "giam_gia_tb_pct": 20.8
+    },
+    {
+      "danh_muc": "Đông lạnh",
+      "so_luong": 28,
+      "con_hang": 28,
+      "gia_tb": 122671,
+      "gia_min": 29500,
+      "gia_max": 288800,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 20.1
+    },
+    {
+      "danh_muc": "Chăm Sóc Gia Đình",
+      "so_luong": 27,
+      "con_hang": 27,
+      "gia_tb": 82870,
+      "gia_min": 18000,
+      "gia_max": 243000,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 12.4
+    },
+    {
+      "danh_muc": "Thịt - Thủy Hải Sản",
+      "so_luong": 25,
+      "con_hang": 25,
+      "gia_tb": 144508,
+      "gia_min": 9100,
+      "gia_max": 299900,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 14.9
+    },
+    {
+      "danh_muc": "Phở - Bún",
+      "so_luong": 24,
+      "con_hang": 24,
+      "gia_tb": 57375,
+      "gia_min": 8100,
+      "gia_max": 470000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Ngũ Cốc - Yến Mạch",
+      "so_luong": 23,
+      "con_hang": 23,
+      "gia_tb": 125443,
+      "gia_min": 56600,
+      "gia_max": 265000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 21.2
+    },
+    {
+      "danh_muc": "Bánh mì",
+      "so_luong": 23,
+      "con_hang": 23,
+      "gia_tb": 43709,
+      "gia_min": 7000,
+      "gia_max": 144900,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 19.3
+    },
+    {
+      "danh_muc": "Bột Các Loại",
+      "so_luong": 22,
+      "con_hang": 22,
+      "gia_tb": 19341,
+      "gia_min": 8100,
+      "gia_max": 34900,
+      "so_khuyen_mai": 12,
+      "giam_gia_tb_pct": 10.9
+    },
+    {
+      "danh_muc": "Rau củ",
+      "so_luong": 22,
+      "con_hang": 22,
+      "gia_tb": 27369,
+      "gia_min": 3600,
+      "gia_max": 69900,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 20.0
+    },
+    {
+      "danh_muc": "Đồ Dùng Phòng Ngủ",
+      "so_luong": 22,
+      "con_hang": 22,
+      "gia_tb": 88705,
+      "gia_min": 19000,
+      "gia_max": 249000,
+      "so_khuyen_mai": 7,
+      "giam_gia_tb_pct": 28.5
+    },
+    {
+      "danh_muc": "Hải Sản Đông Lạnh",
+      "so_luong": 20,
+      "con_hang": 20,
+      "gia_tb": 121705,
+      "gia_min": 38000,
+      "gia_max": 235900,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Cháo",
+      "so_luong": 20,
+      "con_hang": 20,
+      "gia_tb": 26750,
+      "gia_min": 4000,
+      "gia_max": 99200,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Chăm Sóc Cá Nhân Khác",
+      "so_luong": 20,
+      "con_hang": 20,
+      "gia_tb": 69005,
+      "gia_min": 11200,
+      "gia_max": 328200,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 23.2
+    },
+    {
+      "danh_muc": "Trái Cây",
+      "so_luong": 20,
+      "con_hang": 20,
+      "gia_tb": 87695,
+      "gia_min": 26900,
+      "gia_max": 239000,
+      "so_khuyen_mai": 7,
+      "giam_gia_tb_pct": 19.7
+    },
+    {
+      "danh_muc": "Trái cây",
+      "so_luong": 20,
+      "con_hang": 20,
+      "gia_tb": 78460,
+      "gia_min": 19900,
+      "gia_max": 189000,
+      "so_khuyen_mai": 6,
+      "giam_gia_tb_pct": 25.4
+    },
+    {
+      "danh_muc": "Nước Xả",
+      "so_luong": 20,
+      "con_hang": 20,
+      "gia_tb": 222220,
+      "gia_min": 106600,
+      "gia_max": 283500,
+      "so_khuyen_mai": 8,
+      "giam_gia_tb_pct": 19.0
+    },
+    {
+      "danh_muc": "Chả Giò",
+      "so_luong": 19,
+      "con_hang": 19,
+      "gia_tb": 62911,
+      "gia_min": 35200,
+      "gia_max": 156600,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 12.8
+    },
+    {
+      "danh_muc": "Tương Các Loại",
+      "so_luong": 18,
+      "con_hang": 18,
+      "gia_tb": 34511,
+      "gia_min": 8600,
+      "gia_max": 94500,
+      "so_khuyen_mai": 9,
+      "giam_gia_tb_pct": 19.7
+    },
+    {
+      "danh_muc": "Sữa Bột - Sữa Dinh Dưỡng",
+      "so_luong": 18,
+      "con_hang": 18,
+      "gia_tb": 135961,
+      "gia_min": 22700,
+      "gia_max": 576000,
+      "so_khuyen_mai": 10,
+      "giam_gia_tb_pct": 9.9
+    },
+    {
+      "danh_muc": "Nước Tẩy Rửa",
+      "so_luong": 17,
+      "con_hang": 17,
+      "gia_tb": 46412,
+      "gia_min": 21900,
+      "gia_max": 141800,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 20.4
+    },
+    {
+      "danh_muc": "Điện gia dụng",
+      "so_luong": 17,
+      "con_hang": 17,
+      "gia_tb": 1254647,
+      "gia_min": 527000,
+      "gia_max": 2090000,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 42.8
+    },
+    {
+      "danh_muc": "Sữa đặc",
+      "so_luong": 16,
+      "con_hang": 16,
+      "gia_tb": 39094,
+      "gia_min": 18000,
+      "gia_max": 89900,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 5.5
+    },
+    {
+      "danh_muc": "Cá - Bò Viên",
+      "so_luong": 15,
+      "con_hang": 15,
+      "gia_tb": 74187,
+      "gia_min": 37000,
+      "gia_max": 159000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Rau - Củ - Quả",
+      "so_luong": 15,
+      "con_hang": 15,
+      "gia_tb": 21573,
+      "gia_min": 4000,
+      "gia_max": 60200,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Hải Sản",
+      "so_luong": 14,
+      "con_hang": 14,
+      "gia_tb": 201343,
+      "gia_min": 35900,
+      "gia_max": 599000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 10.0
+    },
+    {
+      "danh_muc": "Hạt Nêm",
+      "so_luong": 14,
+      "con_hang": 14,
+      "gia_tb": 62114,
+      "gia_min": 5300,
+      "gia_max": 326000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 24.0
+    },
+    {
+      "danh_muc": "Chăm Sóc Cá Nhân Cho Bé",
+      "so_luong": 14,
+      "con_hang": 14,
+      "gia_tb": 40314,
+      "gia_min": 18000,
+      "gia_max": 69000,
+      "so_khuyen_mai": 2,
+      "giam_gia_tb_pct": 35.3
+    },
+    {
+      "danh_muc": "Nước Lau Sàn - Lau Kính",
+      "so_luong": 14,
+      "con_hang": 14,
+      "gia_tb": 58257,
+      "gia_min": 23800,
+      "gia_max": 118000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Thủy hải sản",
+      "so_luong": 13,
+      "con_hang": 13,
+      "gia_tb": 261615,
+      "gia_min": 99000,
+      "gia_max": 749900,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Tã - Bỉm",
+      "so_luong": 12,
+      "con_hang": 12,
+      "gia_tb": 251617,
+      "gia_min": 93300,
+      "gia_max": 440800,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Sữa Bột",
+      "so_luong": 11,
+      "con_hang": 11,
+      "gia_tb": 512645,
+      "gia_min": 31700,
+      "gia_max": 1226000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 11.1
+    },
+    {
+      "danh_muc": "Nước Suối",
+      "so_luong": 11,
+      "con_hang": 11,
+      "gia_tb": 155500,
+      "gia_min": 5500,
+      "gia_max": 628000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 18.1
+    },
+    {
+      "danh_muc": "Mỹ Phẩm",
+      "so_luong": 11,
+      "con_hang": 11,
+      "gia_tb": 46218,
+      "gia_min": 27000,
+      "gia_max": 69800,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Trứng",
+      "so_luong": 10,
+      "con_hang": 10,
+      "gia_tb": 58690,
+      "gia_min": 34000,
+      "gia_max": 87200,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Gạo - Nông Sản Khô",
+      "so_luong": 10,
+      "con_hang": 10,
+      "gia_tb": 118180,
+      "gia_min": 43500,
+      "gia_max": 184200,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 14.5
+    },
+    {
+      "danh_muc": "Tết_Category 1_Meat Deli",
+      "so_luong": 10,
+      "con_hang": 10,
+      "gia_tb": 75500,
+      "gia_min": 5100,
+      "gia_max": 379000,
+      "so_khuyen_mai": 2,
+      "giam_gia_tb_pct": 20.4
+    },
+    {
+      "danh_muc": "Điện Gia Dụng",
+      "so_luong": 10,
+      "con_hang": 10,
+      "gia_tb": 772100,
+      "gia_min": 229000,
+      "gia_max": 2059000,
+      "so_khuyen_mai": 6,
+      "giam_gia_tb_pct": 46.1
+    },
+    {
+      "danh_muc": "Colgate _Category 1 (KĐR)",
+      "so_luong": 10,
+      "con_hang": 10,
+      "gia_tb": 58140,
+      "gia_min": 25000,
+      "gia_max": 82500,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 26.1
+    },
+    {
+      "danh_muc": "Xúc xích - Thịt nguội",
+      "so_luong": 10,
+      "con_hang": 10,
+      "gia_tb": 24250,
+      "gia_min": 7900,
+      "gia_max": 110000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 15.7
+    },
+    {
+      "danh_muc": "Live 24.05_ Chăm sóc cá nhân",
+      "so_luong": 10,
+      "con_hang": 10,
+      "gia_tb": 98310,
+      "gia_min": 28900,
+      "gia_max": 337300,
+      "so_khuyen_mai": 7,
+      "giam_gia_tb_pct": 22.2
+    },
+    {
+      "danh_muc": "Bình Xịt Côn Trùng",
+      "so_luong": 9,
+      "con_hang": 9,
+      "gia_tb": 62478,
+      "gia_min": 29500,
+      "gia_max": 68700,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Đậu hũ",
+      "so_luong": 8,
+      "con_hang": 8,
+      "gia_tb": 14975,
+      "gia_min": 11000,
+      "gia_max": 21500,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 20.2
+    },
+    {
+      "danh_muc": "Nước Tương",
+      "so_luong": 8,
+      "con_hang": 8,
+      "gia_tb": 29325,
+      "gia_min": 12800,
+      "gia_max": 89600,
+      "so_khuyen_mai": 5,
+      "giam_gia_tb_pct": 22.6
+    },
+    {
+      "danh_muc": "Sữa Tắm - Gội Cho Bé",
+      "so_luong": 8,
+      "con_hang": 8,
+      "gia_tb": 176388,
+      "gia_min": 117000,
+      "gia_max": 196000,
+      "so_khuyen_mai": 4,
+      "giam_gia_tb_pct": 12.8
+    },
+    {
+      "danh_muc": "Nước Rửa Chén",
+      "so_luong": 8,
+      "con_hang": 8,
+      "gia_tb": 73500,
+      "gia_min": 28800,
+      "gia_max": 118900,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Bánh bao",
+      "so_luong": 7,
+      "con_hang": 7,
+      "gia_tb": 34914,
+      "gia_min": 20000,
+      "gia_max": 43500,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Thiết bị dùng điện trong nhà",
+      "so_luong": 7,
+      "con_hang": 7,
+      "gia_tb": 129543,
+      "gia_min": 45000,
+      "gia_max": 229000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Giò chả",
+      "so_luong": 6,
+      "con_hang": 6,
+      "gia_tb": 67700,
+      "gia_min": 58900,
+      "gia_max": 79000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 39.8
+    },
+    {
+      "danh_muc": "Unilever - Category 1 - Chăm sóc cơ thể",
+      "so_luong": 6,
+      "con_hang": 6,
+      "gia_tb": 91000,
+      "gia_min": 89000,
+      "gia_max": 95000,
+      "so_khuyen_mai": 6,
+      "giam_gia_tb_pct": 19.2
+    },
+    {
+      "danh_muc": "MAXKLEEN_Category 1",
+      "so_luong": 6,
+      "con_hang": 6,
+      "gia_tb": 140667,
+      "gia_min": 77000,
+      "gia_max": 216000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 24.9
+    },
+    {
+      "danh_muc": "Category 1_Omo",
+      "so_luong": 6,
+      "con_hang": 6,
+      "gia_tb": 188167,
+      "gia_min": 93000,
+      "gia_max": 252000,
+      "so_khuyen_mai": 5,
+      "giam_gia_tb_pct": 24.5
+    },
+    {
+      "danh_muc": "Kim chi",
+      "so_luong": 5,
+      "con_hang": 5,
+      "gia_tb": 51500,
+      "gia_min": 15600,
+      "gia_max": 97900,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 20.0
+    },
+    {
+      "danh_muc": "Mì, miến, cháo, phở, gạo",
+      "so_luong": 5,
+      "con_hang": 5,
+      "gia_tb": 48760,
+      "gia_min": 8900,
+      "gia_max": 147600,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 11.5
+    },
+    {
+      "danh_muc": "Colgate _Category 2 (BCĐR)",
+      "so_luong": 5,
+      "con_hang": 5,
+      "gia_tb": 62020,
+      "gia_min": 39100,
+      "gia_max": 89000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 18.5
+    },
+    {
+      "danh_muc": "Xúc xích thịt nguội",
+      "so_luong": 5,
+      "con_hang": 5,
+      "gia_tb": 41880,
+      "gia_min": 14000,
+      "gia_max": 75000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 19.1
+    },
+    {
+      "danh_muc": "Category 3_Pepsico",
+      "so_luong": 5,
+      "con_hang": 5,
+      "gia_tb": 181200,
+      "gia_min": 20200,
+      "gia_max": 239400,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 26.5
+    },
+    {
+      "danh_muc": "Chante_Category 1",
+      "so_luong": 5,
+      "con_hang": 5,
+      "gia_tb": 135000,
+      "gia_min": 119000,
+      "gia_max": 159000,
+      "so_khuyen_mai": 5,
+      "giam_gia_tb_pct": 34.4
+    },
+    {
+      "danh_muc": "Đường",
+      "so_luong": 4,
+      "con_hang": 4,
+      "gia_tb": 83650,
+      "gia_min": 34200,
+      "gia_max": 165000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Đồ dùng trong nhà",
+      "so_luong": 4,
+      "con_hang": 4,
+      "gia_tb": 151475,
+      "gia_min": 8900,
+      "gia_max": 579000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 27.8
+    },
+    {
+      "danh_muc": "Thịt ướp, giò sống",
+      "so_luong": 4,
+      "con_hang": 4,
+      "gia_tb": 60625,
+      "gia_min": 31600,
+      "gia_max": 100000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Ưu Đãi Hội Viên",
+      "so_luong": 4,
+      "con_hang": 4,
+      "gia_tb": 127825,
+      "gia_min": 5600,
+      "gia_max": 242900,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 20.0
+    },
+    {
+      "danh_muc": "Bơ Sữa Trứng O’lala",
+      "so_luong": 4,
+      "con_hang": 4,
+      "gia_tb": 46000,
+      "gia_min": 34000,
+      "gia_max": 65000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "OMO BW_Category 1",
+      "so_luong": 4,
+      "con_hang": 4,
+      "gia_tb": 167500,
+      "gia_min": 93000,
+      "gia_max": 196000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 26.0
+    },
+    {
+      "danh_muc": "Thịt Đông Lạnh",
+      "so_luong": 3,
+      "con_hang": 3,
+      "gia_tb": 248733,
+      "gia_min": 195300,
+      "gia_max": 334900,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Category 1_Dove",
+      "so_luong": 3,
+      "con_hang": 3,
+      "gia_tb": 155933,
+      "gia_min": 77000,
+      "gia_max": 195400,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 19.2
+    },
+    {
+      "danh_muc": "Chante_Category 3",
+      "so_luong": 3,
+      "con_hang": 3,
+      "gia_tb": 61000,
+      "gia_min": 25000,
+      "gia_max": 79000,
+      "so_khuyen_mai": 3,
+      "giam_gia_tb_pct": 39.1
+    },
+    {
+      "danh_muc": "Mega BW_Category 3",
+      "so_luong": 3,
+      "con_hang": 3,
+      "gia_tb": 186600,
+      "gia_min": 169000,
+      "gia_max": 195400,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 11.3
+    },
+    {
+      "danh_muc": "Thực Phẩm Chay",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 67600,
+      "gia_min": 60400,
+      "gia_max": 74800,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Snack O'lala",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 23200,
+      "gia_min": 22200,
+      "gia_max": 24200,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Tết_Category 2_Chante",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 119000,
+      "gia_min": 119000,
+      "gia_max": 119000,
+      "so_khuyen_mai": 2,
+      "giam_gia_tb_pct": 22.3
+    },
+    {
+      "danh_muc": "Neptune BW_Category 2",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 183000,
+      "gia_min": 122000,
+      "gia_max": 244000,
+      "so_khuyen_mai": 2,
+      "giam_gia_tb_pct": 14.6
+    },
+    {
+      "danh_muc": "Thức ăn nấu sẵn",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 33900,
+      "gia_min": 11800,
+      "gia_max": 56000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "MEGA BW3_Category 2",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 315500,
+      "gia_min": 296000,
+      "gia_max": 335000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Category 2_B2C",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 267050,
+      "gia_min": 238700,
+      "gia_max": 295400,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 9.7
+    },
+    {
+      "danh_muc": "Vinamilk_Category 2",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 35900,
+      "gia_min": 35500,
+      "gia_max": 36300,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "CHINSU_Category 1",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 25900,
+      "gia_min": 25900,
+      "gia_max": 25900,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Category 3_Omo",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 104000,
+      "gia_min": 59000,
+      "gia_max": 149000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 19.9
+    },
+    {
+      "danh_muc": "Chante_Category 2",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 79000,
+      "gia_min": 79000,
+      "gia_max": 79000,
+      "so_khuyen_mai": 2,
+      "giam_gia_tb_pct": 43.0
+    },
+    {
+      "danh_muc": "Category 1_comfort",
+      "so_luong": 2,
+      "con_hang": 2,
+      "gia_tb": 212350,
+      "gia_min": 191000,
+      "gia_max": 233700,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 18.3
+    },
+    {
+      "danh_muc": "Neptune BW_Category 1",
+      "so_luong": 1,
+      "con_hang": 1,
+      "gia_tb": 38000,
+      "gia_min": 38000,
+      "gia_max": 38000,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "chăm sóc quần áo",
+      "so_luong": 1,
+      "con_hang": 1,
+      "gia_tb": 119000,
+      "gia_min": 119000,
+      "gia_max": 119000,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 44.7
+    },
+    {
+      "danh_muc": "Category 1_B2C",
+      "so_luong": 1,
+      "con_hang": 1,
+      "gia_tb": 72500,
+      "gia_min": 72500,
+      "gia_max": 72500,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "Văn phòng phẩm",
+      "so_luong": 1,
+      "con_hang": 1,
+      "gia_tb": 47700,
+      "gia_min": 47700,
+      "gia_max": 47700,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    },
+    {
+      "danh_muc": "MEGA BW3_Category 3",
+      "so_luong": 1,
+      "con_hang": 1,
+      "gia_tb": 39600,
+      "gia_min": 39600,
+      "gia_max": 39600,
+      "so_khuyen_mai": 1,
+      "giam_gia_tb_pct": 17.3
+    },
+    {
+      "danh_muc": "Category 1_Pepsico",
+      "so_luong": 1,
+      "con_hang": 1,
+      "gia_tb": 55600,
+      "gia_min": 55600,
+      "gia_max": 55600,
+      "so_khuyen_mai": 0,
+      "giam_gia_tb_pct": null
+    }
+  ],
+  "top_giam_gia": [
+    {
+      "ten": "HOKAIDO Bộ 5 hộp TPCN 0.5-1.0-1.5-2-2.5L",
+      "danh_muc": "Gia dụng",
+      "giam_gia_pct": 65.7,
+      "gia_niem_yet": 289000,
+      "gia_ban": 99000
+    },
+    {
+      "ten": "Bàn Ủi Hơi Nước Dạng Đứng Lock&Lock ENI211 - Hồng Phối Trắng",
+      "danh_muc": "Điện Gia Dụng",
+      "giam_gia_pct": 63.5,
+      "gia_niem_yet": 2716000,
+      "gia_ban": 990000
+    },
+    {
+      "ten": "Bộ lau nhà Starplus MS03",
+      "danh_muc": "Vệ Sinh Nhà Cửa",
+      "giam_gia_pct": 53.6,
+      "gia_niem_yet": 429000,
+      "gia_ban": 199000
+    },
+    {
+      "ten": "Khăn tắm cotton Quảng Phú W630 70*140*415g",
+      "danh_muc": "Đồ Dùng Phòng Ngủ",
+      "giam_gia_pct": 53.6,
+      "gia_niem_yet": 234700,
+      "gia_ban": 109000
+    },
+    {
+      "ten": "Dụng cụ băm nhỏ thực phẩm mini Lock&Lock CKS321",
+      "danh_muc": "Đồ dùng nhà bếp",
+      "giam_gia_pct": 50.6,
+      "gia_niem_yet": 141400,
+      "gia_ban": 69900
+    },
+    {
+      "ten": "OPPA Mì ăn liền bò hầm 65g",
+      "danh_muc": "Giá Siêu Rẻ",
+      "giam_gia_pct": 50.0,
+      "gia_niem_yet": 182000,
+      "gia_ban": 91000
+    },
+    {
+      "ten": "Giấy vệ sinh Paseo 6 cuộn 3 lớp",
+      "danh_muc": "Khăn Giấy - Khăn Ướt",
+      "giam_gia_pct": 49.4,
+      "gia_niem_yet": 89000,
+      "gia_ban": 45000
+    },
+    {
+      "ten": "Nồi Lock&Lock Stone 2 tay cầm LCA6242D 24cm (Dùng bếp từ)",
+      "danh_muc": "Đồ dùng nhà bếp",
+      "giam_gia_pct": 49.4,
+      "gia_niem_yet": 971500,
+      "gia_ban": 492000
+    },
+    {
+      "ten": "INOCHI Bình nước cao cấp Biwa Plus 1,6l",
+      "danh_muc": "Gia dụng",
+      "giam_gia_pct": 49.4,
+      "gia_niem_yet": 176000,
+      "gia_ban": 89000
+    },
+    {
+      "ten": "Giấy bếp đa dụng 2 lớp Elene gói 100 tờ",
+      "danh_muc": "Khăn Giấy - Khăn Ướt",
+      "giam_gia_pct": 48.1,
+      "gia_niem_yet": 26000,
+      "gia_ban": 13500
+    }
+  ],
+  "updated": "2026-07-10"
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toàn bộ sản phẩm WinMart — Giá Chợ</title>
+  <meta name="description" content="Toàn bộ sản phẩm đang bán tại WinMart — tìm kiếm, lọc theo danh mục, sắp xếp theo giá.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Giá Chợ">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="11" fill="#141821" stroke="rgba(255,255,255,0.10)"/>
+          <path d="M17 20a7 7 0 0 1 14 0" fill="none" stroke="#2dd4a7" stroke-width="2.4" stroke-linecap="round"/>
+          <rect x="11.5" y="19" width="25" height="4.2" rx="2.1" fill="#2dd4a7"/>
+          <path d="M14.5 23.5 L33.5 23.5 L30.6 36 a2 2 0 0 1-1.95 1.6 H19.35 a2 2 0 0 1-1.95-1.6 Z" fill="none" stroke="#2dd4a7" stroke-width="2.2" stroke-linejoin="round"/>
+          <rect x="18.4" y="30" width="3" height="4.2" rx="1.1" fill="#3987e5"/>
+          <rect x="22.5" y="27.6" width="3" height="6.6" rx="1.1" fill="#5aa0ee"/>
+          <rect x="26.6" y="25" width="3" height="9.2" rx="1.1" fill="#7db6f3"/>
+        </svg>
+        <span>
+          <span class="name">Giá Chợ</span>
+          <span class="tag">Chỉ số giá thực phẩm hàng tuần · BHX &amp; WinMart</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a class="cta" href="catalog.html">Toàn bộ sản phẩm</a>
+        <a href="methodology.html">Phương pháp</a>
+        <a href="workflow.html">Cách hoạt động ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="page-title">Toàn bộ sản phẩm WinMart</h1>
+    <p class="page-sub" id="catalog-sub">Đang tải dữ liệu…</p>
+
+    <div class="catalog-toolbar">
+      <input type="search" id="f-search" placeholder="Tìm theo tên sản phẩm…" aria-label="Tìm kiếm">
+      <select id="f-category" aria-label="Danh mục">
+        <option value="">Tất cả danh mục</option>
+      </select>
+      <label><input type="checkbox" id="f-instock"> Chỉ hàng còn bán</label>
+      <label><input type="checkbox" id="f-promo"> Chỉ đang khuyến mãi</label>
+      <div class="spacer"></div>
+      <select id="f-sort" aria-label="Sắp xếp">
+        <option value="name-asc">Tên A→Z</option>
+        <option value="price-asc">Giá thấp→cao</option>
+        <option value="price-desc">Giá cao→thấp</option>
+        <option value="discount-desc">Giảm giá nhiều nhất</option>
+      </select>
+      <select id="f-pagesize" aria-label="Số sản phẩm mỗi trang">
+        <option value="24">24 / trang</option>
+        <option value="48" selected>48 / trang</option>
+        <option value="96">96 / trang</option>
+      </select>
+      <span class="result-cnt" id="catalog-count"></span>
+    </div>
+
+    <div id="catalog-grid" class="grid prod-grid" aria-label="Sản phẩm"></div>
+    <div class="pager" id="catalog-pager"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap row">
+      <span id="catalog-updated">—</span>
+      <span>
+        <a href="methodology.html">Phương pháp luận</a> ·
+        <a href="workflow.html">Cách hoạt động</a> ·
+        <a href="https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price">Mã nguồn</a>
+      </span>
+      <span>Dữ liệu tự thu thập, chỉ để tham khảo.</span>
+    </div>
+  </footer>
+
+  <script src="assets/catalog.js"></script>
+</body>
+</html>

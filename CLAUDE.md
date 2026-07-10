@@ -150,6 +150,29 @@ For SKU *i*, chain *c*: relative `R_i,c = don_gia_chuan_now / don_gia_chuan_base
 
 ---
 
+## Full WinMart catalog (separate from the weekly basket)
+
+A second, independent pipeline browses **every** WinMart product (not just the
+40-SKU basket) — no weights, no time-index, current snapshot only. Run manually,
+not part of the weekly routine / idempotency guard.
+
+- **Crawl:** `python scripts/crawl_winmart_full.py` — pages
+  `GET /it/api/web/v3/item/search?storeCode=1535&storeGroupCode=1998&pageNumber=&pageSize=`
+  **without** the `search=` param, which returns the whole catalog paginated
+  instead of a keyword match (confirmed 2026-07-10: 4263 items / 43 pages at
+  `pageSize=100`, stable across pages, no dupes). Writes `data/full/winmart-catalog.json`
+  (current snapshot, overwritten each run).
+- **Analyze:** `python scripts/analyze_winmart_full.py` — deterministic per-category
+  + overall stats (counts, price range, promo rate) → `data/full/winmart-catalog-stats.json`.
+  Formula-driven, not agent judgment.
+- **Publish:** `python scripts/build_catalog_site.py` — splits the catalog into
+  ~300-item chunk files under `site/data/catalog/winmart/` (+ `index.json` manifest:
+  categories, chunk list, stats). `site/catalog.html` + `assets/catalog.js` fetch
+  that folder and do search/category-filter/stock-filter/sort/pagination entirely
+  client-side — no server, no rebuild needed to page through data.
+
+---
+
 ## Validation rules (`validator`)
 
 Operates on `data/db/products.json` (this week's current values) vs the last row of
