@@ -48,6 +48,30 @@ cd site && python3 -m http.server 8000   # then open http://localhost:8000
 ```
 Chart.js is vendored (`site/assets/chart.umd.min.js`) — no CDN needed.
 
+## Adding BHX (residential IP only)
+
+BHX (`apibhx.tgdd.vn`) blocks this project's cloud environment at every layer —
+confirmed live: the API resets the TCP connection, the website itself returns
+`200` with an **empty body**, and even a real headless browser gets reset. No
+header tuning fixes this; it's IP-based. So the weekly cloud routine is
+**WinMart-only**, and BHX only comes from a **residential IP** (your home
+machine), same repo/code, different runner:
+
+```bash
+git clone https://github.com/Quang-Dobe/Agents-VietName-Grocery-Price
+cd Agents-VietName-Grocery-Price && git checkout claude/website-design-docs-plan-v1ljj3
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+playwright install chromium   # needed for the BHX token step
+./scripts/run_local.sh
+```
+
+Run `./scripts/run_local.sh`, **not** `crawl_bhx.py` directly — BHX's API token
+is short-lived, so the script mints a fresh one (`bhx_token.py`, headless
+Chromium) before every crawl; a bare `crawl_bhx.py` call has no valid token and
+just fails. Full details, including the first-run store/category checks, are in
+[`docs/LOCAL-RUN.md`](docs/LOCAL-RUN.md).
+
 ## How it runs (weekly)
 
 `crawler-bhx` ‖ `crawler-winmart` → `validator` → `index-calculator` →
