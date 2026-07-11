@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10",
+  "updated": "2026-07-11",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -96,9 +96,18 @@
       "id": "thit-heo-nac-dui-500g",
       "chains": {
         "winmart": {
-          "trang_thai": "out_of_stock",
-          "nguon": "api",
-          "_note": "no confident match (best 0.00)"
+          "ten_hien_thi": "MEATDELI Thịt Nạc dăm heo (Thịt Nạc vai) (S)",
+          "thuong_hieu": "MEAT DELI",
+          "danh_muc": "Thịt - Thủy Hải Sản",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617957-20241205094605.jpg",
+          "url": "https://winmart.vn/products/meat-deli-nac-dam-heo--s10617957",
+          "don_vi": "Kg",
+          "net": 1.0,
+          "gia_niem_yet": 204900,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 204900,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
@@ -109,16 +118,16 @@
       "id": "thit-heo-xay-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "MEAT DELI Thịt heo tảng cho món nướng",
+          "ten_hien_thi": "MEATDELI Thịt heo xay chuẩn ngon (S)",
           "thuong_hieu": "MEAT DELI",
-          "danh_muc": "Thịt",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/meat-deli-thit-heo-tang-cho-mon-nuong--s10274278",
+          "danh_muc": "Thịt - Thủy Hải Sản",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617947-20241205094732.jpg",
+          "url": "https://winmart.vn/products/meat-deli-thit-heo-xay--s10617947",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 168900,
+          "gia_niem_yet": 141900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 168900,
+          "don_gia_chuan": 141900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -131,16 +140,16 @@
       "id": "suon-non-heo-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Sườn non heo đặc biệt",
+          "ten_hien_thi": "Sườn non heo_MH giun quế",
           "thuong_hieu": "NOBRAND",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427337310110053664-kg-syp-lo-(bung-cai)-trang-og.jpg",
-          "url": "https://winmart.vn/products/suon-non-heo-dac-biet--s10053664",
+          "hinh_anh": null,
+          "url": "https://winmart.vn/products/suon-non-heo_mh-giun-que--s10323948",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 255000,
+          "gia_niem_yet": 239900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 255000,
+          "don_gia_chuan": 239900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }

@@ -1,24 +1,17 @@
 {
-  "week": "2026-07-10",
-  "risers": [
+  "week": "2026-07-11",
+  "risers": [],
+  "fallers": [
     {
       "id": "thit-heo-xay-500g",
       "ten_chuan": "Thịt heo xay khay 500g",
-      "pct": 19.0,
-      "direction": "up"
+      "pct": -16.0,
+      "direction": "down"
     },
     {
-      "id": "giay-ve-sinh-loc10",
-      "ten_chuan": "Giấy vệ sinh lốc 10 cuộn",
-      "pct": 7.2,
-      "direction": "up"
-    }
-  ],
-  "fallers": [
-    {
-      "id": "cam-sanh-1kg",
-      "ten_chuan": "Cam sành ~1kg",
-      "pct": -12.3,
+      "id": "suon-non-heo-500g",
+      "ten_chuan": "Sườn non heo khay 500g",
+      "pct": -5.9,
       "direction": "down"
     }
   ]
