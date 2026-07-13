@@ -1,18 +1,5 @@
 {
-  "week": "2026-07-11",
+  "week": "2026-07-13",
   "risers": [],
-  "fallers": [
-    {
-      "id": "thit-heo-xay-500g",
-      "ten_chuan": "Thịt heo xay khay 500g",
-      "pct": -16.0,
-      "direction": "down"
-    },
-    {
-      "id": "suon-non-heo-500g",
-      "ten_chuan": "Sườn non heo khay 500g",
-      "pct": -5.9,
-      "direction": "down"
-    }
-  ]
+  "fallers": []
 }

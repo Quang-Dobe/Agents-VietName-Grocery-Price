@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11",
+  "updated": "2026-07-13",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -729,18 +729,9 @@
       "id": "mi-hao-hao-goi",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Mì Handy Hảo Hảo chay lẩu nấm thập cẩm 66g",
-          "thuong_hieu": "HẢO HẢO",
-          "danh_muc": "Mì",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/11/10617354-20241119120714.jpg",
-          "url": "https://winmart.vn/products/acecook-mi-handy-chay-lau-nam-t.cam--s10617354",
-          "don_vi": "Ly",
-          "net": 1,
-          "gia_niem_yet": 10200,
-          "gia_khuyen_mai": 9600,
-          "don_gia_chuan": 9600,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "out_of_stock",
+          "nguon": "api",
+          "_note": "no confident match (best 0.00)"
         }
       }
     },
