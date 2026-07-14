@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-14",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -96,18 +96,9 @@
       "id": "thit-heo-nac-dui-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "MEATDELI Thịt Nạc dăm heo (Thịt Nạc vai) (S)",
-          "thuong_hieu": "MEAT DELI",
-          "danh_muc": "Thịt - Thủy Hải Sản",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617957-20241205094605.jpg",
-          "url": "https://winmart.vn/products/meat-deli-nac-dam-heo--s10617957",
-          "don_vi": "Kg",
-          "net": 1.0,
-          "gia_niem_yet": 204900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 204900,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "out_of_stock",
+          "nguon": "api",
+          "_note": "no confident match (best 0.00)"
         }
       }
     },
