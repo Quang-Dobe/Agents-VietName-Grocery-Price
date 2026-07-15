@@ -10,6 +10,9 @@ commentary.
 > design specs, and runnable skeletons. Live crawling starts at the P0 PoC (see
 > the plan). No prices have been collected yet.
 
+**🌐 Live dashboard:** https://quang-dobe.github.io/Agents-VietName-Grocery-Price/
+(published from `site/` via GitHub Pages; goes live once the first run deploys).
+
 ## Start here
 
 - **[`docs/PLAN.md`](docs/PLAN.md)** — the detailed plan: locked decisions, build
@@ -41,11 +44,15 @@ site/             dark-theme dashboard (index.html), methodology.html, items/ (d
 docs/             PLAN.md, DATA-MODEL.md, UI-DESIGN.md, WORKFLOW.md, brief.md, research/
 ```
 
-## Run the site locally
+## The site
 
-```
-cd site && python3 -m http.server 8000   # then open http://localhost:8000
-```
+- **Live (GitHub Pages):** https://quang-dobe.github.io/Agents-VietName-Grocery-Price/
+- **Locally:**
+
+  ```
+  cd site && python3 -m http.server 8000   # then open http://localhost:8000
+  ```
+
 Chart.js is vendored (`site/assets/chart.umd.min.js`) — no CDN needed.
 
 ## Adding BHX (residential IP only)
