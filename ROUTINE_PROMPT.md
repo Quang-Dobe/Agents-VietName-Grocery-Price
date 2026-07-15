@@ -9,7 +9,9 @@ idempotency check makes the Sunday run a no-op if Saturday already succeeded).
 You are running the weekly `vn-grocery-price-index` pipeline. Read `CLAUDE.md`
 before doing anything — it holds the schema, the two data stores (DB vs history),
 store IDs, API map, and rules. See `docs/DATA-MODEL.md` for the DB/history split.
-All work commits straight to `main`/default; GitHub Pages redeploys automatically.
+All work goes onto a fresh weekly branch and is published as a **normal (non-draft)
+pull request** — the auto-merge workflow merges it into `main` once checks pass, and
+GitHub Pages redeploys automatically.
 
 ## Step 0 — idempotency guard
 Compute this week's Saturday date (Asia/Ho_Chi_Minh). If `data/db/meta.json`
@@ -46,12 +48,18 @@ note, and keeps the **Workflow link** (`workflow.html`) on the dashboard. No cli
 data script and no fetch; charts read `<canvas data-*>` attributes. It verifies the
 page renders.
 
-## Step 5 — commit & log
+## Step 5 — commit, open a PR & log
 - Append a run summary to `data/run-log.md` (date, sources ok/fail, SKUs captured,
   substitutions, index values).
 - Write `data/db/meta.json` = `{ last_run_week: <saturday>, captured_at: <ISO> }`.
-- Commit everything with a message like
-  `data: weekly update <saturday> (index_chung <value>)` and push.
+- Create a fresh branch for this run (e.g. `data/weekly-update-<saturday>`) off the
+  latest `main`. Commit everything with a message like
+  `data: weekly update <saturday> (index_chung <value>)` and push the branch.
+- Open a **normal (non-draft) pull request** into `main` with that same title and a
+  short body summarizing sources ok/fail, SKUs captured, and the index values. Do
+  **not** open it as a draft — the auto-merge workflow only merges non-draft PRs.
+- The `auto-merge` workflow (`.github/workflows/auto-merge.yml`) merges the PR into
+  `main` once checks pass; GitHub Pages then redeploys automatically.
 - If Pages doesn't update, note it in the run log; do not retry destructively.
 
 ## Guardrails
