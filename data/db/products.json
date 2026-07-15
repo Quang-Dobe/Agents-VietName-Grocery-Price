@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14",
+  "updated": "2026-07-15",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -131,16 +131,16 @@
       "id": "suon-non-heo-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Sườn non heo_MH giun quế",
+          "ten_hien_thi": "Sườn non heo đặc biệt",
           "thuong_hieu": "NOBRAND",
           "danh_muc": "Thịt",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/suon-non-heo_mh-giun-que--s10323948",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427337310110053664-kg-syp-lo-(bung-cai)-trang-og.jpg",
+          "url": "https://winmart.vn/products/suon-non-heo-dac-biet--s10053664",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 239900,
+          "gia_niem_yet": 255000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 239900,
+          "don_gia_chuan": 255000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -175,16 +175,16 @@
       "id": "dui-ga-cn-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "CP Má đùi gà công nghiệp VietGap",
-          "thuong_hieu": "CP",
+          "ten_hien_thi": "MEATDELI Đùi gà tháo khớp",
+          "thuong_hieu": "MEAT DELI",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428498907910053728-kg-cp-suon-già-heo-og.jpg",
-          "url": "https://winmart.vn/products/cp-ma-dui-ga-cong-nghiep-vietgap--s10053728",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10283204-20241205094030.jpg",
+          "url": "https://winmart.vn/products/meatdeli-dui-ga-thao-khop--s10283204",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 94000,
+          "gia_niem_yet": 113900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 94000,
+          "don_gia_chuan": 113900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -242,7 +242,7 @@
       "chains": {
         "winmart": {
           "ten_hien_thi": "Thịt bò Úc Kiaora xay khay 200g",
-          "thuong_hieu": "NEWZEALAND",
+          "thuong_hieu": "KIAORA",
           "danh_muc": "Thịt",
           "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/8936150841113_7bc1837c-aa53-4a4d-a62c-28bed51c0e98-og.jpg",
           "url": "https://winmart.vn/products/kiaora-thit-bo-uc-xay-200g--s10282507",

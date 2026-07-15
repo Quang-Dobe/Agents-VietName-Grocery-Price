@@ -1,5 +1,18 @@
 {
-  "week": "2026-07-14",
-  "risers": [],
+  "week": "2026-07-15",
+  "risers": [
+    {
+      "id": "dui-ga-cn-500g",
+      "ten_chuan": "Đùi gà công nghiệp khay 500g",
+      "pct": 21.2,
+      "direction": "up"
+    },
+    {
+      "id": "suon-non-heo-500g",
+      "ten_chuan": "Sườn non heo khay 500g",
+      "pct": 6.3,
+      "direction": "up"
+    }
+  ],
   "fallers": []
 }
