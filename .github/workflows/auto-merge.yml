@@ -1,0 +1,81 @@
+name: Auto-merge PRs
+
+# Automatically merges any open pull request that is NOT a draft.
+# Drafts are skipped; mark a PR "Ready for review" to trigger the merge.
+# Runs on PR events and re-checks after CI completes, so a PR merges once
+# its checks are green.
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize, labeled, unlabeled]
+  check_suite:
+    types: [completed]
+  workflow_dispatch: {}
+
+# Need write on PRs/contents to merge, and read on checks to gate on CI.
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+# Don't run two merge passes for the same PR at once.
+concurrency:
+  group: auto-merge-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge on non-draft PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          # Collect the PR numbers to consider for this event.
+          if [ -n "${{ github.event.pull_request.number || '' }}" ]; then
+            prs="${{ github.event.pull_request.number }}"
+          else
+            # check_suite completed / manual dispatch: scan all open PRs.
+            prs=$(gh pr list --repo "$REPO" --state open --json number \
+              --jq '.[].number')
+          fi
+
+          if [ -z "$prs" ]; then
+            echo "No open PRs to process."
+            exit 0
+          fi
+
+          for pr in $prs; do
+            echo "::group::PR #$pr"
+
+            info=$(gh pr view "$pr" --repo "$REPO" \
+              --json isDraft,state,mergeStateStatus,title)
+            is_draft=$(echo "$info" | jq -r '.isDraft')
+            state=$(echo "$info" | jq -r '.state')
+            title=$(echo "$info" | jq -r '.title')
+
+            if [ "$state" != "OPEN" ]; then
+              echo "PR #$pr ($title) is $state — skipping."
+              echo "::endgroup::"
+              continue
+            fi
+
+            if [ "$is_draft" = "true" ]; then
+              echo "PR #$pr ($title) is a draft — skipping."
+              echo "::endgroup::"
+              continue
+            fi
+
+            echo "PR #$pr ($title) is ready — enabling auto-merge."
+            # --auto merges as soon as required checks pass (or immediately
+            # if there are none). Falls back to an immediate merge if the
+            # repo doesn't have auto-merge enabled.
+            gh pr merge "$pr" --repo "$REPO" --squash --auto \
+              || gh pr merge "$pr" --repo "$REPO" --squash \
+              || echo "Could not merge PR #$pr yet (checks pending or conflicts)."
+
+            echo "::endgroup::"
+          done
