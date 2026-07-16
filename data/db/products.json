@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15",
+  "updated": "2026-07-18",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -96,9 +96,18 @@
       "id": "thit-heo-nac-dui-500g",
       "chains": {
         "winmart": {
-          "trang_thai": "out_of_stock",
-          "nguon": "api",
-          "_note": "no confident match (best 0.00)"
+          "ten_hien_thi": "MEATDELI Thịt Nạc dăm heo (Thịt Nạc vai) (S)",
+          "thuong_hieu": "MEAT DELI",
+          "danh_muc": "Thịt - Thủy Hải Sản",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617957-20241205094605.jpg",
+          "url": "https://winmart.vn/products/meat-deli-nac-dam-heo--s10617957",
+          "don_vi": "Kg",
+          "net": 1.0,
+          "gia_niem_yet": 204900,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 204900,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
@@ -175,16 +184,16 @@
       "id": "dui-ga-cn-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "MEATDELI Đùi gà tháo khớp",
-          "thuong_hieu": "MEAT DELI",
+          "ten_hien_thi": "CP Má đùi gà công nghiệp VietGap",
+          "thuong_hieu": "CP",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10283204-20241205094030.jpg",
-          "url": "https://winmart.vn/products/meatdeli-dui-ga-thao-khop--s10283204",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428498907910053728-kg-cp-suon-già-heo-og.jpg",
+          "url": "https://winmart.vn/products/cp-ma-dui-ga-cong-nghiep-vietgap--s10053728",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 113900,
+          "gia_niem_yet": 94000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 113900,
+          "don_gia_chuan": 94000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -241,16 +250,16 @@
       "id": "thit-bo-xay-300g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Thịt bò Úc Kiaora xay khay 200g",
-          "thuong_hieu": "KIAORA",
+          "ten_hien_thi": "Thịt bò xay – Mince (xay) Vinabeef 200gr",
+          "thuong_hieu": "",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/8936150841113_7bc1837c-aa53-4a4d-a62c-28bed51c0e98-og.jpg",
-          "url": "https://winmart.vn/products/kiaora-thit-bo-uc-xay-200g--s10282507",
+          "hinh_anh": null,
+          "url": "https://winmart.vn/products/thit-bo-xay-mince-xay-vinabeef-200gr--s10271856",
           "don_vi": "Khay",
-          "net": 0.2,
-          "gia_niem_yet": 68700,
+          "net": 0.3,
+          "gia_niem_yet": 75000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 343500,
+          "don_gia_chuan": 250000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -464,8 +473,8 @@
           "don_vi": "Kg",
           "net": 1.0,
           "gia_niem_yet": 40900,
-          "gia_khuyen_mai": 34900,
-          "don_gia_chuan": 34900,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 40900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -798,8 +807,8 @@
           "don_vi": "Chai",
           "net": 0.75,
           "gia_niem_yet": 28800,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 38400,
+          "gia_khuyen_mai": 25000,
+          "don_gia_chuan": 33333,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
