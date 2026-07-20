@@ -1,31 +1,12 @@
 {
-  "week": "2026-07-18",
+  "week": "2026-07-20",
   "risers": [
-    {
-      "id": "chuoi-gia-1kg",
-      "ten_chuan": "Chuối già ~1kg",
-      "pct": 17.2,
-      "direction": "up"
-    }
-  ],
-  "fallers": [
     {
       "id": "thit-bo-xay-300g",
       "ten_chuan": "Thịt bò xay khay 300g",
-      "pct": -27.2,
-      "direction": "down"
-    },
-    {
-      "id": "dui-ga-cn-500g",
-      "ten_chuan": "Đùi gà công nghiệp khay 500g",
-      "pct": -17.5,
-      "direction": "down"
-    },
-    {
-      "id": "nuoc-rua-chen-sunlight-750g",
-      "ten_chuan": "Nước rửa chén Sunlight 750g",
-      "pct": -13.2,
-      "direction": "down"
+      "pct": 37.4,
+      "direction": "up"
     }
-  ]
+  ],
+  "fallers": []
 }

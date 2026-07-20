@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18",
+  "updated": "2026-07-20",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -250,16 +250,16 @@
       "id": "thit-bo-xay-300g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Thịt bò xay – Mince (xay) Vinabeef 200gr",
-          "thuong_hieu": "",
+          "ten_hien_thi": "Thịt bò Úc Kiaora xay khay 200g",
+          "thuong_hieu": "KIAORA",
           "danh_muc": "Thịt",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/thit-bo-xay-mince-xay-vinabeef-200gr--s10271856",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/8936150841113_7bc1837c-aa53-4a4d-a62c-28bed51c0e98-og.jpg",
+          "url": "https://winmart.vn/products/kiaora-thit-bo-uc-xay-200g--s10282507",
           "don_vi": "Khay",
-          "net": 0.3,
-          "gia_niem_yet": 75000,
+          "net": 0.2,
+          "gia_niem_yet": 68700,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 250000,
+          "don_gia_chuan": 343500,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -307,18 +307,9 @@
       "id": "tom-the-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "HDC Tôm thẻ hấp ĐL size 40-60con/kg",
-          "thuong_hieu": "HDC",
-          "danh_muc": "Thủy hải sản",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/hdc-tom-the-hap-dl-size-40-60conkg--s10283920",
-          "don_vi": "Kg",
-          "net": 1.0,
-          "gia_niem_yet": 299900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 299900,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "out_of_stock",
+          "nguon": "api",
+          "_note": "no confident match (best 0.00)"
         }
       }
     },
@@ -421,18 +412,9 @@
       "id": "hanh-la-100g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Hành lá 100g",
-          "thuong_hieu": "NOBRAND",
-          "danh_muc": "Rau Lá",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/hanh-la-100g_32be1d63-8c44-4190-81d0-5e1a2a84b301-og.png",
-          "url": "https://winmart.vn/products/hanh-la-100g--s10281776",
-          "don_vi": "Gói",
-          "net": 0.1,
-          "gia_niem_yet": 5500,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 55000,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "out_of_stock",
+          "nguon": "api",
+          "_note": "no confident match (best 0.00)"
         }
       }
     },
