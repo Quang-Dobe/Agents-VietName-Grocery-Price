@@ -81,3 +81,8 @@ Format:
 - WinMart: ok — 35/40 SKU
 - BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
 - Index: chung 100.00 · bhx — · winmart 100.00
+
+## 2026-07-20  (captured 2026-07-20T06:00:00+07:00)
+- WinMart: ok — 33/40 SKU
+- BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
+- Index: chung 100.00 · bhx — · winmart 100.00
