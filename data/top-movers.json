@@ -1,10 +1,16 @@
 {
-  "week": "2026-07-20",
+  "week": "2026-07-21",
   "risers": [
     {
-      "id": "thit-bo-xay-300g",
-      "ten_chuan": "Thịt bò xay khay 300g",
-      "pct": 37.4,
+      "id": "canh-ga-500g",
+      "ten_chuan": "Cánh gà khay 500g",
+      "pct": 19.2,
+      "direction": "up"
+    },
+    {
+      "id": "dui-ga-cn-500g",
+      "ten_chuan": "Đùi gà công nghiệp khay 500g",
+      "pct": 2.0,
       "direction": "up"
     }
   ],

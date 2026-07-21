@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-21",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -184,16 +184,16 @@
       "id": "dui-ga-cn-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "CP Má đùi gà công nghiệp VietGap",
-          "thuong_hieu": "CP",
+          "ten_hien_thi": "MEATDELI Má đùi gà",
+          "thuong_hieu": "MEAT DELI",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428498907910053728-kg-cp-suon-già-heo-og.jpg",
-          "url": "https://winmart.vn/products/cp-ma-dui-ga-cong-nghiep-vietgap--s10053728",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10283203-20241205094133.jpg",
+          "url": "https://winmart.vn/products/meatdeli-ma-dui-ga--s10283203",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 94000,
+          "gia_niem_yet": 95900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 94000,
+          "don_gia_chuan": 95900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -206,16 +206,16 @@
       "id": "canh-ga-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "CP Cánh gà công nghiệp VietGap",
-          "thuong_hieu": "CP",
+          "ten_hien_thi": "MEATDELI Cánh gà",
+          "thuong_hieu": "MEAT DELI",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428501154810053639-kg-cp-chon-giu-heo-og.jpg",
-          "url": "https://winmart.vn/products/cp-canh-ga-cong-nghiep-vietgap--s10053639",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10283202-20241205093808.jpg",
+          "url": "https://winmart.vn/products/meatdeli-canh-ga--s10283202",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 115000,
-          "gia_khuyen_mai": 103900,
-          "don_gia_chuan": 103900,
+          "gia_niem_yet": 123900,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 123900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -412,9 +412,18 @@
       "id": "hanh-la-100g",
       "chains": {
         "winmart": {
-          "trang_thai": "out_of_stock",
-          "nguon": "api",
-          "_note": "no confident match (best 0.00)"
+          "ten_hien_thi": "Combo Hành lá + Ngò rí 50g",
+          "thuong_hieu": "NOBRAND",
+          "danh_muc": "Rau Lá",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/combo-hanh-la-ngo-ri-50g.jpg",
+          "url": "https://winmart.vn/products/combo-hanh-la-ngo-ri-50g--s10242901",
+          "don_vi": "Gói",
+          "net": 0.05,
+          "gia_niem_yet": 7500,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 150000,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
