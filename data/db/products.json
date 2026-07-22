@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-22",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -250,16 +250,16 @@
       "id": "thit-bo-xay-300g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Thịt bò Úc Kiaora xay khay 200g",
-          "thuong_hieu": "KIAORA",
+          "ten_hien_thi": "Thịt bò xay – Mince (xay) Vinabeef 200gr",
+          "thuong_hieu": "",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/8936150841113_7bc1837c-aa53-4a4d-a62c-28bed51c0e98-og.jpg",
-          "url": "https://winmart.vn/products/kiaora-thit-bo-uc-xay-200g--s10282507",
+          "hinh_anh": null,
+          "url": "https://winmart.vn/products/thit-bo-xay-mince-xay-vinabeef-200gr--s10271856",
           "don_vi": "Khay",
-          "net": 0.2,
-          "gia_niem_yet": 68700,
+          "net": 0.3,
+          "gia_niem_yet": 75000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 343500,
+          "don_gia_chuan": 250000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -412,9 +412,18 @@
       "id": "hanh-la-100g",
       "chains": {
         "winmart": {
-          "trang_thai": "out_of_stock",
-          "nguon": "api",
-          "_note": "no confident match (best 0.00)"
+          "ten_hien_thi": "Combo Hành lá + Ngò rí 50g",
+          "thuong_hieu": "NOBRAND",
+          "danh_muc": "Rau Lá",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/combo-hanh-la-ngo-ri-50g.jpg",
+          "url": "https://winmart.vn/products/combo-hanh-la-ngo-ri-50g--s10242901",
+          "don_vi": "Gói",
+          "net": 0.05,
+          "gia_niem_yet": 7500,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 150000,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
