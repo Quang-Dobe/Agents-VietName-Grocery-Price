@@ -1,12 +1,12 @@
 {
-  "week": "2026-07-20",
-  "risers": [
+  "week": "2026-07-22",
+  "risers": [],
+  "fallers": [
     {
       "id": "thit-bo-xay-300g",
       "ten_chuan": "Thịt bò xay khay 300g",
-      "pct": 37.4,
-      "direction": "up"
+      "pct": -27.2,
+      "direction": "down"
     }
-  ],
-  "fallers": []
+  ]
 }
