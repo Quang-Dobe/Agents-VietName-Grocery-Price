@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22",
+  "updated": "2026-07-24",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -16,8 +16,8 @@
           "don_vi": "Gói",
           "net": 5.0,
           "gia_niem_yet": 189000,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 37800,
+          "gia_khuyen_mai": 180600,
+          "don_gia_chuan": 36120,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -52,16 +52,16 @@
       "id": "bun-pho-kho-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Bún khô Hùng Lô Thiên Nhiên Xanh 500g",
-          "thuong_hieu": "THIÊN NHIÊN XANH",
+          "ten_hien_thi": "Bún khô Thu Dung làm từ gạo lứt 500g",
+          "thuong_hieu": "THU DUNG",
           "danh_muc": "Phở - Bún",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2023/02/bun-kho-hung-lo-thien-nhien-xanh-500g.png",
-          "url": "https://winmart.vn/products/thien-nhien-xanh-bun-kho-hung-lo-500g--s10324875",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/bun-kho-thu-dung-lam-tu-gao-lut-500g-20221014063337-og.jpg",
+          "url": "https://winmart.vn/products/thu-dung-bun-kho-lam-tu-gao-lu-500g--s10008461",
           "don_vi": "Gói",
           "net": 0.5,
-          "gia_niem_yet": 36600,
+          "gia_niem_yet": 36400,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 73200,
+          "don_gia_chuan": 72800,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -74,16 +74,16 @@
       "id": "thit-heo-ba-roi-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Thịt ba rọi heo đặc biệt",
+          "ten_hien_thi": "Thịt Ba Rọi có da_MH giun quế",
           "thuong_hieu": "NOBRAND",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427314545410053663-kg-thit-dui-heo-og.jpg",
-          "url": "https://winmart.vn/products/thit-ba-roi-heo-dac-biet--s10053663",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/thit-ba-roi-co-da.jpg",
+          "url": "https://winmart.vn/products/thit-ba-roi-co-da_mh-giun-que--s10323947",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 239900,
+          "gia_niem_yet": 245000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 239900,
+          "don_gia_chuan": 245000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -140,16 +140,16 @@
       "id": "suon-non-heo-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Sườn non heo đặc biệt",
+          "ten_hien_thi": "Sườn non heo_MH giun quế",
           "thuong_hieu": "NOBRAND",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427337310110053664-kg-syp-lo-(bung-cai)-trang-og.jpg",
-          "url": "https://winmart.vn/products/suon-non-heo-dac-biet--s10053664",
+          "hinh_anh": null,
+          "url": "https://winmart.vn/products/suon-non-heo_mh-giun-que--s10323948",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 255000,
+          "gia_niem_yet": 239900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 255000,
+          "don_gia_chuan": 239900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -206,16 +206,16 @@
       "id": "canh-ga-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "CP Cánh gà công nghiệp VietGap",
-          "thuong_hieu": "CP",
+          "ten_hien_thi": "OGARI Cánh gà công nghiệp",
+          "thuong_hieu": "",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428501154810053639-kg-cp-chon-giu-heo-og.jpg",
-          "url": "https://winmart.vn/products/cp-canh-ga-cong-nghiep-vietgap--s10053639",
+          "hinh_anh": null,
+          "url": "https://winmart.vn/products/ogari-canh-ga-cong-nghiep--s10276973",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 115000,
-          "gia_khuyen_mai": 103900,
-          "don_gia_chuan": 103900,
+          "gia_niem_yet": 105000,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 105000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -258,8 +258,8 @@
           "don_vi": "Khay",
           "net": 0.3,
           "gia_niem_yet": 75000,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 250000,
+          "gia_khuyen_mai": 67500,
+          "don_gia_chuan": 225000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -272,16 +272,16 @@
       "id": "ca-nuc-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Cá nục làm sạch bỏ đầu 8-12 con/kg",
+          "ten_hien_thi": "Cá nục gai tươi",
           "thuong_hieu": "NOBRAND",
-          "danh_muc": "Thủy hải sản",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/ca-nuc-lam-sach-bo-dau-8-12-conkg--s10060420",
+          "danh_muc": "Hải Sản",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428531325010053358-kg-cà-rot-l1-vineco-og.jpg",
+          "url": "https://winmart.vn/products/ca-nuc-gai-tuoi--s10053358",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 118900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 118900,
+          "gia_niem_yet": 109900,
+          "gia_khuyen_mai": 101900,
+          "don_gia_chuan": 101900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -398,8 +398,8 @@
           "don_vi": "Gói",
           "net": 1.0,
           "gia_niem_yet": 85500,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 85500,
+          "gia_khuyen_mai": 75500,
+          "don_gia_chuan": 75500,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -412,18 +412,9 @@
       "id": "hanh-la-100g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Combo Hành lá + Ngò rí 50g",
-          "thuong_hieu": "NOBRAND",
-          "danh_muc": "Rau Lá",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/combo-hanh-la-ngo-ri-50g.jpg",
-          "url": "https://winmart.vn/products/combo-hanh-la-ngo-ri-50g--s10242901",
-          "don_vi": "Gói",
-          "net": 0.05,
-          "gia_niem_yet": 7500,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 150000,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "out_of_stock",
+          "nguon": "api",
+          "_note": "no confident match (best 0.00)"
         }
       }
     },
@@ -530,8 +521,8 @@
           "don_vi": "Chai",
           "net": 5.0,
           "gia_niem_yet": 325000,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 65000,
+          "gia_khuyen_mai": 265500,
+          "don_gia_chuan": 53100,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -552,8 +543,8 @@
           "don_vi": "Chai",
           "net": 1.0,
           "gia_niem_yet": 69200,
-          "gia_khuyen_mai": 56100,
-          "don_gia_chuan": 56100,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 69200,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -662,8 +653,8 @@
           "don_vi": "Gói",
           "net": 0.22,
           "gia_niem_yet": 9800,
-          "gia_khuyen_mai": 9000,
-          "don_gia_chuan": 40909,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 44545,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -684,8 +675,8 @@
           "don_vi": "Hộp",
           "net": 0.38,
           "gia_niem_yet": 29500,
-          "gia_khuyen_mai": 28800,
-          "don_gia_chuan": 75789,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 77632,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -706,8 +697,8 @@
           "don_vi": "Gói 4",
           "net": 4,
           "gia_niem_yet": 26800,
-          "gia_khuyen_mai": 22800,
-          "don_gia_chuan": 5700,
+          "gia_khuyen_mai": 23200,
+          "don_gia_chuan": 5800,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -776,8 +767,8 @@
           "don_vi": "Lốc, Lô, Lố",
           "net": 10,
           "gia_niem_yet": 116900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 11690,
+          "gia_khuyen_mai": 65000,
+          "don_gia_chuan": 6500,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -820,8 +811,8 @@
           "don_vi": "Gói",
           "net": 3.0,
           "gia_niem_yet": 146800,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 48933,
+          "gia_khuyen_mai": 134000,
+          "don_gia_chuan": 44667,
           "trang_thai": "in_stock",
           "nguon": "api"
         }

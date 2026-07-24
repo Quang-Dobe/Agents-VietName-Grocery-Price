@@ -1,11 +1,66 @@
 {
-  "week": "2026-07-22",
-  "risers": [],
+  "week": "2026-07-24",
+  "risers": [
+    {
+      "id": "dau-an-simply-1l",
+      "ten_chuan": "Dầu ăn Simply chai 1 lít",
+      "pct": 23.4,
+      "direction": "up"
+    },
+    {
+      "id": "sua-tuoi-vinamilk-1l",
+      "ten_chuan": "Sữa tươi Vinamilk hộp 1 lít",
+      "pct": 8.9,
+      "direction": "up"
+    },
+    {
+      "id": "sua-dac-ong-tho-380g",
+      "ten_chuan": "Sữa đặc Ông Thọ lon 380g",
+      "pct": 2.4,
+      "direction": "up"
+    },
+    {
+      "id": "thit-heo-ba-roi-500g",
+      "ten_chuan": "Thịt ba rọi heo khay 500g",
+      "pct": 2.1,
+      "direction": "up"
+    },
+    {
+      "id": "sua-chua-vinamilk-loc4",
+      "ten_chuan": "Sữa chua Vinamilk lốc 4 hộp",
+      "pct": 1.8,
+      "direction": "up"
+    }
+  ],
   "fallers": [
+    {
+      "id": "giay-ve-sinh-loc10",
+      "ten_chuan": "Giấy vệ sinh lốc 10 cuộn",
+      "pct": -44.4,
+      "direction": "down"
+    },
+    {
+      "id": "dau-an-tuong-an-1l",
+      "ten_chuan": "Dầu ăn Tường An chai 1 lít",
+      "pct": -18.3,
+      "direction": "down"
+    },
+    {
+      "id": "ca-nuc-500g",
+      "ten_chuan": "Cá nục tươi khay 500g",
+      "pct": -14.3,
+      "direction": "down"
+    },
+    {
+      "id": "khoai-tay-1kg",
+      "ten_chuan": "Khoai tây ~1kg",
+      "pct": -11.7,
+      "direction": "down"
+    },
     {
       "id": "thit-bo-xay-300g",
       "ten_chuan": "Thịt bò xay khay 300g",
-      "pct": -27.2,
+      "pct": -10.0,
       "direction": "down"
     }
   ]
