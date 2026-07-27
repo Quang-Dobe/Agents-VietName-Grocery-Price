@@ -91,3 +91,19 @@ Format:
 - WinMart: ok — 34/40 SKU
 - BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
 - Index: chung 100.00 · bhx — · winmart 100.00
+
+## 2026-07-27  (captured 2026-07-27T06:00:00+07:00)
+- WinMart: ok — 34/40 SKU
+- BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
+- Index: chung 100.00 · bhx — · winmart 100.00
+- **Anomaly:** `scripts/build_run.py` writes a hardcoded `"100.00"` row to
+  `index-history.csv` for every week instead of calling
+  `lib_index.compute_indices()` (which implements the correct Laspeyres
+  formula against each item's base-week price). This has been the case since
+  the pipeline's first commit (`46fa7b0`), so `index_chung`/`index_winmart`
+  have never moved despite real per-SKU price changes (`top-movers.json` this
+  week shows swings from -63.2% to +145.7%, computed correctly from the
+  per-item CSVs). `build_run.py` needs to read each matched item's base price
+  from `data/items/<id>.csv` and call `compute_indices` before writing the
+  history row. Not fixed in this run — out of scope for the weekly data
+  update; flagging per golden rule 5.
