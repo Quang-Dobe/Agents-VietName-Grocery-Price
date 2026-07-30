@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22",
+  "updated": "2026-07-30",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -16,8 +16,8 @@
           "don_vi": "Gói",
           "net": 5.0,
           "gia_niem_yet": 189000,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 37800,
+          "gia_khuyen_mai": 180600,
+          "don_gia_chuan": 36120,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -52,16 +52,16 @@
       "id": "bun-pho-kho-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Bún khô Hùng Lô Thiên Nhiên Xanh 500g",
-          "thuong_hieu": "THIÊN NHIÊN XANH",
+          "ten_hien_thi": "Bún khô Thu Dung làm từ gạo lứt 500g",
+          "thuong_hieu": "THU DUNG",
           "danh_muc": "Phở - Bún",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2023/02/bun-kho-hung-lo-thien-nhien-xanh-500g.png",
-          "url": "https://winmart.vn/products/thien-nhien-xanh-bun-kho-hung-lo-500g--s10324875",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/bun-kho-thu-dung-lam-tu-gao-lut-500g-20221014063337-og.jpg",
+          "url": "https://winmart.vn/products/thu-dung-bun-kho-lam-tu-gao-lu-500g--s10008461",
           "don_vi": "Gói",
           "net": 0.5,
-          "gia_niem_yet": 36600,
+          "gia_niem_yet": 36400,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 73200,
+          "don_gia_chuan": 72800,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -206,16 +206,16 @@
       "id": "canh-ga-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "CP Cánh gà công nghiệp VietGap",
+          "ten_hien_thi": "CP Cánh gà góc VietGap",
           "thuong_hieu": "CP",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428501154810053639-kg-cp-chon-giu-heo-og.jpg",
-          "url": "https://winmart.vn/products/cp-canh-ga-cong-nghiep-vietgap--s10053639",
+          "hinh_anh": null,
+          "url": "https://winmart.vn/products/cp-canh-ga-goc-vietgap--s10281128",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 115000,
-          "gia_khuyen_mai": 103900,
-          "don_gia_chuan": 103900,
+          "gia_niem_yet": 84000,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 84000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -250,16 +250,16 @@
       "id": "thit-bo-xay-300g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Thịt bò xay – Mince (xay) Vinabeef 200gr",
-          "thuong_hieu": "",
+          "ten_hien_thi": "Thịt bò Úc Kiaora xay khay 200g",
+          "thuong_hieu": "KIAORA",
           "danh_muc": "Thịt",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/thit-bo-xay-mince-xay-vinabeef-200gr--s10271856",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/8936150841113_7bc1837c-aa53-4a4d-a62c-28bed51c0e98-og.jpg",
+          "url": "https://winmart.vn/products/kiaora-thit-bo-uc-xay-200g--s10282507",
           "don_vi": "Khay",
-          "net": 0.3,
-          "gia_niem_yet": 75000,
+          "net": 0.2,
+          "gia_niem_yet": 68700,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 250000,
+          "don_gia_chuan": 343500,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -272,16 +272,16 @@
       "id": "ca-nuc-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Cá nục làm sạch bỏ đầu 8-12 con/kg",
+          "ten_hien_thi": "Cá nục gai tươi",
           "thuong_hieu": "NOBRAND",
-          "danh_muc": "Thủy hải sản",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/ca-nuc-lam-sach-bo-dau-8-12-conkg--s10060420",
+          "danh_muc": "Hải Sản",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428531325010053358-kg-cà-rot-l1-vineco-og.jpg",
+          "url": "https://winmart.vn/products/ca-nuc-gai-tuoi--s10053358",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 118900,
+          "gia_niem_yet": 109900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 118900,
+          "don_gia_chuan": 109900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -368,18 +368,19 @@
       "id": "ca-chua-1kg",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Cà chua đỏ 500g",
+          "ten_hien_thi": "Cà chua cherry đỏ 300g",
           "thuong_hieu": "NOBRAND",
-          "danh_muc": "Rau củ",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/ca-chua-do-500g--s10290350",
-          "don_vi": "Gói",
-          "net": 0.5,
-          "gia_niem_yet": 13500,
+          "danh_muc": "Củ, Quả",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2023/02/ca-chua-cherry-do-300g.jpg",
+          "url": "https://winmart.vn/products/ca-chua-cherry-do-300g--s10283522",
+          "don_vi": "Hộp",
+          "net": 0.3,
+          "gia_niem_yet": 19900,
           "gia_khuyen_mai": null,
           "don_gia_chuan": 27000,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "carry_forward",
+          "nguon": "api",
+          "_note": "jump guard: raw don_gia_chuan 66.333d (matched Ca chua cherry do 300g) vs 27.000d prior 11 weeks -> +145.7%, carried forward previous value"
         }
       }
     },
@@ -398,8 +399,8 @@
           "don_vi": "Gói",
           "net": 1.0,
           "gia_niem_yet": 85500,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 85500,
+          "gia_khuyen_mai": 75500,
+          "don_gia_chuan": 75500,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -530,8 +531,8 @@
           "don_vi": "Chai",
           "net": 5.0,
           "gia_niem_yet": 325000,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 65000,
+          "gia_khuyen_mai": 265500,
+          "don_gia_chuan": 53100,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -552,8 +553,8 @@
           "don_vi": "Chai",
           "net": 1.0,
           "gia_niem_yet": 69200,
-          "gia_khuyen_mai": 56100,
-          "don_gia_chuan": 56100,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 69200,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -662,8 +663,8 @@
           "don_vi": "Gói",
           "net": 0.22,
           "gia_niem_yet": 9800,
-          "gia_khuyen_mai": 9000,
-          "don_gia_chuan": 40909,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 44545,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -684,8 +685,8 @@
           "don_vi": "Hộp",
           "net": 0.38,
           "gia_niem_yet": 29500,
-          "gia_khuyen_mai": 28800,
-          "don_gia_chuan": 75789,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 77632,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -706,8 +707,8 @@
           "don_vi": "Gói 4",
           "net": 4,
           "gia_niem_yet": 26800,
-          "gia_khuyen_mai": 22800,
-          "don_gia_chuan": 5700,
+          "gia_khuyen_mai": 23200,
+          "don_gia_chuan": 5800,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -776,8 +777,8 @@
           "don_vi": "Lốc, Lô, Lố",
           "net": 10,
           "gia_niem_yet": 116900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 11690,
+          "gia_khuyen_mai": 65000,
+          "don_gia_chuan": 6500,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -820,8 +821,8 @@
           "don_vi": "Gói",
           "net": 3.0,
           "gia_niem_yet": 146800,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 48933,
+          "gia_khuyen_mai": 134000,
+          "don_gia_chuan": 44667,
           "trang_thai": "in_stock",
           "nguon": "api"
         }

@@ -91,3 +91,27 @@ Format:
 - WinMart: ok — 34/40 SKU
 - BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
 - Index: chung 100.00 · bhx — · winmart 100.00
+
+### 2026-07-30 — bug fix note
+`build_run.py` was found to hardcode the index at 100.00 every run instead of
+calling `lib_index.compute_indices()` (which was defined but never invoked).
+Fixed the script and retroactively recomputed `data/index-history.csv` from
+the real per-item price history in `data/items/*.csv` (source of truth,
+unaffected by the bug). Corrected series: 04/07=100.00, 08/07=114.35,
+09/07=105.67, 10/07=106.62, 11/07=105.31, 13/07=105.39, 14/07=105.63,
+15/07=106.55, 18/07=104.71, 20/07=105.99, 22/07=109.29.
+
+While computing this week's (30/07) figure, `ca-chua-1kg`/WinMart raw don_gia_chuan
+came back 66.333đ (crawler matched "Cà chua cherry đỏ 300g", a different product
+than the ~27.000đ/kg item matched every prior week) → +145.7%, tripping the
+jump-guard (>50%, CLAUDE.md §Validation). Applied the documented default action:
+dropped the reading, carried forward 27.000đ into `products.json` and
+`data/items/ca-chua-1kg.csv`, marked `carry_forward`. That's why this week's
+WinMart count is 33/40 (not 34) and the item is excluded from this week's history
+row / index / item page per existing carry_forward convention (see 08/07 entry
+above). Final corrected index for 30/07 is below.
+
+## 2026-07-30  (captured 2026-07-30T06:00:00+07:00)
+- WinMart: ok — 33/40 SKU
+- BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
+- Index: chung 106.88 · bhx — · winmart 106.88

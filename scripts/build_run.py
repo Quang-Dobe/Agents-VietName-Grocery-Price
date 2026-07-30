@@ -20,6 +20,7 @@ import json
 from pathlib import Path
 
 import lib_db
+import lib_index
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -47,6 +48,16 @@ def pct(x) -> str:
 
 def read_csv(p: Path):
     return list(csv.DictReader(p.open())) if p.exists() else []
+
+
+def load_weights() -> dict:
+    basket = json.loads((ROOT / "basket.json").read_text(encoding="utf-8"))
+    b_items = basket["items"] if isinstance(basket, dict) and "items" in basket else basket
+    return {it["id"]: it["trong_so"] for it in b_items}
+
+
+def fmt_idx(v) -> str:
+    return f"{v:.2f}" if v is not None else ""
 
 
 def jarr(a) -> str:
@@ -154,6 +165,20 @@ def main() -> None:
 
     # --- history (the only time-indexed data) ---
     (DATA / "items").mkdir(parents=True, exist_ok=True)
+
+    # Base = first-ever row of each item's history, captured BEFORE this week's
+    # row is appended (an item establishing its first row this week has no base
+    # yet, so it doesn't move the index until next week — see CLAUDE.md §Index).
+    weights = load_weights()
+    base_prices = {}
+    for it in items:
+        r0 = next(iter(read_csv(DATA / "items" / f"{it['id']}.csv")), None)
+        if r0:
+            base_prices[it["id"]] = {
+                "bhx": float(r0["bhx_don_gia_chuan"]) if r0.get("bhx_don_gia_chuan") else None,
+                "winmart": float(r0["winmart_don_gia_chuan"]) if r0.get("winmart_don_gia_chuan") else None,
+            }
+
     for it in matched:
         p = DATA / "items" / f"{it['id']}.csv"
         rows = read_csv(p)
@@ -167,9 +192,20 @@ def main() -> None:
                 w.writerow([week, "", wm])
 
     ih = DATA / "index-history.csv"
-    if not any(r["date"] == week for r in read_csv(ih)):
+    ih_before = read_csv(ih)
+    if not any(r["date"] == week for r in ih_before):
+        now_prices = lib_db.current_don_gia_chuan(db)
+        computed = lib_index.compute_indices(now_prices, base_prices, weights)
+        if not ih_before:
+            # Genesis week: no item has a prior base yet, so this week anchors at 100.00.
+            chung = computed["index_chung"] if computed["index_chung"] is not None else 100.00
+            winmart = computed["index_winmart"] if computed["index_winmart"] is not None else 100.00
+        else:
+            chung = computed["index_chung"]
+            winmart = computed["index_winmart"]
+        bhx = computed["index_bhx"]
         with ih.open("a", newline="") as f:
-            csv.writer(f).writerow([week, "100.00", "", "100.00"])
+            csv.writer(f).writerow([week, fmt_idx(chung), fmt_idx(bhx), fmt_idx(winmart)])
     ih_all = read_csv(ih)
     first_week = len(ih_all) <= 1
 
@@ -266,12 +302,17 @@ def main() -> None:
         (items_dir / f"{it['id']}.html").write_text(page, encoding="utf-8")
 
     # run log
-    with (DATA / "run-log.md").open("a") as f:
-        f.write(f"\n## {week}  (captured {captured})\n"
-                f"- WinMart: ok — {len(matched)}/{len(items)} SKU\n"
-                f"- BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/{len(items)}\n"
-                f"- Index: chung 100.00 · bhx — · winmart 100.00"
-                f"{' (base week)' if first_week else ''}\n")
+    log_idx = lambda v: f"{v:.2f}" if v is not None else "—"
+    already_logged = f"## {week}  (captured" in (DATA / "run-log.md").read_text(encoding="utf-8") \
+        if (DATA / "run-log.md").exists() else False
+    if not already_logged:
+        with (DATA / "run-log.md").open("a") as f:
+            f.write(f"\n## {week}  (captured {captured})\n"
+                    f"- WinMart: ok — {len(matched)}/{len(items)} SKU\n"
+                    f"- BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/{len(items)}\n"
+                    f"- Index: chung {log_idx(last(ser['chung']))} · bhx {log_idx(last(ser['bhx']))} · "
+                    f"winmart {log_idx(last(ser['winmart']))}"
+                    f"{' (base week)' if first_week else ''}\n")
 
     print(f"run {week}: {len(matched)}/{len(items)} WinMart SKUs; first_week={first_week}; "
           f"rendered site/index.html + {len(matched)} item pages")
