@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23",
+  "updated": "2026-08-02",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -52,16 +52,16 @@
       "id": "bun-pho-kho-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Bún khô Hùng Lô Thiên Nhiên Xanh 500g",
-          "thuong_hieu": "THIÊN NHIÊN XANH",
+          "ten_hien_thi": "Bún khô Thu Dung làm từ gạo lứt 500g",
+          "thuong_hieu": "THU DUNG",
           "danh_muc": "Phở - Bún",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2023/02/bun-kho-hung-lo-thien-nhien-xanh-500g.png",
-          "url": "https://winmart.vn/products/thien-nhien-xanh-bun-kho-hung-lo-500g--s10324875",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/bun-kho-thu-dung-lam-tu-gao-lut-500g-20221014063337-og.jpg",
+          "url": "https://winmart.vn/products/thu-dung-bun-kho-lam-tu-gao-lu-500g--s10008461",
           "don_vi": "Gói",
           "net": 0.5,
-          "gia_niem_yet": 36600,
+          "gia_niem_yet": 36400,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 73200,
+          "don_gia_chuan": 72800,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -74,16 +74,16 @@
       "id": "thit-heo-ba-roi-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Thịt Ba Rọi có da_MH giun quế",
+          "ten_hien_thi": "Thịt ba rọi heo đặc biệt",
           "thuong_hieu": "NOBRAND",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/thit-ba-roi-co-da.jpg",
-          "url": "https://winmart.vn/products/thit-ba-roi-co-da_mh-giun-que--s10323947",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427314545410053663-kg-thit-dui-heo-og.jpg",
+          "url": "https://winmart.vn/products/thit-ba-roi-heo-dac-biet--s10053663",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 245000,
+          "gia_niem_yet": 239900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 245000,
+          "don_gia_chuan": 239900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -140,16 +140,16 @@
       "id": "suon-non-heo-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Sườn non heo_MH giun quế",
+          "ten_hien_thi": "Sườn non heo đặc biệt",
           "thuong_hieu": "NOBRAND",
           "danh_muc": "Thịt",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/suon-non-heo_mh-giun-que--s10323948",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427337310110053664-kg-syp-lo-(bung-cai)-trang-og.jpg",
+          "url": "https://winmart.vn/products/suon-non-heo-dac-biet--s10053664",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 239900,
+          "gia_niem_yet": 255000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 239900,
+          "don_gia_chuan": 255000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -184,16 +184,16 @@
       "id": "dui-ga-cn-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "MEATDELI Má đùi gà",
-          "thuong_hieu": "MEAT DELI",
+          "ten_hien_thi": "CP Má đùi gà công nghiệp VietGap",
+          "thuong_hieu": "CP",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10283203-20241205094133.jpg",
-          "url": "https://winmart.vn/products/meatdeli-ma-dui-ga--s10283203",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428498907910053728-kg-cp-suon-già-heo-og.jpg",
+          "url": "https://winmart.vn/products/cp-ma-dui-ga-cong-nghiep-vietgap--s10053728",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 95900,
+          "gia_niem_yet": 94000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 95900,
+          "don_gia_chuan": 94000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -206,16 +206,16 @@
       "id": "canh-ga-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "MEATDELI Cánh gà",
-          "thuong_hieu": "MEAT DELI",
+          "ten_hien_thi": "CP Cánh gà công nghiệp VietGap",
+          "thuong_hieu": "CP",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10283202-20241205093808.jpg",
-          "url": "https://winmart.vn/products/meatdeli-canh-ga--s10283202",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428501154810053639-kg-cp-chon-giu-heo-og.jpg",
+          "url": "https://winmart.vn/products/cp-canh-ga-cong-nghiep-vietgap--s10053639",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 123900,
+          "gia_niem_yet": 115000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 123900,
+          "don_gia_chuan": 115000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -412,9 +412,18 @@
       "id": "hanh-la-100g",
       "chains": {
         "winmart": {
-          "trang_thai": "out_of_stock",
-          "nguon": "api",
-          "_note": "no confident match (best 0.00)"
+          "ten_hien_thi": "Hành lá WinEco gói 100g",
+          "thuong_hieu": "WINECO",
+          "danh_muc": "Rau Lá",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/10281879.jpg",
+          "url": "https://winmart.vn/products/wineco-hanh-la-l1-100gr--s10281879",
+          "don_vi": "Gói",
+          "net": 0.1,
+          "gia_niem_yet": 6900,
+          "gia_khuyen_mai": 5520,
+          "don_gia_chuan": 55200,
+          "trang_thai": "in_stock",
+          "nguon": "api"
         }
       }
     },
@@ -425,18 +434,9 @@
       "id": "cai-thao-1kg",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Cải thảo",
-          "thuong_hieu": "NOBRAND",
-          "danh_muc": "Rau - Củ - Quả",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162428528568010053860-kg-cai-xanh-(cai-canh)-l1-vineco-og.jpg",
-          "url": "https://winmart.vn/products/cai-thao--s10053860",
-          "don_vi": "Kg",
-          "net": 1.0,
-          "gia_niem_yet": 19900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 19900,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "out_of_stock",
+          "nguon": "api",
+          "_note": "no confident match (best 0.00)"
         }
       }
     },
@@ -789,8 +789,8 @@
           "don_vi": "Chai",
           "net": 0.75,
           "gia_niem_yet": 28800,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 38400,
+          "gia_khuyen_mai": 25000,
+          "don_gia_chuan": 33333,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
