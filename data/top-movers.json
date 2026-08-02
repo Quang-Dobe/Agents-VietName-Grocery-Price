@@ -1,11 +1,66 @@
 {
-  "week": "2026-07-22",
-  "risers": [],
+  "week": "2026-07-23",
+  "risers": [
+    {
+      "id": "dau-an-simply-1l",
+      "ten_chuan": "Dầu ăn Simply chai 1 lít",
+      "pct": 23.4,
+      "direction": "up"
+    },
+    {
+      "id": "canh-ga-500g",
+      "ten_chuan": "Cánh gà khay 500g",
+      "pct": 19.2,
+      "direction": "up"
+    },
+    {
+      "id": "nuoc-rua-chen-sunlight-750g",
+      "ten_chuan": "Nước rửa chén Sunlight 750g",
+      "pct": 15.2,
+      "direction": "up"
+    },
+    {
+      "id": "sua-tuoi-vinamilk-1l",
+      "ten_chuan": "Sữa tươi Vinamilk hộp 1 lít",
+      "pct": 8.9,
+      "direction": "up"
+    },
+    {
+      "id": "sua-dac-ong-tho-380g",
+      "ten_chuan": "Sữa đặc Ông Thọ lon 380g",
+      "pct": 2.4,
+      "direction": "up"
+    }
+  ],
   "fallers": [
+    {
+      "id": "giay-ve-sinh-loc10",
+      "ten_chuan": "Giấy vệ sinh lốc 10 cuộn",
+      "pct": -44.4,
+      "direction": "down"
+    },
+    {
+      "id": "dau-an-tuong-an-1l",
+      "ten_chuan": "Dầu ăn Tường An chai 1 lít",
+      "pct": -18.3,
+      "direction": "down"
+    },
+    {
+      "id": "khoai-tay-1kg",
+      "ten_chuan": "Khoai tây ~1kg",
+      "pct": -11.7,
+      "direction": "down"
+    },
     {
       "id": "thit-bo-xay-300g",
       "ten_chuan": "Thịt bò xay khay 300g",
-      "pct": -27.2,
+      "pct": -10.0,
+      "direction": "down"
+    },
+    {
+      "id": "bot-giat-omo-3kg",
+      "ten_chuan": "Bột giặt Omo túi 3kg",
+      "pct": -8.7,
       "direction": "down"
     }
   ]
