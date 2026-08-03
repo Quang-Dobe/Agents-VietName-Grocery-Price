@@ -1,42 +1,24 @@
 {
-  "week": "2026-08-02",
+  "week": "2026-08-03",
   "risers": [
     {
-      "id": "suon-non-heo-500g",
-      "ten_chuan": "Sườn non heo khay 500g",
-      "pct": 6.3,
+      "id": "thit-bo-xay-300g",
+      "ten_chuan": "Thịt bò xay khay 300g",
+      "pct": 52.7,
+      "direction": "up"
+    },
+    {
+      "id": "trung-ga-hop-10",
+      "ten_chuan": "Trứng gà hộp 10 quả",
+      "pct": 9.1,
       "direction": "up"
     }
   ],
   "fallers": [
     {
-      "id": "nuoc-rua-chen-sunlight-750g",
-      "ten_chuan": "Nước rửa chén Sunlight 750g",
-      "pct": -13.2,
-      "direction": "down"
-    },
-    {
-      "id": "canh-ga-500g",
-      "ten_chuan": "Cánh gà khay 500g",
-      "pct": -7.2,
-      "direction": "down"
-    },
-    {
-      "id": "thit-heo-ba-roi-500g",
-      "ten_chuan": "Thịt ba rọi heo khay 500g",
-      "pct": -2.1,
-      "direction": "down"
-    },
-    {
-      "id": "dui-ga-cn-500g",
-      "ten_chuan": "Đùi gà công nghiệp khay 500g",
-      "pct": -2.0,
-      "direction": "down"
-    },
-    {
-      "id": "bun-pho-kho-500g",
-      "ten_chuan": "Bún/phở khô gói 500g",
-      "pct": -0.5,
+      "id": "suon-non-heo-500g",
+      "ten_chuan": "Sườn non heo khay 500g",
+      "pct": -5.9,
       "direction": "down"
     }
   ]
