@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-02",
+  "updated": "2026-08-03",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -140,16 +140,16 @@
       "id": "suon-non-heo-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Sườn non heo đặc biệt",
+          "ten_hien_thi": "Sườn non heo_MH giun quế",
           "thuong_hieu": "NOBRAND",
           "danh_muc": "Thịt",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/162427337310110053664-kg-syp-lo-(bung-cai)-trang-og.jpg",
-          "url": "https://winmart.vn/products/suon-non-heo-dac-biet--s10053664",
+          "hinh_anh": null,
+          "url": "https://winmart.vn/products/suon-non-heo_mh-giun-que--s10323948",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 255000,
+          "gia_niem_yet": 239900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 255000,
+          "don_gia_chuan": 239900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -250,16 +250,16 @@
       "id": "thit-bo-xay-300g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Thịt bò xay – Mince (xay) Vinabeef 200gr",
-          "thuong_hieu": "",
+          "ten_hien_thi": "Thịt bò Úc Kiaora xay khay 200g",
+          "thuong_hieu": "KIAORA",
           "danh_muc": "Thịt",
-          "hinh_anh": null,
-          "url": "https://winmart.vn/products/thit-bo-xay-mince-xay-vinabeef-200gr--s10271856",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/8936150841113_7bc1837c-aa53-4a4d-a62c-28bed51c0e98-og.jpg",
+          "url": "https://winmart.vn/products/kiaora-thit-bo-uc-xay-200g--s10282507",
           "don_vi": "Khay",
-          "net": 0.3,
-          "gia_niem_yet": 75000,
-          "gia_khuyen_mai": 67500,
-          "don_gia_chuan": 225000,
+          "net": 0.2,
+          "gia_niem_yet": 68700,
+          "gia_khuyen_mai": null,
+          "don_gia_chuan": 343500,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -320,16 +320,16 @@
       "id": "trung-ga-hop-10",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Trứng gà so 729 Ba Vì giỏ 10 quả",
+          "ten_hien_thi": "Trứng gà ta Ba Vì 729 Omega 3",
           "thuong_hieu": "729 BA VÌ",
-          "danh_muc": "Sữa - Bánh Kẹo",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/trung-ga-so-729-ba-vi-gio-10-qua.jpg",
-          "url": "https://winmart.vn/products/729-ba-vi-trung-ga-so-gio-10-qua--s10006025",
+          "danh_muc": "Trứng",
+          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2022/trung-ga-ta-ba-vi-729-omega-3.jpg",
+          "url": "https://winmart.vn/products/729-ba-vi-trung-ga-ta-omega-3--s10606717",
           "don_vi": "Bộ",
           "net": 10,
-          "gia_niem_yet": 55000,
+          "gia_niem_yet": 60000,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 5500,
+          "don_gia_chuan": 6000,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
