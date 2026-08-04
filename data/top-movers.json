@@ -1,25 +1,12 @@
 {
-  "week": "2026-08-03",
+  "week": "2026-08-08",
   "risers": [
     {
-      "id": "thit-bo-xay-300g",
-      "ten_chuan": "Thịt bò xay khay 300g",
-      "pct": 52.7,
-      "direction": "up"
-    },
-    {
-      "id": "trung-ga-hop-10",
-      "ten_chuan": "Trứng gà hộp 10 quả",
-      "pct": 9.1,
+      "id": "thit-heo-xay-500g",
+      "ten_chuan": "Thịt heo xay khay 500g",
+      "pct": 14.8,
       "direction": "up"
     }
   ],
-  "fallers": [
-    {
-      "id": "suon-non-heo-500g",
-      "ten_chuan": "Sườn non heo khay 500g",
-      "pct": -5.9,
-      "direction": "down"
-    }
-  ]
+  "fallers": []
 }

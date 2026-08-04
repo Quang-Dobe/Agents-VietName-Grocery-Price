@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03",
+  "updated": "2026-08-08",
   "items": [
     {
       "ten_chuan": "Gạo ST25 túi 5kg",
@@ -96,18 +96,9 @@
       "id": "thit-heo-nac-dui-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "MEATDELI Thịt Nạc dăm heo (Thịt Nạc vai) (S)",
-          "thuong_hieu": "MEAT DELI",
-          "danh_muc": "Thịt - Thủy Hải Sản",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617957-20241205094605.jpg",
-          "url": "https://winmart.vn/products/meat-deli-nac-dam-heo--s10617957",
-          "don_vi": "Kg",
-          "net": 1.0,
-          "gia_niem_yet": 204900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 204900,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "out_of_stock",
+          "nguon": "api",
+          "_note": "no confident match (best 0.00)"
         }
       }
     },
@@ -118,16 +109,16 @@
       "id": "thit-heo-xay-500g",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "MEATDELI Thịt heo xay chuẩn ngon (S)",
+          "ten_hien_thi": "MEAT DELI Thịt heo đặc biệt xiên que",
           "thuong_hieu": "MEAT DELI",
-          "danh_muc": "Thịt - Thủy Hải Sản",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/12/10617947-20241205094732.jpg",
-          "url": "https://winmart.vn/products/meat-deli-thit-heo-xay--s10617947",
+          "danh_muc": "Thịt",
+          "hinh_anh": null,
+          "url": "https://winmart.vn/products/meat-deli-thit-heo-dac-biet-xien-que--s10274277",
           "don_vi": "Kg",
           "net": 1.0,
-          "gia_niem_yet": 141900,
+          "gia_niem_yet": 162900,
           "gia_khuyen_mai": null,
-          "don_gia_chuan": 141900,
+          "don_gia_chuan": 162900,
           "trang_thai": "in_stock",
           "nguon": "api"
         }
@@ -162,18 +153,9 @@
       "id": "ga-ta-nguyen-con-1kg",
       "chains": {
         "winmart": {
-          "ten_hien_thi": "Gà ta nguyên con 3F",
-          "thuong_hieu": "3F",
-          "danh_muc": "Thịt - Thủy Hải Sản",
-          "hinh_anh": "https://s3-hcmc02.higiocloud.vn/images/2024/04/ga-ta-3f-khay-vang-20240415024517.jpeg",
-          "url": "https://winmart.vn/products/3f-ga-ta--s10620356",
-          "don_vi": "Kg",
-          "net": 1.0,
-          "gia_niem_yet": 129900,
-          "gia_khuyen_mai": null,
-          "don_gia_chuan": 129900,
-          "trang_thai": "in_stock",
-          "nguon": "api"
+          "trang_thai": "out_of_stock",
+          "nguon": "api",
+          "_note": "validator: rejected match \"Trung ga ta Ba Vi 729 Omega 3\" (eggs, not whole chicken) - price jumped -53.8% vs last week (129900 -> 60000), score 0.50 at min-score threshold; treated as no confident match this week"
         }
       }
     },
