@@ -20,11 +20,22 @@ import json
 from pathlib import Path
 
 import lib_db
+import lib_index
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SITE = ROOT / "site"
 TPL = Path(__file__).resolve().parent / "templates"
+
+
+def load_weights() -> dict:
+    basket = json.loads((ROOT / "basket.json").read_text(encoding="utf-8"))
+    items_b = basket["items"] if isinstance(basket, dict) and "items" in basket else basket
+    return {it["id"]: it["trong_so"] for it in items_b}
+
+
+def fmt_idx(v) -> str:
+    return f"{v:.2f}" if v is not None else ""
 
 
 # ---------- formatting helpers (Vietnamese conventions) ----------
@@ -167,28 +178,43 @@ def main() -> None:
                 w.writerow([week, "", wm])
 
     ih = DATA / "index-history.csv"
-    if not any(r["date"] == week for r in read_csv(ih)):
+    ih_rows_before = read_csv(ih)
+    first_week = len(ih_rows_before) == 0
+    if not any(r["date"] == week for r in ih_rows_before):
+        weights = load_weights()
+        now, base = {}, {}
+        for it in matched:
+            rows = read_csv(DATA / "items" / f"{it['id']}.csv")
+            base_row, now_row = rows[0], next(r for r in rows if r["date"] == week)
+            base[it["id"]] = {
+                "bhx": float(base_row["bhx_don_gia_chuan"]) if base_row["bhx_don_gia_chuan"] else None,
+                "winmart": float(base_row["winmart_don_gia_chuan"]) if base_row["winmart_don_gia_chuan"] else None,
+            }
+            now[it["id"]] = {
+                "bhx": float(now_row["bhx_don_gia_chuan"]) if now_row["bhx_don_gia_chuan"] else None,
+                "winmart": float(now_row["winmart_don_gia_chuan"]) if now_row["winmart_don_gia_chuan"] else None,
+            }
+        computed = lib_index.compute_indices(now, base, weights)
         with ih.open("a", newline="") as f:
-            csv.writer(f).writerow([week, "100.00", "", "100.00"])
+            csv.writer(f).writerow([week, fmt_idx(computed["index_chung"]),
+                                     fmt_idx(computed["index_bhx"]), fmt_idx(computed["index_winmart"])])
     ih_all = read_csv(ih)
-    first_week = len(ih_all) <= 1
 
     # top movers (week-over-week overall) — none on the first week
     risers, fallers = [], []
     if not first_week:
         prev_date = ih_all[-2]["date"]
         names = {it["id"]: it["ten_chuan"] for it in items}
-        changes = []
+        cur_now, cur_prev = {}, {}
         for it in matched:
             rows = read_csv(DATA / "items" / f"{it['id']}.csv")
             cur = {r["date"]: r["winmart_don_gia_chuan"] for r in rows}
-            a, b = cur.get(prev_date), cur.get(week)
-            if a and b:
-                changes.append({"id": it["id"], "ten_chuan": names[it["id"]],
-                                "pct": round(100.0 * (float(b) - float(a)) / float(a), 1)})
-        changes.sort(key=lambda c: c["pct"])
-        fallers = [dict(c, direction="down") for c in changes[:5] if c["pct"] < 0]
-        risers = [dict(c, direction="up") for c in reversed(changes[-5:]) if c["pct"] > 0]
+            if cur.get(week):
+                cur_now[it["id"]] = float(cur[week])
+            if cur.get(prev_date):
+                cur_prev[it["id"]] = float(cur[prev_date])
+        movers = lib_index.top_movers(cur_now, cur_prev, names)
+        risers, fallers = movers["risers"], movers["fallers"]
     (DATA / "top-movers.json").write_text(
         json.dumps({"week": week, "risers": risers, "fallers": fallers}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8")
@@ -266,11 +292,13 @@ def main() -> None:
         (items_dir / f"{it['id']}.html").write_text(page, encoding="utf-8")
 
     # run log
+    week_row = next(r for r in ih_all if r["date"] == week)
     with (DATA / "run-log.md").open("a") as f:
         f.write(f"\n## {week}  (captured {captured})\n"
                 f"- WinMart: ok — {len(matched)}/{len(items)} SKU\n"
                 f"- BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/{len(items)}\n"
-                f"- Index: chung 100.00 · bhx — · winmart 100.00"
+                f"- Index: chung {week_row['index_chung'] or '—'} · "
+                f"bhx {week_row['index_bhx'] or '—'} · winmart {week_row['index_winmart'] or '—'}"
                 f"{' (base week)' if first_week else ''}\n")
 
     print(f"run {week}: {len(matched)}/{len(items)} WinMart SKUs; first_week={first_week}; "

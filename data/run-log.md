@@ -106,3 +106,25 @@ Format:
 - WinMart: ok — 33/40 SKU
 - BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
 - Index: chung 100.00 · bhx — · winmart 100.00
+
+## 2026-08-08  (captured 2026-08-08T06:00:00+07:00)
+- WinMart: ok — 31/40 SKU (32 matched by the crawler; 1 dropped by validator, see below)
+- BHX: blocked (apibhx.tgdd.vn resets datacenter IP) — 0/40
+- Index: chung 104.78 · bhx — · winmart 104.78
+- Validator: `ga-ta-nguyen-con-1kg` (Gà ta nguyên con) crawler match was "Trứng gà ta
+  Ba Vì 729 Omega 3" — a carton of eggs, not a whole chicken — at score 0.50 (the
+  min-score floor). Implied price move 129.900đ → 60.000đ (−53,8%), over the >50%
+  jump-guard threshold. Dropped the reading and marked the SKU `out_of_stock` for
+  this week (excluded from the index and item history) rather than carry-forward,
+  since the matched product's identity — not just its price — is wrong.
+- Bug fix: `scripts/build_run.py` computed `index_chung`/`index_winmart` as a
+  hardcoded "100.00" stub every week instead of calling `lib_index.compute_indices`
+  — the index has been flat since the project started despite real price moves in
+  the per-item history. Fixed to use `lib_index.py` (already correct, just never
+  wired in) for this week onward. Did **not** backfill past weeks' index-history.csv
+  rows: recomputing them surfaced other likely bad crawler matches in the historical
+  per-item CSVs (e.g. `tao-my-1kg` 49.000đ→135.000đ, `nuoc-rua-chen-sunlight-750g`
+  38.400đ→94.267đ, both >100% single-week jumps around 2026-07-08) that were never
+  caught by a validator pass — backfilling on top of that data would launder bad
+  matches into permanent history. Recommend a one-off historical validator pass
+  before trusting or backfilling those older rows.
